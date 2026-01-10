@@ -3,4 +3,659 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="The Fungi Consultant - Book a Consultation" currentPage="/booking">
+  <div class="booking-content">
+    <!-- Main Heading -->
+    <h1 class="page-heading">Book a Consultation</h1>
+
+    <!-- Intro Text -->
+    <div class="intro-text">
+      Whether you're new to functional mushrooms or looking to enhance your health routine, my personalised consultations provide tailored advice to suit your specific needs.
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+      <!-- Individual Consultations -->
+      <div class="service-item">
+        <input type="checkbox" id="individualToggle" class="service-toggle">
+        <label for="individualToggle" class="service-label">
+          Individual Consultations
+          <span class="service-arrow"></span>
+        </label>
+        <div class="service-content">
+          <p class="service-intro">One-to-one online sessions tailored to your personal wellness goals.</p>
+
+          <!-- What to Expect Nested Dropdown -->
+          <div class="nested-item">
+            <input type="checkbox" id="expectToggle" class="nested-toggle">
+            <label for="expectToggle" class="nested-label">
+              What to expect in our session <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p><em>We will…</em></p>
+              <ul class="custom-bullet-list">
+                <li>Discuss your health goals and any supplements already being taken</li>
+                <li>Explore the potential benefits of various functional mushrooms based on your individual needs</li>
+              </ul>
+              <p><em>I will…</em></p>
+              <ul class="custom-bullet-list">
+                <li>Offer guidance on how to incorporate functional mushrooms into your lifestyle, including dosage, product recommendations, and preparation methods</li>
+                <li>Provide practical advice on reputable brands and products, ensuring quality and effectiveness</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pricing-info">
+            <p><strong>Price:</strong> £50 per hour for individual online consultations</p>
+            <p><strong>Email:</strong> <a href="mailto:oli@thefungiconsultant.com" class="contact-link">oli@thefungiconsultant.com</a></p>
+            <p>Use the email above or the form below to arrange a consultation - or a <strong>free 15-minute discovery call</strong> to answer any preliminary questions and outline how a full consultation can benefit you.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brand Consultations -->
+      <div class="service-item">
+        <input type="checkbox" id="brandToggle" class="service-toggle">
+        <label for="brandToggle" class="service-label">
+          Brand Consultations
+          <span class="service-arrow"></span>
+        </label>
+        <div class="service-content">
+          <p class="service-intro">Expert guidance for brands entering the functional mushroom industry.</p>
+
+          <p>I provide a gold standard of quality, trust and traceability for organisations ready to discover the power of functional mushrooms. Whether you're developing new products, need expert review, or want to establish credibility in the functional mushroom space, I offer tailored consultancy services.</p>
+
+          <div class="nested-item">
+            <input type="checkbox" id="brandServicesToggle" class="nested-toggle">
+            <label for="brandServicesToggle" class="nested-label">
+              Services for brands <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <ul class="custom-bullet-list">
+                <li>Product development guidance and formulation advice</li>
+                <li>Quality assurance and sourcing recommendations</li>
+                <li>Educational content creation and brand positioning</li>
+                <li>Market research and competitor analysis</li>
+                <li>Regulatory compliance and labelling guidance</li>
+                <li>Staff training and product knowledge workshops</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pricing-info">
+            <p><strong>Pricing:</strong> Tailored to project scope and requirements</p>
+            <p><strong>Email:</strong> <a href="mailto:oli@thefungiconsultant.com" class="contact-link">oli@thefungiconsultant.com</a></p>
+            <p>Contact me with details of your project for a bespoke quote.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events & Workshops -->
+      <div class="service-item">
+        <input type="checkbox" id="eventsToggle" class="service-toggle">
+        <label for="eventsToggle" class="service-label">
+          Events & Workshops
+          <span class="service-arrow"></span>
+        </label>
+        <div class="service-content">
+          <p class="service-intro">Engaging talks and interactive workshops on functional mushrooms and mycology.</p>
+
+          <p>I offer educational presentations and workshops for conferences, festivals, wellness events, and corporate settings. With years of experience organising and speaking at events across the UK, I bring accessible, engaging content on functional mushrooms to diverse audiences.</p>
+
+          <div class="nested-item">
+            <input type="checkbox" id="eventTypesToggle" class="nested-toggle">
+            <label for="eventTypesToggle" class="nested-label">
+              Event types <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <ul class="custom-bullet-list">
+                <li>Conference talks and keynote presentations</li>
+                <li>Interactive workshops and demonstrations</li>
+                <li>Festival and wellness event sessions</li>
+                <li>Corporate wellness programmes</li>
+                <li>Panel discussions and Q&A sessions</li>
+                <li>Private group sessions and team building</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pricing-info">
+            <p><strong>Pricing:</strong> Varies based on event type, duration, and location</p>
+            <p><strong>Email:</strong> <a href="mailto:oli@thefungiconsultant.com" class="contact-link">oli@thefungiconsultant.com</a></p>
+            <p>Contact me with details of your event for availability and pricing.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Contact Form Section -->
+    <div class="form-section">
+      <h2 class="form-heading">Get in touch</h2>
+      <p class="form-intro">Fill out the form below and I'll get back to you as soon as possible.</p>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" id="name" name="name" required class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" name="email" required class="form-input">
+        </div>
+
+        <div class="form-group">
+          <label for="service" class="form-label">I'm interested in</label>
+          <select id="service" name="service" required class="form-select">
+            <option value="">Please select...</option>
+            <option value="individual">Individual Consultation</option>
+            <option value="discovery">Free 15-Minute Discovery Call</option>
+            <option value="brand">Brand Consultation</option>
+            <option value="event">Event/Workshop Booking</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="6" required class="form-textarea"></textarea>
+        </div>
+
+        <button type="submit" class="form-button">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.booking-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Page Heading */
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+/* Intro Text */
+.intro-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Services Section */
+.services-section {
+  margin: 30px 0;
+}
+
+.service-item {
+  margin: 20px 0;
+}
+
+.service-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.service-label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 40px 12px 15px;
+  background-color: #b6c2a0;
+  border: 1px solid #9a89a4;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2em;
+  color: #efefed;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.service-label:hover {
+  background-color: #9a89a4;
+}
+
+.service-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #efefed;
+  transition: transform 0.3s ease;
+}
+
+.service-toggle:checked + .service-label .service-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.service-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 15px;
+}
+
+.service-toggle:checked ~ .service-content {
+  max-height: 4000px;
+  padding: 20px 15px;
+}
+
+.service-content p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.service-intro {
+  font-style: italic;
+  color: #4e625c;
+}
+
+/* Nested Items */
+.nested-item {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.nested-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.nested-label {
+  display: inline-block;
+  color: #9a89a4;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 5px 8px;
+  margin: 5px 0;
+  position: relative;
+  border-bottom: 2px solid transparent;
+}
+
+.nested-label:hover {
+  color: #b6c2a0;
+  border-bottom: 2px solid #b6c2a0;
+}
+
+.nested-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #9a89a4;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+.nested-toggle:checked + .nested-label .nested-arrow {
+  transform: rotate(180deg);
+}
+
+.nested-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin: 0;
+}
+
+.nested-toggle:checked ~ .nested-content {
+  max-height: 2000px;
+  margin: 10px 0;
+}
+
+.nested-content p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+/* Custom Bullet Lists */
+.custom-bullet-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 15px 0;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-bullet-list li {
+  padding: 6px 0 6px 25px;
+  position: relative;
+  font-family: 'Literata', serif;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #52515c;
+}
+
+.custom-bullet-list li:before {
+  content: "𓆱";
+  position: absolute;
+  left: 0;
+  color: #9a89a4;
+  font-size: 14px;
+}
+
+/* Pricing Info */
+.pricing-info {
+  background-color: #f9f9f7;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid #e0e0d8;
+}
+
+.pricing-info p {
+  margin-bottom: 10px;
+}
+
+.pricing-info p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.contact-link:active {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.contact-link:visited {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+/* Divider */
+.divider {
+  width: 60%;
+  max-width: 300px;
+  height: 1px;
+  background-color: #b6c2a0;
+  margin: 50px auto;
+}
+
+/* Form Section */
+.form-section {
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.form-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-intro {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1em;
+  color: #52515c;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  font-family: 'Literata', serif;
+  font-size: 0.95em;
+  color: #52515c;
+  background-color: #ffffff;
+  border: 1px solid #b6c2a0;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #9a89a4;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 12px 24px;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.1em;
+  color: #efefed;
+  background-color: #b6c2a0;
+  border: 1px solid #9a89a4;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #9a89a4;
+}
+
+.form-button:active {
+  transform: translateY(1px);
+}
+
+/* Bottom Image */
+.bottom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+/* Finish Container */
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .booking-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text,
+  .form-intro {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+
+  .service-label {
+    font-size: 1.05em;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .service-content p,
+  .nested-content p {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+
+  .custom-bullet-list li {
+    font-size: 0.85em;
+    line-height: 1.6;
+  }
+
+  .form-heading {
+    font-size: 1.6em;
+  }
+
+  .bottom-image {
+    max-width: 200px;
+    margin-top: 40px;
+  }
+}
+</style>
+
+<script is:inline>
+// No additional JavaScript needed - CSS handles all the interactions
+</script>
