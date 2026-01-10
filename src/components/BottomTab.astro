@@ -1,0 +1,283 @@
+---
+// Bottom tab with social links
+---
+
+<div class="bottom-tab" id="bottomTab">
+  <div class="tab-handle" id="tabHandle">
+    <svg class="tab-arrow" viewBox="0 0 24 24">
+      <polyline points="6 15 12 9 18 15"></polyline>
+    </svg>
+    <span class="tab-label">connect</span>
+  </div>
+  <div class="tab-content">
+    <div class="tab-button-row">
+      <a href="https://www.facebook.com/p/The-Fungi-Consultant-61566967040340/" target="_blank" class="tab-icon-button">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" alt="Facebook">
+        <span class="tab-icon-button-label">facebook</span>
+      </a>
+      <a href="https://www.instagram.com/the_fungi_consultant" target="_blank" class="tab-icon-button">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" alt="Instagram">
+        <span class="tab-icon-button-label">insta</span>
+      </a>
+      <a href="https://uk.linkedin.com/company/the-fungi-consultant" target="_blank" class="tab-icon-button">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" alt="LinkedIn">
+        <span class="tab-icon-button-label">linkedin</span>
+      </a>
+      <a href="mailto:oli@thefungiconsultant.com" class="tab-icon-button">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5968.png" alt="Contact">
+        <span class="tab-icon-button-label">contact</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Bottom Tab Container */
+.bottom-tab {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background-color: #efefed;
+  border: 2px solid #b6c2a0;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 1440px;
+  transition: all 0.4s ease;
+  box-shadow: 0 2px 8px rgba(44, 41, 48, 0.45);
+}
+
+.bottom-tab.open {
+  min-width: 1440px;
+}
+
+.bottom-tab.integrated {
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.bottom-tab.integrated .tab-content {
+  max-height: 150px;
+  padding: 15px 20px 20px 20px;
+}
+
+.bottom-tab.integrated .tab-handle {
+  max-height: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tab-handle {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0 4px 0;
+  transition: all 0.4s ease;
+  max-height: 60px;
+  opacity: 1;
+}
+
+.tab-label {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2em;
+  color: #b6c2a0;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  margin-bottom: 2px;
+  transition: opacity 0.3s ease;
+}
+
+.tab-arrow {
+  width: 18px;
+  height: 18px;
+  stroke: #52515c;
+  stroke-width: 2.5;
+  fill: none;
+  transition: transform 0.3s ease;
+}
+
+.tab-handle:hover .tab-arrow {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.tab-handle:hover .tab-label {
+  opacity: 0.7;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: rotate(0deg) scale(1); opacity: 1; }
+  50% { transform: rotate(0deg) scale(1.2); opacity: 0.7; }
+}
+
+.bottom-tab.open .tab-arrow {
+  transform: rotate(180deg);
+}
+
+.bottom-tab.open .tab-handle:hover .tab-arrow {
+  animation: pulse-open 1s ease-in-out infinite;
+}
+
+@keyframes pulse-open {
+  0%, 100% { transform: rotate(180deg) scale(1); opacity: 1; }
+  50% { transform: rotate(180deg) scale(1.2); opacity: 0.7; }
+}
+
+.tab-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 20px;
+}
+
+.bottom-tab.open .tab-content {
+  max-height: 150px;
+  padding: 10px 20px 20px 20px;
+}
+
+.tab-button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+
+.tab-icon-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tab-icon-button:hover {
+  transform: scale(1.08);
+}
+
+.tab-icon-button img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.tab-icon-button-label {
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.75em;
+  color: #52515c;
+  text-align: center;
+}
+
+.tab-icon-button:hover .tab-icon-button-label {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .bottom-tab {
+    min-width: 480px;
+  }
+
+  .bottom-tab.open {
+    min-width: 480px;
+  }
+
+  .bottom-tab.integrated {
+    min-width: 100%;
+  }
+
+  .tab-handle {
+    padding: 6px 0 3px 0;
+  }
+
+  .tab-label {
+    font-size: 1em;
+  }
+
+  .tab-arrow {
+    width: 15px;
+    height: 15px;
+  }
+
+  .tab-button-row {
+    gap: 12px;
+  }
+
+  .tab-icon-button {
+    gap: 5px;
+  }
+
+  .tab-icon-button img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tab-icon-button-label {
+    font-size: 0.6em;
+  }
+
+  .tab-content {
+    padding: 0 12px;
+  }
+
+  .bottom-tab.open .tab-content {
+    max-height: 100px;
+    padding: 8px 12px 12px 12px;
+  }
+
+  .bottom-tab.integrated .tab-content {
+    max-height: 100px;
+    padding: 10px 12px 12px 12px;
+  }
+}
+</style>
+
+<script>
+(function() {
+  const bottomTab = document.getElementById('bottomTab');
+  const tabHandle = document.getElementById('tabHandle');
+
+  if (!bottomTab || !tabHandle) return;
+
+  // Click to toggle
+  tabHandle.addEventListener('click', function() {
+    if (!bottomTab.classList.contains('integrated')) {
+      bottomTab.classList.toggle('open');
+    }
+  });
+
+  // Scroll detection
+  function checkScrollPosition() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight;
+    const clientHeight = document.documentElement.clientHeight;
+    const distanceFromBottom = scrollHeight - scrollTop - clientHeight;
+
+    if (distanceFromBottom < 50) {
+      bottomTab.classList.add('integrated');
+      bottomTab.classList.remove('open');
+    } else {
+      bottomTab.classList.remove('integrated');
+    }
+  }
+
+  window.addEventListener('scroll', checkScrollPosition);
+  checkScrollPosition();
+})();
+</script>

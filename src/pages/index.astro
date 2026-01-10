@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Fungi Consultant - Home" currentPage="/">
+  <div class="home-content">
+    <!-- Video Section -->
+    <div class="video-container">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="hero-video"
+      >
+        <source src="https://raw.githubusercontent.com/feralchill/fungi/main/video1.mov" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Intro Text and Image -->
+    <div class="intro-container">
+      <div class="intro-text">
+        Welcome to <span class="brand-name">The Fungi Consultant</span>: coaching, workshops and one-to-one consultation for individuals and organisations ready to discover the power of functional mushrooms.<br><br>
+        Our services can match you with the natural solutions best suited to your lifestyle, and provide a <span class="brand-name">gold standard</span> of quality, trust and traceability to brands entering the functional mushroom industry.<br><br>
+        <a href="/about" class="intro-link">Find out more</a> about our services, or <a href="/booking" class="intro-link">book a consultation</a> today.
+      </div>
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5963.png" class="intro-image" alt="Functional mushrooms">
+    </div>
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@500&family=Abril+Fatface&family=Almendra+Display&display=swap');
+
+.home-content {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Video Container */
+.video-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hero-video {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+}
+
+/* Intro Container */
+.intro-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.intro-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #52515c;
+  margin-bottom: 60px;
+}
+
+.intro-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+}
+
+.intro-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.intro-link:hover {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.intro-link:active {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.intro-link:visited {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+.intro-image {
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: block;
+}
+
+/* Finish Container */
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .intro-container {
+    padding: 20px 15px;
+    margin: 4px auto;
+  }
+
+  .intro-text {
+    font-size: 0.95em;
+  }
+}
+</style>

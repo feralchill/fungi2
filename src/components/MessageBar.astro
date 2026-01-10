@@ -1,0 +1,78 @@
+---
+// Rotating message bar at the top
+---
+
+<div class="message-bar">
+  <div class="message-bar-content">
+    <div class="message active" id="message1">find out which mushrooms are best suited to you</div>
+    <div class="message" id="message2">learn what to look for and what to avoid</div>
+    <div class="message" id="message3">one-to-one consultation, workshops, and coaching</div>
+    <div class="message" id="message4">book your FREE 15-minute discovery call</div>
+  </div>
+</div>
+
+<style>
+/* Rotating message bar */
+.message-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #2c2930;
+  padding: 8px 20px;
+  z-index: 98;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+}
+
+.message-bar-content {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.1em;
+  color: #efefed;
+  line-height: 1;
+}
+
+.message {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.message.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .message-bar {
+    transition: opacity 0.3s ease;
+    background: #37323e;
+    padding: 5px 20px;
+    height: 35px;
+  }
+
+  .message-bar-content {
+    font-size: 0.9em;
+  }
+}
+</style>
+
+<script>
+// Rotate through messages
+const messages = document.querySelectorAll('.message');
+let currentMessage = 0;
+
+function rotateMessages() {
+  messages[currentMessage].classList.remove('active');
+  currentMessage = (currentMessage + 1) % messages.length;
+  messages[currentMessage].classList.add('active');
+}
+
+// Rotate every 2 seconds
+setInterval(rotateMessages, 2000);
+</script>

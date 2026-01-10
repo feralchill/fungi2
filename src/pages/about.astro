@@ -1,0 +1,481 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Fungi Consultant - About" currentPage="/about">
+  <div class="about-content">
+    <!-- Services Content -->
+    <div class="fungi-section">
+      <div class="fungi-intro">
+        The functional mushroom market is a crowded and confusing place. Countless products, conflicting claims, and no clear way to know what's worth your money or your time.<span class="small-break"></span>
+        For consumers, it's frustrating and overwhelming. For brands, it's both a challenge and an opportunity.<span class="small-break"></span>
+        <span class="brand-name">The Fungi Consultant</span> can help you cut through the noise, whichever side of the chaos you're coming from.
+      </div>
+
+      <div class="fungi-links-row" id="fungiLinksRow">
+        <!-- Brands -->
+        <div class="fungi-link-wrapper">
+          <div class="fungi-link-item" id="brandsBtnItem" onclick="fcToggle(1)">
+            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" class="fungi-bullet" alt="">
+            <span class="fungi-nav-link" id="brandsLink">What we offer brands <span class="fungi-arrow" id="brandsArrow"></span></span>
+          </div>
+          <div class="fungi-mobile-panel" id="brandsMobilePanel">
+            <div class="fungi-content-text">
+              <span class="brand-name">The Fungi Consultant</span> works with supplement companies and wellness brands looking to get functional mushrooms right.<br><br>
+              From formulation and dosing to extraction methods, testing protocols, sourcing, and honest customer communication – <span class="brand-name">The Fungi Consultant</span> will help you build products that people can trust, with guidance informed by cutting-edge scientific research and hands-on experience working with leading voices in mycology.<br><br>
+              For more information on consultancy structure and pricing, or to book <span class="brand-name">The Fungi Consultant</span> for your event, workshop or lecture series, head to the <a href="/booking" class="fungi-content-link">bookings</a> page.
+            </div>
+          </div>
+        </div>
+
+        <!-- Individuals -->
+        <div class="fungi-link-wrapper">
+          <div class="fungi-link-item" id="individualsBtnItem" onclick="fcToggle(2)">
+            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="fungi-bullet" alt="">
+            <span class="fungi-nav-link" id="individualsLink">What we offer individuals <span class="fungi-arrow" id="individualsArrow"></span></span>
+          </div>
+          <div class="fungi-mobile-panel" id="individualsMobilePanel">
+            <div class="fungi-content-text">
+              <span class="brand-name">The Fungi Consultant</span>'s one-to-one service helps you identify which mushrooms align with your needs, which brands deliver on their promises, and how to use them effectively alongside your existing lifestyle.<br><br>
+              Whether you're looking to support cognitive function, manage stress, boost energy, or build long-term resilience, <span class="brand-name">The Fungi Consultant</span> offers clear, calm and grounded guidance – informed by cutting-edge scientific research, thousands of years of traditional use, and hands-on experience working with leading voices in mycology.<br><br>
+              For more information on consultancy structure and pricing, booking <span class="brand-name">The Fungi Consultant</span> for your event or workshop, or to book your free 15-minute discovery call, head to the <a href="/booking" class="fungi-content-link">bookings</a> page.
+            </div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="fungi-link-wrapper">
+          <div class="fungi-link-item" id="aboutBtnItem" onclick="fcToggle(3)">
+            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="fungi-bullet" alt="">
+            <span class="fungi-nav-link" id="aboutLink">Who is The Fungi Consultant? <span class="fungi-arrow" id="aboutArrow"></span></span>
+          </div>
+          <div class="fungi-mobile-panel" id="aboutMobilePanel">
+            <div class="fungi-content-text">
+              <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="The Fungi Consultant">
+              <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
+              
+            <i>I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.<br><br>
+          Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but lion's mane, reishi, and cordyceps became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span></i>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Panels -->
+      <div class="fungi-desktop-panel hidden" id="brandsDesktopPanel">
+        <div class="fungi-content-text">
+          <span class="brand-name">The Fungi Consultant</span> works with supplement companies and wellness brands looking to get functional mushrooms right.<br><br>
+          From formulation and dosing to extraction methods, testing protocols, sourcing, and honest customer communication – <span class="brand-name">The Fungi Consultant</span> will help you build products that people can trust, with guidance informed by cutting-edge scientific research and hands-on experience working with leading voices in mycology.<br><br>
+          For more information on consultancy structure and pricing, or to book <span class="brand-name">The Fungi Consultant</span> for your event, workshop or lecture series, head to the <a href="/booking" class="fungi-content-link">bookings</a> page.
+        </div>
+      </div>
+
+      <div class="fungi-desktop-panel hidden" id="individualsDesktopPanel">
+        <div class="fungi-content-text">
+          <span class="brand-name">The Fungi Consultant</span>'s one-to-one service helps you identify which mushrooms align with your needs, which brands deliver on their promises, and how to use them effectively alongside your existing lifestyle.<br><br>
+          Whether you're looking to support cognitive function, manage stress, boost energy, or build long-term resilience, <span class="brand-name">The Fungi Consultant</span> offers clear, calm and grounded guidance – informed by cutting-edge scientific research, thousands of years of traditional use, and hands-on experience working with leading voices in mycology.<br><br>
+          For more information on consultancy structure and pricing, booking <span class="brand-name">The Fungi Consultant</span> for your event or workshop, or to book your free 15-minute discovery call, head to the <a href="/booking" class="fungi-content-link">bookings</a> page.
+        </div>
+      </div>
+
+      <div class="fungi-desktop-panel hidden" id="aboutDesktopPanel">
+        <div class="fungi-content-text">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="The Fungi Consultant">
+          <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
+         <br>
+          I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.<br><br>
+          Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but lion's mane, reishi, and cordyceps became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span>.
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6016.png" class="bottom-image" alt="Functional mushrooms">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@500&family=Abril+Fatface&display=swap');
+
+.fungi-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.fungi-intro {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #52515c;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.fungi-intro .small-break {
+  display: block;
+  height: 1.4em;
+}
+
+.fungi-intro .brand-name,
+.fungi-content-text .brand-name,
+.fungi-bio-caption .brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fungi-links-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.fungi-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.fungi-bullet {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fungi-nav-link {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.15em;
+  color: #9A89A4;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.fungi-nav-link .brand-highlight {
+  color: #52515c;
+  transition: color 0.3s ease;
+}
+
+.fungi-link-item:hover .fungi-nav-link {
+  border-bottom: 1px solid #9A89A4;
+}
+
+.fungi-link-item:hover .fungi-nav-link .brand-highlight {
+  color: #9A89A4;
+}
+
+.fungi-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #9A89A4;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.fungi-arrow.flipped {
+  transform: rotate(180deg);
+}
+
+.fungi-content-panel {
+  display: none;
+}
+
+.fungi-content-panel.open {
+  display: block;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fungi-content-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #52515c;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.fungi-content-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-style: normal;
+}
+
+.fungi-content-link:hover {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.fungi-content-link:active {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.fungi-content-link:visited {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+.fungi-bio-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto 12px auto;
+  display: block;
+  border: 1px solid #b6c2a0;
+  border-radius: 8px;
+}
+
+.fungi-bio-caption {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: #52515c;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.fungi-mobile-panel {
+  display: none !important;
+}
+
+.fungi-desktop-panel {
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .fungi-section {
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .fungi-intro {
+    font-size: 0.9em;
+    line-height: 1.7;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+
+  .fungi-intro .small-break {
+    height: 1.7em;
+  }
+
+  .fungi-links-row {
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+  }
+
+  .fungi-link-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .fungi-mobile-panel.open {
+    margin-bottom: 20px;
+  }
+
+  .fungi-link-item {
+    margin-bottom: 0px;
+  }
+
+  .fungi-bullet {
+    width: 18px;
+    height: 18px;
+  }
+
+  .fungi-nav-link {
+    font-size: 1.05em;
+  }
+
+  .fungi-content-text {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+
+  .fungi-desktop-panel {
+    display: none !important;
+  }
+
+  .fungi-mobile-panel {
+    display: none !important;
+  }
+
+  .fungi-mobile-panel.open {
+    display: block !important;
+  }
+
+  .bottom-image {
+    max-width: 300px;
+    margin-top: 40px;
+  }
+}
+
+/* Bottom Image */
+.bottom-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+/* Finish Container */
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+</style>
+
+<script is:inline>
+var fcCurrent = 0;
+
+function fcToggle(n) {
+  var linksRow = document.getElementById("fungiLinksRow");
+  var arrows = [
+    document.getElementById("brandsArrow"),
+    document.getElementById("individualsArrow"),
+    document.getElementById("aboutArrow")
+  ];
+  var links = [
+    document.getElementById("brandsLink"),
+    document.getElementById("individualsLink"),
+    document.getElementById("aboutLink")
+  ];
+  var dPanels = [
+    document.getElementById("brandsDesktopPanel"),
+    document.getElementById("individualsDesktopPanel"),
+    document.getElementById("aboutDesktopPanel")
+  ];
+  var mPanels = [
+    document.getElementById("brandsMobilePanel"),
+    document.getElementById("individualsMobilePanel"),
+    document.getElementById("aboutMobilePanel")
+  ];
+  var isMobile = window.innerWidth <= 768;
+  var i;
+
+  if (fcCurrent === n) {
+    arrows[n-1].classList.remove("flipped");
+    links[n-1].classList.add("visited-state");
+    if (isMobile) {
+      mPanels[n-1].classList.remove("open");
+    } else {
+      dPanels[n-1].classList.add("hidden");
+    }
+    fcCurrent = 0;
+    return;
+  }
+
+  for (i = 0; i < 3; i++) {
+    arrows[i].classList.remove("flipped");
+    dPanels[i].classList.add("hidden");
+    mPanels[i].classList.remove("open");
+  }
+
+  if (fcCurrent > 0) {
+    links[fcCurrent-1].classList.add("visited-state");
+  }
+
+  arrows[n-1].classList.add("flipped");
+  links[n-1].classList.remove("visited-state");
+
+  if (isMobile) {
+    mPanels[n-1].classList.add("open");
+  } else {
+    dPanels[n-1].classList.remove("hidden");
+  }
+
+  fcCurrent = n;
+
+  if (linksRow) {
+    linksRow.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+}
+</script>

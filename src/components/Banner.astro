@@ -1,0 +1,96 @@
+---
+// Full-width banner with animated heading
+---
+
+<div class="page-banner-wrapper">
+  <div class="page-banner">
+    <div class="custom-heading">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5946.png" alt="the" class="heading-word-1">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5947.png" alt="fungi" class="heading-word-2">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5948.png" alt="consultant" class="heading-word-3">
+    </div>
+  </div>
+</div>
+
+<style>
+.page-banner-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  box-shadow: 0 3px 6px rgba(44, 41, 48, 0.6);
+  margin-bottom: 0;
+  z-index: 10;
+}
+
+.page-banner {
+  width: 100%;
+  background: #B6C2A0;
+  padding: 40px 20px;
+}
+
+.custom-heading {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.heading-word-1,
+.heading-word-2,
+.heading-word-3 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 120px;
+  width: auto;
+  opacity: 0;
+  animation: fadeDown 0.6s ease forwards;
+}
+
+.heading-word-1 {
+  animation-delay: 0.1s;
+}
+
+.heading-word-2 {
+  animation-delay: 0.2s;
+}
+
+.heading-word-3 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner-wrapper {
+    margin-top: 35px;
+  }
+
+  .page-banner {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .custom-heading {
+    white-space: normal;
+    text-align: left;
+  }
+
+  .heading-word-1,
+  .heading-word-2,
+  .heading-word-3 {
+    display: block;
+    margin: 0 0 5px 0 !important;
+    height: 50px;
+  }
+}
+</style>

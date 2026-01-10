@@ -1,0 +1,74 @@
+---
+import MessageBar from '../components/MessageBar.astro';
+import Navigation from '../components/Navigation.astro';
+import Banner from '../components/Banner.astro';
+import BottomTab from '../components/BottomTab.astro';
+
+interface Props {
+  title: string;
+  currentPage?: string;
+}
+
+const { title, currentPage = '/' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="The Fungi Consultant - Functional mushroom consultation and coaching" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600&family=Abril+Fatface&family=Almendra+Display&display=swap" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <MessageBar />
+    <Navigation currentPage={currentPage} />
+    <Banner />
+    <main>
+      <slot />
+    </main>
+    <BottomTab />
+  </body>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Literata', serif;
+    background: #EFEFED;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100vh;
+    padding-top: 90px;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  main {
+    max-width: 100%;
+    overflow-x: hidden;
+    padding: 0 20px 100px;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-top: 0;
+    }
+
+    main {
+      padding: 0 15px 100px;
+    }
+  }
+</style>
