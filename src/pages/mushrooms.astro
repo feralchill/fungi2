@@ -8,7 +8,7 @@ import Layout from '../layouts/Layout.astro';
     <h1 class="page-heading">What are functional mushrooms?</h1>
 
     <!-- Hero Image -->
-    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6020.png" class="hero-image" alt="Functional mushrooms">
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6020.png" class="hero-image" alt="">
 
     <!-- Intro Text -->
     <div class="intro-text">
@@ -119,30 +119,70 @@ import Layout from '../layouts/Layout.astro';
       Read on to learn a little more about some of the most popular varieties of functional mushroom available!
     </div>
 
-    <!-- Mobile Mushroom Links (visible only on mobile) -->
-    <div class="mushroom-links-row">
-      <div class="mushroom-link-item">
-        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" class="mushroom-bullet" alt="">
-        <a href="#lions-mane-heading" class="mushroom-nav-link">Lion's Mane</a>
+    <!-- Mobile Mushroom Navigation (visible only on mobile) -->
+    <div class="mobile-mushroom-nav">
+      <!-- Lion's Mane Mobile -->
+      <div class="mobile-mushroom-wrapper">
+        <div class="mobile-mushroom-item" id="lionMobileBtn" onclick="mushroomToggle(1)">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" class="mobile-mushroom-bullet">
+          <span class="mobile-mushroom-link" id="lionMobileLink">Lion's Mane <span class="mobile-mushroom-arrow" id="lionMobileArrow"></span></span>
+        </div>
+        <div class="mobile-mushroom-panel" id="lionMobilePanel">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mobile-panel-image" alt="">
+          <div class="mobile-panel-text">
+            <span class="mushroom-text">This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</span>
+            <p>For centuries this mushroom has been studied for its cognition-enhancing abilities, with recent studies showing its ability to enhance the 'nerve growth factor' (NGF).</p>
+            <p>The active ingredients, known as erinacenes and hericenones - derived from its Latin name <em>Hericium erinaceus</em> (meaning 'hedgehog') - are what stimulate NGF, and make lion's mane a potential treatment for neurodegenerative disorders such as Parkinson's disease and Alzheimer's.</p>
+            <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out if lion's mane is right for you, and how to get the most out of it.</p>
+          </div>
+        </div>
       </div>
-      <div class="mushroom-link-item">
-        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="mushroom-bullet" alt="">
-        <a href="#reishi-heading" class="mushroom-nav-link">Reishi</a>
+
+      <!-- Reishi Mobile -->
+      <div class="mobile-mushroom-wrapper">
+        <div class="mobile-mushroom-item" id="reishiMobileBtn" onclick="mushroomToggle(2)">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="mobile-mushroom-bullet">
+          <span class="mobile-mushroom-link" id="reishiMobileLink">Reishi <span class="mobile-mushroom-arrow" id="reishiMobileArrow"></span></span>
+        </div>
+        <div class="mobile-mushroom-panel" id="reishiMobilePanel">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mobile-panel-image" alt="">
+          <div class="mobile-panel-text">
+            <span class="mushroom-text">Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</span>
+            <p>Some of the traditional benefits of reishi include anti-aging and enhancing memory, with more recent studies showing increased blood flow to the brain and effects on neurotransmitters, suggesting a positive nootropic effect.</p>
+            <p>One compound in particular, ganoderic acid A (related to the Latin name for reishi, <em>Ganoderma lucidum</em>, meaning shining bright) has been shown to be responsible for improvement in brain function and metabolism, cell recycling, and prolonging the length of telomeres (which determines the lifespan of cells).</p>
+            <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
+          </div>
+        </div>
       </div>
-      <div class="mushroom-link-item">
-        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="mushroom-bullet" alt="">
-        <a href="#cordyceps-heading" class="mushroom-nav-link">Cordyceps</a>
+
+      <!-- Cordyceps Mobile -->
+      <div class="mobile-mushroom-wrapper">
+        <div class="mobile-mushroom-item" id="cordycepsMobileBtn" onclick="mushroomToggle(3)">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="mobile-mushroom-bullet">
+          <span class="mobile-mushroom-link" id="cordycepsMobileLink">Cordyceps <span class="mobile-mushroom-arrow" id="cordycepsMobileArrow"></span></span>
+        </div>
+        <div class="mobile-mushroom-panel" id="cordycepsMobilePanel">
+          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mobile-panel-image" alt="">
+          <div class="mobile-panel-text">
+            <span class="mushroom-text">Cordyceps are a uniquely weird fungus, in that they grow on the larvae of insects.</span>
+            <p>While over 350 different species of cordyceps have been identified to date, and with a rich history of traditional use for at least 300 years in Chinese and Tibetan medicine, still only one species - <em>Cordyceps sinensis</em> - has been officially recorded in the Chinese pharmacopoeia since 1964; but it is nonetheless one of the most famous Chinese medicines, and medicinal mushrooms.</p>
+            <p>Folk healers in the Himalayan region of Sikkim have used it as a tonic for "all illnesses", with claims that it improves appetite, stamina, libido, endurance, and sleeping patterns.</p>
+            <p>Its contemporary use has gained popularity as an adaptogenic functional mushroom, particularly in regards to performance, as it stimulates the body's cells to produce more of the molecule adenosine triphosphate - which is essential for delivering energy to the muscles and improving your body's use of oxygen during exercise.</p>
+            <p>The potential for this mushroom to improve exercise was famously noted in 1993, when the Chinese Olympics female running team broke records for 1,500, 3,000 and 10,000 metres, causing suspicion and accusations of using performance-enhancing steroids - however, tests showed zero steroid use and their coach revealed that he had requested the team to take cordyceps after each training session.</p>
+            <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. <a href="/booking" class="mushroom-content-link">Get in touch</a> to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="divider"></div>
+    <div class="divider desktop-only"></div>
 
     <!-- Mushrooms Container (side by side on desktop) -->
     <div class="mushrooms-container">
       <!-- Lion's Mane Section -->
       <div class="mushroom-section" id="lions-mane">
         <h2 class="mushroom-heading" id="lions-mane-heading">Lion's Mane</h2>
-      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="Lion's Mane">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="">
 
       <div class="mushroom-text-container">
         <span class="mushroom-text">This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</span>
@@ -151,7 +191,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="mushroom-expanded">
           <p>For centuries this mushroom has been studied for its cognition-enhancing abilities, with recent studies showing its ability to enhance the 'nerve growth factor' (NGF).</p>
           <p>The active ingredients, known as erinacenes and hericenones - derived from its Latin name <em>Hericium erinaceus</em> (meaning 'hedgehog') - are what stimulate NGF, and make lion's mane a potential treatment for neurodegenerative disorders such as Parkinson's disease and Alzheimer's.</p>
-          <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. Book a consultation to find out if lion's mane is right for you, and how to get the most out of it.</p>
+          <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out if lion's mane is right for you, and how to get the most out of it.</p>
           <label for="lionToggle" class="show-less-link">Show less</label>
         </div>
       </div>
@@ -160,7 +200,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Reishi Section -->
       <div class="mushroom-section" id="reishi">
         <h2 class="mushroom-heading" id="reishi-heading">Reishi</h2>
-      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="Reishi">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="">
 
       <div class="mushroom-text-container">
         <span class="mushroom-text">Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</span>
@@ -169,7 +209,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="mushroom-expanded">
           <p>Some of the traditional benefits of reishi include anti-aging and enhancing memory, with more recent studies showing increased blood flow to the brain and effects on neurotransmitters, suggesting a positive nootropic effect.</p>
           <p>One compound in particular, ganoderic acid A (related to the Latin name for reishi, <em>Ganoderma lucidum</em>, meaning shining bright) has been shown to be responsible for improvement in brain function and metabolism, cell recycling, and prolonging the length of telomeres (which determines the lifespan of cells).</p>
-          <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. Book a consultation to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
+          <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
           <label for="reishiToggle" class="show-less-link">Show less</label>
         </div>
       </div>
@@ -178,7 +218,7 @@ import Layout from '../layouts/Layout.astro';
       <!-- Cordyceps Section -->
       <div class="mushroom-section" id="cordyceps">
         <h2 class="mushroom-heading" id="cordyceps-heading">Cordyceps</h2>
-      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mushroom-image" alt="Cordyceps">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mushroom-image" alt="">
 
       <div class="mushroom-text-container">
         <span class="mushroom-text">Cordyceps are a uniquely weird fungus, in that they grow on the larvae of insects.</span>
@@ -189,7 +229,7 @@ import Layout from '../layouts/Layout.astro';
           <p>Folk healers in the Himalayan region of Sikkim have used it as a tonic for "all illnesses", with claims that it improves appetite, stamina, libido, endurance, and sleeping patterns.</p>
           <p>Its contemporary use has gained popularity as an adaptogenic functional mushroom, particularly in regards to performance, as it stimulates the body's cells to produce more of the molecule adenosine triphosphate - which is essential for delivering energy to the muscles and improving your body's use of oxygen during exercise.</p>
           <p>The potential for this mushroom to improve exercise was famously noted in 1993, when the Chinese Olympics female running team broke records for 1,500, 3,000 and 10,000 metres, causing suspicion and accusations of using performance-enhancing steroids - however, tests showed zero steroid use and their coach revealed that he had requested the team to take cordyceps after each training session.</p>
-          <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. Get in touch to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
+          <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. <a href="/booking" class="mushroom-content-link">Get in touch</a> to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
           <label for="cordycepsToggle" class="show-less-link">Show less</label>
         </div>
       </div>
@@ -204,7 +244,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Bottom Image -->
-    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="Functional mushrooms">
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
 
     <!-- Finish Section -->
     <div class="finish-container">
@@ -418,37 +458,93 @@ import Layout from '../layouts/Layout.astro';
   margin: 40px 0 0 0;
 }
 
-/* Mobile Mushroom Links - Hidden on Desktop */
-.mushroom-links-row {
+/* Mobile Mushroom Navigation - Hidden on Desktop */
+.mobile-mushroom-nav {
   display: none;
 }
 
-.mushroom-link-item {
+.mobile-mushroom-wrapper {
+  margin: 15px 0;
+}
+
+.mobile-mushroom-item {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 8px;
+  cursor: pointer;
+  padding: 8px 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
-.mushroom-bullet {
+.mobile-mushroom-bullet {
   width: 24px;
   height: 24px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
-.mushroom-nav-link {
+.mobile-mushroom-link {
   font-family: 'Abril Fatface', serif;
   font-size: 1.15em;
   color: #9A89A4;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.mushroom-nav-link:hover {
-  border-bottom: 1px solid #9A89A4;
+.mobile-mushroom-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #9A89A4;
+  transition: transform 0.3s ease;
+}
+
+.mobile-mushroom-arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobile-mushroom-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 10px;
+}
+
+.mobile-mushroom-panel.open {
+  max-height: 3000px;
+  padding: 20px 10px 10px;
+}
+
+.mobile-panel-image {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+.mobile-panel-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.7;
+  color: #52515c;
+  text-align: center;
+}
+
+.mobile-panel-text .mushroom-text {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mobile-panel-text p {
+  margin-bottom: 12px;
 }
 
 /* Divider */
@@ -549,6 +645,29 @@ import Layout from '../layouts/Layout.astro';
   color: #52515c;
   text-align: center;
   margin-bottom: 15px;
+}
+
+.mushroom-content-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.mushroom-content-link:hover {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.mushroom-content-link:active {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.mushroom-content-link:visited {
+  color: #b6c2a0;
+  text-decoration: underline;
 }
 
 .mushroom-toggle:checked + .read-more-link {
@@ -688,45 +807,22 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.7;
   }
 
-  /* Show mobile mushroom links */
-  .mushroom-links-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  /* Show mobile mushroom navigation */
+  .mobile-mushroom-nav {
+    display: block;
     margin: 20px 0;
   }
 
-  .mushroom-link-item {
-    margin-bottom: 0;
-  }
-
-  .mushroom-bullet {
-    width: 18px;
-    height: 18px;
-  }
-
-  .mushroom-nav-link {
-    font-size: 0.95em;
-  }
-
-  /* Stack mushroom sections vertically on mobile */
+  /* Hide desktop mushroom sections on mobile */
   .mushrooms-container {
-    flex-direction: column;
-    gap: 0;
+    display: none;
   }
 
-  .mushroom-section {
-    margin: 30px 0;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #b6c2a0;
+  /* Hide desktop-only divider on mobile */
+  .desktop-only {
+    display: none;
   }
 
-  .mushroom-section:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
 
   .concept-label {
     font-size: 1.05em;
@@ -745,15 +841,6 @@ import Layout from '../layouts/Layout.astro';
     line-height: 1.6;
   }
 
-  .mushroom-heading {
-    font-size: 1.6em;
-    color: #52515c;
-  }
-
-  .mushroom-image {
-    max-width: 200px;
-    height: 200px;
-  }
 
   .bottom-image {
     max-width: 200px;
@@ -767,5 +854,28 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script is:inline>
-// No additional JavaScript needed - CSS handles all the interactions
+function mushroomToggle(num) {
+  // Get elements based on which mushroom was clicked
+  let btn, panel, arrow;
+
+  if (num === 1) {
+    btn = document.getElementById('lionMobileBtn');
+    panel = document.getElementById('lionMobilePanel');
+    arrow = document.getElementById('lionMobileArrow');
+  } else if (num === 2) {
+    btn = document.getElementById('reishiMobileBtn');
+    panel = document.getElementById('reishiMobilePanel');
+    arrow = document.getElementById('reishiMobileArrow');
+  } else if (num === 3) {
+    btn = document.getElementById('cordycepsMobileBtn');
+    panel = document.getElementById('cordycepsMobilePanel');
+    arrow = document.getElementById('cordycepsMobileArrow');
+  }
+
+  // Toggle the open class on panel and arrow
+  if (panel && arrow) {
+    panel.classList.toggle('open');
+    arrow.classList.toggle('open');
+  }
+}
 </script>

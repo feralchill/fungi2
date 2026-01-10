@@ -81,6 +81,16 @@ const { title, currentPage = '/' } = Astro.props;
     -webkit-tap-highlight-color: transparent !important;
   }
 
+  img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+  }
+
   main {
     max-width: 100%;
     overflow-x: hidden;
