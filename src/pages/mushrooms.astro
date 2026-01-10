@@ -415,7 +415,7 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.6;
   color: #52515c;
   text-align: center;
-  margin: 40px 0 30px 0;
+  margin: 40px 0 0 0;
 }
 
 /* Mobile Mushroom Links - Hidden on Desktop */
@@ -457,7 +457,7 @@ import Layout from '../layouts/Layout.astro';
   max-width: 300px;
   height: 1px;
   background-color: #b6c2a0;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 
 /* Mushrooms Container - Desktop Side by Side */
@@ -465,7 +465,7 @@ import Layout from '../layouts/Layout.astro';
   display: flex;
   justify-content: space-between;
   gap: 40px;
-  margin: 40px 0;
+  margin: 0;
   max-width: 1200px;
 }
 
@@ -515,7 +515,7 @@ import Layout from '../layouts/Layout.astro';
 
 .read-more-link {
   display: inline;
-  color: #9a89a4;
+  color: #b6c2a0;
   font-family: 'Abril Fatface', serif;
   cursor: pointer;
   text-decoration: none;
@@ -557,7 +557,7 @@ import Layout from '../layouts/Layout.astro';
 
 .show-less-link {
   display: block;
-  color: #9a89a4;
+  color: #b6c2a0;
   font-family: 'Abril Fatface', serif;
   cursor: pointer;
   text-decoration: none;
@@ -579,7 +579,7 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.5;
   color: #52515c;
   text-align: center;
-  margin: 50px 0 30px 0;
+  margin: 0 0 30px 0;
   font-style: italic;
 }
 
@@ -691,10 +691,15 @@ import Layout from '../layouts/Layout.astro';
   /* Show mobile mushroom links */
   .mushroom-links-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 0;
+    gap: 20px;
     margin: 20px 0;
+  }
+
+  .mushroom-link-item {
+    margin-bottom: 0;
   }
 
   .mushroom-bullet {
@@ -703,7 +708,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .mushroom-nav-link {
-    font-size: 1.05em;
+    font-size: 0.95em;
   }
 
   /* Stack mushroom sections vertically on mobile */
