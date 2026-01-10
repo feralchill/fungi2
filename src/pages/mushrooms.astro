@@ -3,4 +3,665 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="The Fungi Consultant - Functional Mushrooms" currentPage="/mushrooms">
+  <div class="mushrooms-content">
+    <!-- Main Heading -->
+    <h1 class="page-heading">What are functional mushrooms?</h1>
+
+    <!-- Hero Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6020.png" class="hero-image" alt="Functional mushrooms">
+
+    <!-- Intro Text -->
+    <div class="intro-text">
+      Functional mushrooms have medicinal, <span class="brand-emphasis">nootropic</span>, and <span class="brand-emphasis">adaptogenic</span> properties that enhance cognitive function and improve the body's stress response, offering a natural means to support both our long-term wellness, and our day-to-day comfort and vitality. While varieties like chaga and turkey tail support and strengthen the immune system and reduce oxidative stress <span class="brand-emphasis">over time</span>, other fungi provide <span class="brand-emphasis">immediate boosts</span> to mental clarity and physical performance.
+    </div>
+
+    <!-- Nootropics & Adaptogens Section -->
+    <div class="concepts-section">
+      <!-- Nootropics Dropdown -->
+      <div class="concept-item">
+        <input type="checkbox" id="nootropicsToggle" class="concept-toggle">
+        <label for="nootropicsToggle" class="concept-label">
+          What are nootropics?
+          <span class="concept-arrow"></span>
+        </label>
+        <div class="concept-content">
+          <p>Nootropics (pronounced "no-eh-troh-piks") are substances that enhance cognitive function, memory, and learning, often referred to as "smart drugs". While synthetic versions are typically prescription-only, natural nootropics are widely available as supplements and herbal extracts.</p>
+
+          <!-- Nested: Mind-guiding -->
+          <div class="nested-item">
+            <input type="checkbox" id="mindGuidingToggle" class="nested-toggle">
+            <label for="mindGuidingToggle" class="nested-label">
+              Mind-guiding <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>The term "nootropic" combines two Greek words: <em>nöos</em> (mind) and <em>tropein</em> (to guide). This "mind-guiding" concept reflects their ability to enhance and direct cognitive processes.</p>
+              <p>While initially studied for cognitive impairment, natural nootropics have gained popularity among healthy individuals seeking to optimize memory and learning capabilities.</p>
+            </div>
+          </div>
+
+          <!-- Nested: Mechanism of action -->
+          <div class="nested-item">
+            <input type="checkbox" id="mechanismToggle" class="nested-toggle">
+            <label for="mechanismToggle" class="nested-label">
+              Mechanism of action <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>The brain requires a disproportionately high percentage of the body's oxygen and blood supply relative to its size. Natural nootropics act as vasodilators in the brain, increasing blood flow to deliver more oxygen, nutrients, and energy.</p>
+              <p>These compounds provide protection against inflammation and cognitive aging while stimulating the growth of new neurons. This enhancement of neuronal activity contributes to neuroplasticity—the brain's ability to reorganize its connections and functions in response to learning and experiences.</p>
+            </div>
+          </div>
+
+          <!-- Nested: Traditional Use -->
+          <div class="nested-item">
+            <input type="checkbox" id="nootropicTraditionalToggle" class="nested-toggle">
+            <label for="nootropicTraditionalToggle" class="nested-label">
+              Traditional use <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>Natural medicines have been used since ancient times to prevent and treat ailments while promoting well-being and longevity. However, the term 'nootropic' only emerged in the early 1970s when Professor Corneliu E. Giurgea described substances that specifically activate cognitive functions involved in memory and learning.</p>
+              <p>Today, natural nootropics are available as teas, pills, or capsules, and the efficacy of plants and fungi with long histories of traditional use is increasingly being validated by scientific studies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adaptogens Dropdown -->
+      <div class="concept-item">
+        <input type="checkbox" id="adaptogensToggle" class="concept-toggle">
+        <label for="adaptogensToggle" class="concept-label">
+          What are adaptogens?
+          <span class="concept-arrow"></span>
+        </label>
+        <div class="concept-content">
+          <p>Adaptogens are plants and fungi that help the body resist various stressors by improving its ability to adapt and maintain balance. Unlike conventional medicines that target specific pathways, adaptogens work through multiple networks, primarily by regulating stress hormones to restore homeostasis.</p>
+
+          <!-- Nested: Homeostasis -->
+          <div class="nested-item">
+            <input type="checkbox" id="homeostasisToggle" class="nested-toggle">
+            <label for="homeostasisToggle" class="nested-label">
+              Homeostasis <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>Adaptogens excel at protecting against stress by helping the body maintain homeostasis—a state of physiological balance. Their ability to mediate stress hormone levels allows the body to better adapt to challenging situations.</p>
+              <p>These natural compounds provide broader benefits by protecting against chronic inflammation, arterial hardening, neurodegenerative disorders, cognitive impairment, metabolic disorders, cancer, and various age-related diseases.</p>
+            </div>
+          </div>
+
+          <!-- Nested: Multivalent Mechanisms -->
+          <div class="nested-item">
+            <input type="checkbox" id="mechanismsToggle" class="nested-toggle">
+            <label for="mechanismsToggle" class="nested-label">
+              Multivalent mechanisms <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>Regardless of the stressor, adaptogens increase resilience by activating cellular and organ defense systems. Their multi-target mechanisms provide potential benefits for preventing and treating stress-induced disorders.</p>
+              <p>The range of conditions that may benefit from adaptogenic action is extensive: chronic fatigue, memory impairment, depression, anxiety, sleep disturbances, diabetes, heart disease, high blood pressure, chronic inflammation, autoimmune diseases, infections, skin diseases, liver disorders, and even certain cancers.</p>
+            </div>
+          </div>
+
+          <!-- Nested: Traditional Use -->
+          <div class="nested-item">
+            <input type="checkbox" id="adaptogenTraditionalToggle" class="nested-toggle">
+            <label for="adaptogenTraditionalToggle" class="nested-label">
+              Traditional use <span class="nested-arrow"></span>
+            </label>
+            <div class="nested-content">
+              <p>The term "adaptogen" first appeared in Soviet literature during the mid-20th century, as researchers sought to understand how these plant compounds help maintain resilience against harmful challenges.</p>
+              <p>Adaptogenic plants have long been integral to numerous healthcare systems, including Russian and Traditional Chinese Medicine (TCM), Ayurveda, and Kampo (Japanese adaptation of TCM introduced in the 7th century).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transition Text -->
+    <div class="transition-text">
+      Read on to learn a little more about some of the most popular varieties of functional mushroom available!
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Lion's Mane Section -->
+    <div class="mushroom-section">
+      <h2 class="mushroom-heading">Lion's Mane</h2>
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="Lion's Mane">
+
+      <div class="mushroom-text-container">
+        <span class="mushroom-text">This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</span>
+        <input type="checkbox" id="lionToggle" class="mushroom-toggle">
+        <label for="lionToggle" class="read-more-link">…Read more</label>
+        <div class="mushroom-expanded">
+          <p>For centuries this mushroom has been studied for its cognition-enhancing abilities, with recent studies showing its ability to enhance the 'nerve growth factor' (NGF).</p>
+          <p>The active ingredients, known as erinacenes and hericenones - derived from its Latin name <em>Hericium erinaceus</em> (meaning 'hedgehog') - are what stimulate NGF, and make lion's mane a potential treatment for neurodegenerative disorders such as Parkinson's disease and Alzheimer's.</p>
+          <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. Book a consultation to find out if lion's mane is right for you, and how to get the most out of it.</p>
+          <label for="lionToggle" class="show-less-link">Show less</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Reishi Section -->
+    <div class="mushroom-section">
+      <h2 class="mushroom-heading">Reishi</h2>
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="Reishi">
+
+      <div class="mushroom-text-container">
+        <span class="mushroom-text">Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</span>
+        <input type="checkbox" id="reishiToggle" class="mushroom-toggle">
+        <label for="reishiToggle" class="read-more-link">…Read more</label>
+        <div class="mushroom-expanded">
+          <p>Some of the traditional benefits of reishi include anti-aging and enhancing memory, with more recent studies showing increased blood flow to the brain and effects on neurotransmitters, suggesting a positive nootropic effect.</p>
+          <p>One compound in particular, ganoderic acid A (related to the Latin name for reishi, <em>Ganoderma lucidum</em>, meaning shining bright) has been shown to be responsible for improvement in brain function and metabolism, cell recycling, and prolonging the length of telomeres (which determines the lifespan of cells).</p>
+          <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. Book a consultation to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
+          <label for="reishiToggle" class="show-less-link">Show less</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Cordyceps Section -->
+    <div class="mushroom-section">
+      <h2 class="mushroom-heading">Cordyceps</h2>
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mushroom-image" alt="Cordyceps">
+
+      <div class="mushroom-text-container">
+        <span class="mushroom-text">Cordyceps are a uniquely weird fungus, in that they grow on the larvae of insects.</span>
+        <input type="checkbox" id="cordycepsToggle" class="mushroom-toggle">
+        <label for="cordycepsToggle" class="read-more-link">…Read more</label>
+        <div class="mushroom-expanded">
+          <p>While over 350 different species of cordyceps have been identified to date, and with a rich history of traditional use for at least 300 years in Chinese and Tibetan medicine, still only one species - <em>Cordyceps sinensis</em> - has been officially recorded in the Chinese pharmacopoeia since 1964; but it is nonetheless one of the most famous Chinese medicines, and medicinal mushrooms.</p>
+          <p>Folk healers in the Himalayan region of Sikkim have used it as a tonic for "all illnesses", with claims that it improves appetite, stamina, libido, endurance, and sleeping patterns.</p>
+          <p>Its contemporary use has gained popularity as an adaptogenic functional mushroom, particularly in regards to performance, as it stimulates the body's cells to produce more of the molecule adenosine triphosphate - which is essential for delivering energy to the muscles and improving your body's use of oxygen during exercise.</p>
+          <p>The potential for this mushroom to improve exercise was famously noted in 1993, when the Chinese Olympics female running team broke records for 1,500, 3,000 and 10,000 metres, causing suspicion and accusations of using performance-enhancing steroids - however, tests showed zero steroid use and their coach revealed that he had requested the team to take cordyceps after each training session.</p>
+          <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. Get in touch to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
+          <label for="cordycepsToggle" class="show-less-link">Show less</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attribution -->
+    <div class="attribution-text">
+      ~the above information is adapted from the <a href="https://www.productearth.life/post/nootropics-and-adaptogens-guide" target="_blank" class="attribution-link">guide to nootropics and adaptogens</a> by <span class="brand-name">The Fungi Consultant</span>, available at <a href="https://www.productearth.life" target="_blank" class="attribution-link">Product Earth</a>.~
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="Functional mushrooms">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.mushrooms-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Page Heading */
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #4e625c;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/* Hero Image */
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+/* Intro Text */
+.intro-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.brand-emphasis {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* Concepts Section (Nootropics & Adaptogens) */
+.concepts-section {
+  margin: 30px 0;
+}
+
+.concept-item {
+  margin: 20px 0;
+}
+
+.concept-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.concept-label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 12px 40px 12px 15px;
+  background-color: #b6c2a0;
+  border: 1px solid #9a89a4;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2em;
+  color: #efefed;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.concept-label:hover {
+  background-color: #9a89a4;
+}
+
+.concept-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #efefed;
+  transition: transform 0.3s ease;
+}
+
+.concept-toggle:checked + .concept-label .concept-arrow {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.concept-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 15px;
+}
+
+.concept-toggle:checked ~ .concept-content {
+  max-height: 4000px;
+  padding: 20px 15px;
+}
+
+.concept-content p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Nested Items */
+.nested-item {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.nested-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.nested-label {
+  display: inline-block;
+  color: #9a89a4;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.05em;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 5px 0;
+  margin: 5px 0;
+  position: relative;
+}
+
+.nested-label:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.nested-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #9a89a4;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+
+.nested-toggle:checked + .nested-label .nested-arrow {
+  transform: rotate(180deg);
+}
+
+.nested-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin: 0;
+}
+
+.nested-toggle:checked ~ .nested-content {
+  max-height: 1500px;
+  margin: 10px 0;
+}
+
+.nested-content p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+/* Transition Text */
+.transition-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin: 40px 0 30px 0;
+}
+
+/* Divider */
+.divider {
+  width: 60%;
+  max-width: 300px;
+  height: 1px;
+  background-color: #b6c2a0;
+  margin: 40px auto;
+}
+
+/* Mushroom Sections */
+.mushroom-section {
+  margin: 40px 0;
+}
+
+.mushroom-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2em;
+  color: #9a89a4;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mushroom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 20px auto;
+  display: block;
+}
+
+.mushroom-text-container {
+  text-align: center;
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+}
+
+.mushroom-text {
+  font-size: inherit;
+}
+
+.mushroom-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.read-more-link {
+  display: inline;
+  color: #b6c2a0;
+  font-family: 'Abril Fatface', serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-left: 3px;
+  white-space: nowrap;
+}
+
+.read-more-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.mushroom-expanded {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin: 0;
+}
+
+.mushroom-toggle:checked ~ .mushroom-expanded {
+  max-height: 3000px;
+  margin-top: 15px;
+}
+
+.mushroom-expanded p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.mushroom-toggle:checked + .read-more-link {
+  display: none;
+}
+
+.show-less-link {
+  display: block;
+  color: #b6c2a0;
+  font-family: 'Abril Fatface', serif;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.show-less-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Attribution */
+.attribution-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  text-align: center;
+  margin: 50px 0 30px 0;
+  font-style: italic;
+}
+
+.attribution-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.attribution-link:hover {
+  color: #9a89a4;
+}
+
+.brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+}
+
+/* Bottom Image */
+.bottom-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+/* Finish Container */
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .mushrooms-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .hero-image {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text,
+  .transition-text {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+
+  .concept-label {
+    font-size: 1.05em;
+    padding: 10px 35px 10px 12px;
+  }
+
+  .concept-content p,
+  .mushroom-text-container,
+  .mushroom-expanded p {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
+
+  .nested-content p {
+    font-size: 0.85em;
+    line-height: 1.6;
+  }
+
+  .mushroom-heading {
+    font-size: 1.6em;
+  }
+
+  .mushroom-image {
+    max-width: 300px;
+  }
+
+  .bottom-image {
+    max-width: 300px;
+    margin-top: 40px;
+  }
+
+  .attribution-text {
+    font-size: 0.75em;
+  }
+}
+</style>
+
+<script is:inline>
+// No additional JavaScript needed - CSS handles all the interactions
+</script>
