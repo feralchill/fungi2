@@ -119,11 +119,29 @@ import Layout from '../layouts/Layout.astro';
       Read on to learn a little more about some of the most popular varieties of functional mushroom available!
     </div>
 
+    <!-- Mobile Mushroom Links (visible only on mobile) -->
+    <div class="mushroom-links-row">
+      <div class="mushroom-link-item">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-bullet" alt="">
+        <a href="#lions-mane" class="mushroom-nav-link">Lion's Mane</a>
+      </div>
+      <div class="mushroom-link-item">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-bullet" alt="">
+        <a href="#reishi" class="mushroom-nav-link">Reishi</a>
+      </div>
+      <div class="mushroom-link-item">
+        <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mushroom-bullet" alt="">
+        <a href="#cordyceps" class="mushroom-nav-link">Cordyceps</a>
+      </div>
+    </div>
+
     <div class="divider"></div>
 
-    <!-- Lion's Mane Section -->
-    <div class="mushroom-section">
-      <h2 class="mushroom-heading">Lion's Mane</h2>
+    <!-- Mushrooms Container (side by side on desktop) -->
+    <div class="mushrooms-container">
+      <!-- Lion's Mane Section -->
+      <div class="mushroom-section" id="lions-mane">
+        <h2 class="mushroom-heading">Lion's Mane</h2>
       <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="Lion's Mane">
 
       <div class="mushroom-text-container">
@@ -137,13 +155,11 @@ import Layout from '../layouts/Layout.astro';
           <label for="lionToggle" class="show-less-link">Show less</label>
         </div>
       </div>
-    </div>
+      </div>
 
-    <div class="divider"></div>
-
-    <!-- Reishi Section -->
-    <div class="mushroom-section">
-      <h2 class="mushroom-heading">Reishi</h2>
+      <!-- Reishi Section -->
+      <div class="mushroom-section" id="reishi">
+        <h2 class="mushroom-heading">Reishi</h2>
       <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="Reishi">
 
       <div class="mushroom-text-container">
@@ -157,13 +173,11 @@ import Layout from '../layouts/Layout.astro';
           <label for="reishiToggle" class="show-less-link">Show less</label>
         </div>
       </div>
-    </div>
+      </div>
 
-    <div class="divider"></div>
-
-    <!-- Cordyceps Section -->
-    <div class="mushroom-section">
-      <h2 class="mushroom-heading">Cordyceps</h2>
+      <!-- Cordyceps Section -->
+      <div class="mushroom-section" id="cordyceps">
+        <h2 class="mushroom-heading">Cordyceps</h2>
       <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mushroom-image" alt="Cordyceps">
 
       <div class="mushroom-text-container">
@@ -178,6 +192,7 @@ import Layout from '../layouts/Layout.astro';
           <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. Get in touch to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
           <label for="cordycepsToggle" class="show-less-link">Show less</label>
         </div>
+      </div>
       </div>
     </div>
 
@@ -403,6 +418,39 @@ import Layout from '../layouts/Layout.astro';
   margin: 40px 0 30px 0;
 }
 
+/* Mobile Mushroom Links - Hidden on Desktop */
+.mushroom-links-row {
+  display: none;
+}
+
+.mushroom-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.mushroom-bullet {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mushroom-nav-link {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.15em;
+  color: #9A89A4;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.mushroom-nav-link:hover {
+  border-bottom: 1px solid #9A89A4;
+}
+
 /* Divider */
 .divider {
   width: 60%;
@@ -412,9 +460,19 @@ import Layout from '../layouts/Layout.astro';
   margin: 40px auto;
 }
 
+/* Mushrooms Container - Desktop Side by Side */
+.mushrooms-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 40px 0;
+}
+
 /* Mushroom Sections */
 .mushroom-section {
-  margin: 40px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .mushroom-heading {
@@ -626,6 +684,41 @@ import Layout from '../layouts/Layout.astro';
   .transition-text {
     font-size: 0.9em;
     line-height: 1.7;
+  }
+
+  /* Show mobile mushroom links */
+  .mushroom-links-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 20px 0;
+  }
+
+  .mushroom-bullet {
+    width: 18px;
+    height: 18px;
+  }
+
+  .mushroom-nav-link {
+    font-size: 1.05em;
+  }
+
+  /* Stack mushroom sections vertically on mobile */
+  .mushrooms-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mushroom-section {
+    margin: 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #b6c2a0;
+  }
+
+  .mushroom-section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .concept-label {
