@@ -101,6 +101,20 @@ if (currentPage === '/') {
   top: 0;
   right: 15px;
   z-index: 1001;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.hamburger-container:active,
+.hamburger-container:focus {
+  outline: none;
+}
+
+.hamburger-container:active .hamburger-lines span,
+.hamburger-container:active .hamburger-text {
+  transform: none;
 }
 
 .hamburger-lines {
