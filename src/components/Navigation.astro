@@ -101,20 +101,31 @@ if (currentPage === '/') {
   top: 0;
   right: 15px;
   z-index: 1001;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   user-select: none;
+  touch-action: manipulation;
+}
+
+.hamburger-container * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .hamburger-container:active,
 .hamburger-container:focus {
   outline: none;
+  background: none;
 }
 
-.hamburger-container:active .hamburger-lines span,
+.hamburger-container:active .hamburger-lines span {
+  transform: none !important;
+  transition: none !important;
+}
+
 .hamburger-container:active .hamburger-text {
-  transform: none;
+  transform: none !important;
+  transition: none !important;
 }
 
 .hamburger-lines {
