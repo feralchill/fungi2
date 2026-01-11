@@ -328,7 +328,7 @@ import Layout from '../layouts/Layout.astro';
   border: 1px solid #9a89a4;
   font-family: 'Abril Fatface', serif;
   font-size: 1.2em;
-  color: #efefed;
+  color: #52515c;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -337,6 +337,7 @@ import Layout from '../layouts/Layout.astro';
 
 .concept-label:hover {
   background-color: #9a89a4;
+  color: #efefed;
 }
 
 .concept-arrow {
@@ -348,8 +349,12 @@ import Layout from '../layouts/Layout.astro';
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 8px solid #efefed;
-  transition: transform 0.3s ease;
+  border-top: 8px solid #52515c;
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.concept-label:hover .concept-arrow {
+  border-top-color: #efefed;
 }
 
 .concept-toggle:checked + .concept-label .concept-arrow {
@@ -465,11 +470,19 @@ import Layout from '../layouts/Layout.astro';
 
 .mobile-mushroom-wrapper {
   margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-mushroom-wrapper:last-child {
+  margin-bottom: 0px;
 }
 
 .mobile-mushroom-item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   cursor: pointer;
   padding: 8px 0;
@@ -479,10 +492,7 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .mobile-mushroom-bullet {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-  flex-shrink: 0;
+  display: none;
 }
 
 .mobile-mushroom-link {

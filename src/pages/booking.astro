@@ -26,7 +26,7 @@ import Layout from '../layouts/Layout.astro';
 
           <!-- What to Expect Nested Dropdown -->
           <div class="nested-item">
-            <input type="checkbox" id="expectToggle" class="nested-toggle">
+            <input type="checkbox" id="expectToggle" class="nested-toggle" checked>
             <label for="expectToggle" class="nested-label">
               What to expect in our session <span class="nested-arrow"></span>
             </label>
@@ -65,7 +65,7 @@ import Layout from '../layouts/Layout.astro';
           <p>I provide a gold standard of quality, trust and traceability for organisations ready to discover the power of functional mushrooms. Whether you're developing new products, need expert review, or want to establish credibility in the functional mushroom space, I offer tailored consultancy services.</p>
 
           <div class="nested-item">
-            <input type="checkbox" id="brandServicesToggle" class="nested-toggle">
+            <input type="checkbox" id="brandServicesToggle" class="nested-toggle" checked>
             <label for="brandServicesToggle" class="nested-label">
               Services for brands <span class="nested-arrow"></span>
             </label>
@@ -102,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
           <p>I offer educational presentations and workshops for conferences, festivals, wellness events, and corporate settings. With years of experience organising and speaking at events across the UK, I bring accessible, engaging content on functional mushrooms to diverse audiences.</p>
 
           <div class="nested-item">
-            <input type="checkbox" id="eventTypesToggle" class="nested-toggle">
+            <input type="checkbox" id="eventTypesToggle" class="nested-toggle" checked>
             <label for="eventTypesToggle" class="nested-label">
               Event types <span class="nested-arrow"></span>
             </label>
@@ -245,7 +245,7 @@ import Layout from '../layouts/Layout.astro';
   border: 1px solid #9a89a4;
   font-family: 'Abril Fatface', serif;
   font-size: 1.2em;
-  color: #efefed;
+  color: #52515c;
   cursor: pointer;
   position: relative;
   transition: all 0.3s ease;
@@ -254,6 +254,11 @@ import Layout from '../layouts/Layout.astro';
 
 .service-label:hover {
   background-color: #9a89a4;
+  color: #efefed;
+}
+
+.service-label:hover .service-arrow {
+  border-top-color: #efefed;
 }
 
 .service-arrow {
@@ -265,8 +270,8 @@ import Layout from '../layouts/Layout.astro';
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 8px solid #efefed;
-  transition: transform 0.3s ease;
+  border-top: 8px solid #52515c;
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
 }
 
 .service-toggle:checked + .service-label .service-arrow {
@@ -436,6 +441,12 @@ import Layout from '../layouts/Layout.astro';
 .contact-link:visited {
   color: #b6c2a0;
   text-decoration: underline;
+}
+
+/* Bold Text Styling */
+strong {
+  font-family: 'Abril Fatface', serif;
+  font-weight: normal;
 }
 
 /* Divider */

@@ -4,6 +4,9 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="The Fungi Consultant - About" currentPage="/about">
   <div class="about-content">
+    <!-- Main Heading -->
+    <h1 class="page-heading">About</h1>
+
     <!-- Services Content -->
     <div class="fungi-section">
       <div class="fungi-intro">
@@ -107,6 +110,22 @@ import Layout from '../layouts/Layout.astro';
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Literata:wght@500&family=Abril+Fatface&display=swap');
 
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Page Heading */
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
 .fungi-section {
   max-width: 800px;
   margin: 0 auto;
@@ -120,7 +139,7 @@ import Layout from '../layouts/Layout.astro';
   font-size: 0.95em;
   line-height: 1.4;
   color: #52515c;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
 }
 
@@ -275,6 +294,16 @@ import Layout from '../layouts/Layout.astro';
 }
 
 @media (max-width: 768px) {
+  .about-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .fungi-section {
     padding: 0 15px;
     margin: 0 auto;
@@ -283,7 +312,7 @@ import Layout from '../layouts/Layout.astro';
   .fungi-intro {
     font-size: 0.9em;
     line-height: 1.7;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 35px;
   }
 
