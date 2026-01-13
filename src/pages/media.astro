@@ -26,9 +26,54 @@ import Layout from '../layouts/Layout.astro';
     <section id="articles" class="media-section">
       <h2 class="section-header">Articles</h2>
       <div class="section-content">
-        <div class="content-text">
-          Coming soon: articles on functional mushrooms, their benefits, and how to use them effectively.
+
+        <!-- Featured: Chemical Collective -->
+        <div class="featured-article">
+          <div class="article-frame">
+            <iframe src="https://www.chemical-collective.com/author/oli-genn-bash/" width="100%" height="400" frameborder="0" loading="lazy"></iframe>
+          </div>
+          <div class="article-details">
+            <h3 class="article-source">Chemical Collective</h3>
+            <p class="article-description">Regular contributor with 25+ articles on functional mushrooms, psychedelics, and wellness. Visit to explore the full collection.</p>
+            <a href="https://www.chemical-collective.com/author/oli-genn-bash/" target="_blank" class="article-link">View all articles →</a>
+          </div>
         </div>
+
+        <!-- Other Articles List -->
+        <div class="articles-list">
+          <h4 class="articles-subheading">Other Publications</h4>
+
+          <div class="article-item">
+            <a href="https://seedsistas.co.uk/2025/10/13/the-healing-potential-of-fungal-allies/" target="_blank" class="article-title">The Healing Potential of Fungal Allies</a>
+            <span class="article-source-inline">Seed SistAs</span>
+          </div>
+
+          <div class="article-item">
+            <a href="https://nuvedo.com/2025/07/15/should-you-feel-it-demystifying-the-world-of-active-compounds-and-mushroom-effects/" target="_blank" class="article-title">Should You Feel It? Demystifying the World of Active Compounds and Mushroom Effects</a>
+            <span class="article-source-inline">Nuvedo</span>
+          </div>
+
+          <div class="article-item">
+            <a href="https://microdoseforpeace.com/understanding-functional-mushrooms/" target="_blank" class="article-title">Understanding Functional Mushrooms</a>
+            <span class="article-source-inline">Microdose For Peace</span>
+          </div>
+
+          <div class="article-item">
+            <a href="https://microdoseforpeace.com/lions-mane-a-synergistic-partner-by-oli-genn-bash/" target="_blank" class="article-title">Lion's Mane: A Synergistic Partner</a>
+            <span class="article-source-inline">Microdose For Peace</span>
+          </div>
+
+          <div class="article-item">
+            <a href="https://www.mycostories.com/post/functional-mushrooms-exploration-into-therapeutic-compounds" target="_blank" class="article-title">Functional Mushrooms: Exploration into Therapeutic Compounds</a>
+            <span class="article-source-inline">Myco Stories</span>
+          </div>
+
+          <div class="article-item">
+            <a href="https://www.leafie.co.uk/culture/functional-mushrooms-beginners-guide/" target="_blank" class="article-title">Functional Mushrooms: Beginner's Guide</a>
+            <span class="article-source-inline">Leafie</span>
+          </div>
+        </div>
+
         <a href="#top" class="back-to-top">Back to top</a>
       </div>
     </section>
@@ -332,6 +377,103 @@ html {
   font-size: 1.2em;
 }
 
+/* Articles Section */
+.featured-article {
+  margin-bottom: 40px;
+}
+
+.article-frame {
+  background-color: #fff;
+  border: 2px solid #e0e0d8;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.article-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+
+.article-details {
+  text-align: center;
+}
+
+.article-source {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4em;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.article-description {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  color: #52515c;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.article-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.95em;
+  color: #9a89a4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.article-link:hover {
+  color: #b6c2a0;
+}
+
+.articles-list {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #e0e0d8;
+}
+
+.articles-subheading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2em;
+  color: #63596a;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.article-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0d8;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-title {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #52515c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-title:hover {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+.article-source-inline {
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.8em;
+  color: #9a89a4;
+}
+
 /* Podcast Section */
 .podcast-section {
   margin-bottom: 20px;
@@ -622,6 +764,22 @@ html {
   .bottom-image {
     max-width: 200px;
     margin-top: 40px;
+  }
+
+  .article-frame iframe {
+    min-height: 300px;
+  }
+
+  .article-item {
+    padding: 12px 0;
+  }
+
+  .article-title {
+    font-size: 0.95em;
+  }
+
+  .article-source-inline {
+    font-size: 0.75em;
   }
 }
 </style>
