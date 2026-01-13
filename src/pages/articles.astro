@@ -1,0 +1,307 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Fungi Consultant - Articles" currentPage="/articles">
+  <div class="articles-content">
+    <h1 class="page-heading">Articles</h1>
+
+    <div class="intro-text">
+      Explore writings on functional mushrooms, their benefits, and how to use them effectively.
+    </div>
+
+    <!-- Featured: Chemical Collective -->
+    <div class="featured-article">
+      <div class="article-frame">
+        <iframe src="https://www.chemical-collective.com/author/oli-genn-bash/" width="100%" height="400" frameborder="0" loading="lazy"></iframe>
+      </div>
+      <div class="article-details">
+        <h3 class="article-source">Chemical Collective</h3>
+        <p class="article-description">Regular contributor with 25+ articles on functional mushrooms, psychedelics, and wellness. Visit to explore the full collection.</p>
+        <a href="https://www.chemical-collective.com/author/oli-genn-bash/" target="_blank" class="article-link">View all articles →</a>
+      </div>
+    </div>
+
+    <!-- Other Articles List -->
+    <div class="articles-list">
+      <h4 class="articles-subheading">Other Publications</h4>
+
+      <div class="article-item">
+        <a href="https://seedsistas.co.uk/2025/10/13/the-healing-potential-of-fungal-allies/" target="_blank" class="article-title">The Healing Potential of Fungal Allies</a>
+        <span class="article-source-inline">Seed SistAs</span>
+      </div>
+
+      <div class="article-item">
+        <a href="https://nuvedo.com/2025/07/15/should-you-feel-it-demystifying-the-world-of-active-compounds-and-mushroom-effects/" target="_blank" class="article-title">Should You Feel It? Demystifying the World of Active Compounds and Mushroom Effects</a>
+        <span class="article-source-inline">Nuvedo</span>
+      </div>
+
+      <div class="article-item">
+        <a href="https://microdoseforpeace.com/understanding-functional-mushrooms/" target="_blank" class="article-title">Understanding Functional Mushrooms</a>
+        <span class="article-source-inline">Microdose For Peace</span>
+      </div>
+
+      <div class="article-item">
+        <a href="https://microdoseforpeace.com/lions-mane-a-synergistic-partner-by-oli-genn-bash/" target="_blank" class="article-title">Lion's Mane: A Synergistic Partner</a>
+        <span class="article-source-inline">Microdose For Peace</span>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.mycostories.com/post/functional-mushrooms-exploration-into-therapeutic-compounds" target="_blank" class="article-title">Functional Mushrooms: Exploration into Therapeutic Compounds</a>
+        <span class="article-source-inline">Myco Stories</span>
+      </div>
+
+      <div class="article-item">
+        <a href="https://www.leafie.co.uk/culture/functional-mushrooms-beginners-guide/" target="_blank" class="article-title">Functional Mushrooms: Beginner's Guide</a>
+        <span class="article-source-inline">Leafie</span>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.articles-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.intro-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.featured-article {
+  margin-bottom: 40px;
+}
+
+.article-frame {
+  background-color: #fff;
+  border: 2px solid #e0e0d8;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.article-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+}
+
+.article-details {
+  text-align: center;
+}
+
+.article-source {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4em;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.article-description {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  color: #52515c;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.article-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.95em;
+  color: #9a89a4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.article-link:hover {
+  color: #b6c2a0;
+}
+
+.articles-list {
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 2px solid #e0e0d8;
+}
+
+.articles-subheading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.2em;
+  color: #63596a;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.article-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0d8;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.article-item:last-child {
+  border-bottom: none;
+}
+
+.article-title {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: #52515c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-title:hover {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+.article-source-inline {
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.8em;
+  color: #9a89a4;
+}
+
+.bottom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+.brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  .articles-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 0.9em;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+
+  .article-frame iframe {
+    min-height: 300px;
+  }
+
+  .article-item {
+    padding: 12px 0;
+  }
+
+  .article-title {
+    font-size: 0.95em;
+  }
+
+  .article-source-inline {
+    font-size: 0.75em;
+  }
+
+  .bottom-image {
+    max-width: 200px;
+    margin-top: 40px;
+  }
+}
+</style>

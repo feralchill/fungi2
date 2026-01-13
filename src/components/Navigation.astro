@@ -5,11 +5,23 @@ const { currentPage } = Astro.props;
 const pages = [
   { href: '/about', label: 'About' },
   { href: '/mushrooms', label: 'Functional Mushrooms' },
-  { href: '/media', label: 'Media' },
+  {
+    href: '/articles',
+    label: 'Media',
+    dropdown: [
+      { href: '/articles', label: 'Articles' },
+      { href: '/podcast-appearances', label: 'Podcast Appearances' },
+      { href: '/tfc-podcast', label: 'The Fungi Consultant Podcast' },
+      { href: '/ogbc-podcast', label: 'Oli Genn-Bash Connects' }
+    ]
+  },
   { href: '/events', label: 'Events' },
   { href: '/testimonials', label: 'Testimonials' },
   { href: '/booking', label: 'Book a Consultation' }
 ];
+
+// Media page paths for highlighting
+const mediaPaths = ['/articles', '/podcast-appearances', '/tfc-podcast', '/ogbc-podcast', '/media'];
 
 // Build navigation array
 let navItems;
@@ -17,8 +29,13 @@ if (currentPage === '/') {
   // Homepage - show all pages as normal
   navItems = pages;
 } else {
-  // Other pages - filter out current page and add "Home" at front
-  navItems = pages.filter(p => p.href !== currentPage);
+  // Other pages - filter out current page if not a media dropdown item
+  if (mediaPaths.includes(currentPage)) {
+    // Keep Media dropdown but filter out from top level
+    navItems = pages;
+  } else {
+    navItems = pages.filter(p => p.href !== currentPage);
+  }
   navItems.unshift({ href: '/', label: 'Home' });
 }
 ---
@@ -34,7 +51,21 @@ if (currentPage === '/') {
   </button>
   <div class="nav-bar" id="navBar">
     {navItems.map(item => (
-      <a href={item.href} class="nav-link">{item.label}</a>
+      item.dropdown ? (
+        <div class="nav-dropdown">
+          <button class="nav-link dropdown-trigger" class:list={[mediaPaths.includes(currentPage) && 'active']}>
+            {item.label}
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div class="dropdown-menu">
+            {item.dropdown.map(subItem => (
+              <a href={subItem.href} class="dropdown-item" class:list={[currentPage === subItem.href && 'active']}>{subItem.label}</a>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <a href={item.href} class="nav-link">{item.label}</a>
+      )
     ))}
   </div>
 </nav>
@@ -85,6 +116,86 @@ if (currentPage === '/') {
 .nav-bar .nav-link:focus,
 .nav-bar .nav-link:active {
   color: #9A89A4;
+}
+
+/* Dropdown styles */
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4em;
+  color: #efefed;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown-trigger:hover {
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+.dropdown-trigger.active {
+  color: #9A89A4 !important;
+}
+
+.dropdown-arrow {
+  font-size: 0.7em;
+  transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4e625c;
+  border: 2px solid #efefed;
+  border-radius: 8px;
+  margin-top: 10px;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.1em;
+  color: #efefed;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #b6c2a0;
+}
+
+.dropdown-item.active {
+  color: #9A89A4;
+  background: rgba(154, 137, 164, 0.1);
 }
 
 /* Hamburger menu button - hidden on desktop */
@@ -253,6 +364,44 @@ if (currentPage === '/') {
   .nav-bar .nav-link.active {
     color: #9a89a4 !important;
   }
+
+  /* Mobile dropdown */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    font-size: 1.05em;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+    min-width: 100%;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    font-size: 0.95em;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.6em;
+  }
 }
 </style>
 
@@ -271,13 +420,36 @@ function initMenu() {
     navBar.classList.toggle('open');
   });
 
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
       navLinks.forEach(l => l.classList.remove('active'));
       this.classList.add('active');
       hamburger.classList.remove('open');
       navBar.classList.remove('open');
+    });
+  });
+
+  // Handle mobile dropdown toggle
+  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+  dropdownTriggers.forEach(trigger => {
+    trigger.addEventListener('click', function(e) {
+      // Only toggle on mobile
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const dropdown = this.closest('.nav-dropdown');
+        dropdown.classList.toggle('open');
+      }
+    });
+  });
+
+  // Close dropdowns when clicking dropdown items on mobile
+  const dropdownItems = document.querySelectorAll('.dropdown-item');
+  dropdownItems.forEach(item => {
+    item.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      navBar.classList.remove('open');
+      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
     });
   });
 }

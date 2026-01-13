@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup: Accordion Style Media Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #EFEFED;
+      font-family: 'Literata', serif;
+      padding: 20px;
+      color: #52515c;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Abril Fatface', serif;
+      font-size: 2.5em;
+      color: #b6c2a0;
+      text-align: center;
+      margin: 40px 0 30px;
+    }
+
+    .intro-text {
+      font-size: 0.95em;
+      line-height: 1.6;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #52515c;
+    }
+
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+
+    .accordion-item {
+      border: 2px solid #e0e0d8;
+      border-radius: 8px;
+      background-color: #f9f9f7;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-item:hover {
+      border-color: #b6c2a0;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 30px;
+      cursor: pointer;
+      background-color: #63596a;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+
+    .accordion-header:hover {
+      background-color: #574e5d;
+    }
+
+    .accordion-item.active .accordion-header {
+      background-color: #4e625c;
+    }
+
+    .accordion-title {
+      font-family: 'Abril Fatface', serif;
+      font-size: 1.6em;
+      color: #efefed;
+      margin: 0;
+    }
+
+    .accordion-icon {
+      font-size: 1.5em;
+      color: #efefed;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 30px;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 5000px;
+      padding: 30px;
+    }
+
+    .content-placeholder {
+      background-color: #fff;
+      border: 1px solid #e0e0d8;
+      border-radius: 6px;
+      padding: 30px;
+      text-align: center;
+      color: #52515c;
+    }
+
+    .embed-demo {
+      background-color: #000;
+      border-radius: 12px;
+      height: 352px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Abril Fatface', serif;
+      font-size: 1.2em;
+    }
+
+    .podcast-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .podcast-item {
+      background-color: #fff;
+      border: 2px solid #e0e0d8;
+      border-radius: 6px;
+      padding: 12px;
+      text-align: center;
+      font-family: 'Abril Fatface', serif;
+      font-size: 0.85em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .podcast-item:hover {
+      border-color: #b6c2a0;
+      transform: translateY(-2px);
+    }
+
+    .podcast-item.active {
+      background-color: #b6c2a0;
+      border-color: #b6c2a0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .accordion-header {
+        padding: 20px;
+      }
+
+      .accordion-title {
+        font-size: 1.2em;
+      }
+
+      .accordion-content {
+        padding: 0 20px;
+      }
+
+      .accordion-item.active .accordion-content {
+        padding: 20px;
+      }
+
+      .podcast-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Media</h1>
+    <div class="intro-text">
+      Explore recent conversations on functional mushrooms, regularly updated with new podcast appearances and articles.
+    </div>
+
+    <div class="accordion">
+      <!-- Articles Section -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h2 class="accordion-title">Articles</h2>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="content-placeholder">
+            Coming soon: articles on functional mushrooms, their benefits, and how to use them effectively.
+          </div>
+        </div>
+      </div>
+
+      <!-- The Fungi Consultant Podcast -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h2 class="accordion-title">The Fungi Consultant Podcast</h2>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="embed-demo">
+            [Spotify Embed: The Fungi Consultant]
+          </div>
+        </div>
+      </div>
+
+      <!-- Oli Genn-Bash Connects -->
+      <div class="accordion-item">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h2 class="accordion-title">Oli Genn-Bash Connects</h2>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="embed-demo">
+            [Spotify Embed: Oli Genn-Bash Connects]
+          </div>
+        </div>
+      </div>
+
+      <!-- Podcast Appearances -->
+      <div class="accordion-item active">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h2 class="accordion-title">Podcast Appearances</h2>
+          <span class="accordion-icon">▼</span>
+        </div>
+        <div class="accordion-content">
+          <div class="embed-demo">
+            [Featured Podcast Player Area]
+          </div>
+          <div class="podcast-grid">
+            <div class="podcast-item active">Psychedelics Today | #645</div>
+            <div class="podcast-item">End of the Road | #328</div>
+            <div class="podcast-item">Mycelium Hub | #04</div>
+            <div class="podcast-item">The Simpa Life | #152</div>
+            <div class="podcast-item">Gnodcast | #18</div>
+            <div class="podcast-item">Psychedelic Conversations | #153</div>
+            <div class="podcast-item">Low/No Drinker | #69</div>
+            <div class="podcast-item">Wired For Success | #216</div>
+            <div class="podcast-item">Mycopreneur | #3</div>
+          </div>
+          <div style="margin-top: 30px; text-align: center; font-style: italic;">
+            <a href="mailto:oli@thefungiconsultant.com" style="color: #b6c2a0; text-decoration: underline; font-family: 'Abril Fatface', serif; font-style: normal;">Get in touch</a> if you're interested in having <span style="font-family: 'Abril Fatface', serif;">The Fungi Consultant</span> on your podcast.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleAccordion(header) {
+      const item = header.parentElement;
+      const wasActive = item.classList.contains('active');
+
+      // Close all accordion items
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('active');
+      });
+
+      // If it wasn't active, open it
+      if (!wasActive) {
+        item.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
