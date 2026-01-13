@@ -244,20 +244,21 @@ import Layout from '../layouts/Layout.astro';
   color: #52515c;
   white-space: nowrap;
   flex: 0 1 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .pill-tab:hover {
   border-color: #b6c2a0;
   background-color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 .pill-tab.active {
   background-color: #63596a;
   border: 1px solid #63596a;
   color: #efefed;
-  box-shadow: 0 4px 16px rgba(99, 89, 106, 0.3);
+  box-shadow: 0 4px 8px rgba(99, 89, 106, 0.2);
 }
 
 /* Tab Panels */
@@ -313,24 +314,27 @@ import Layout from '../layouts/Layout.astro';
   font-size: 0.9em;
   color: #52515c;
   background-color: #f9f9f7;
-  border: 2px solid #e0e0d8;
+  border: 1px solid #b6c2a0;
   border-radius: 6px;
   padding: 12px 15px;
   cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .title-item:hover {
   border-color: #b6c2a0;
   background-color: #fff;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
 .title-item.active {
   border-color: #b6c2a0;
   background-color: #b6c2a0;
   color: #52515c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .featured-player {
@@ -338,8 +342,9 @@ import Layout from '../layouts/Layout.astro';
   border-radius: 8px;
   padding: 25px;
   margin-bottom: 30px;
-  border: 2px solid #e0e0d8;
+  border: 1px solid #b6c2a0;
   min-height: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .player-content {
