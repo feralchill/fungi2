@@ -1,0 +1,589 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Fungi Consultant - Podcasts" currentPage="/podcasts">
+  <div class="podcasts-content">
+    <h1 class="page-heading">Podcasts</h1>
+
+    <!-- Header Image -->
+    <div class="header-image-container">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6031.png" alt="Podcasts" class="header-image">
+    </div>
+
+    <div class="intro-text">
+      Explore conversations about functional mushrooms, psychedelics, and wellness.
+    </div>
+
+    <!-- Pill Tab Navigation -->
+    <div class="pill-tabs-container">
+      <button class="pill-tab active" onclick="switchTab(1)">The Fungi Consultant Podcast</button>
+      <button class="pill-tab" onclick="switchTab(2)">Oli Genn-Bash Connects</button>
+      <button class="pill-tab" onclick="switchTab(3)">Appearances on Other Podcasts</button>
+    </div>
+
+    <!-- Tab Content Panels -->
+    <div class="tab-panel active" id="panel-1">
+      <div class="podcast-embed-section">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0bGc7S9DjRAIgSb5KfCh0B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-2">
+      <div class="podcast-embed-section">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3hH5KDQB9s6FxGzoJcnVde?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="panel-3">
+      <div class="podcast-section">
+        <!-- Featured Player Area -->
+        <div class="featured-player">
+          <!-- Podcast 1 - Psychedelics Today Episode 645 (Spotify) -->
+          <div class="player-content active" id="podcast-1">
+            <div class="player-embed">
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4l5TMlnYKE3Gc12LVwNIXK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Psychedelics Today | #645</h3>
+              <p class="podcast-description">Oli Genn Bash - Functional Mushrooms, Hype Cycles, and Mycelial Thinking</p>
+              <a href="https://open.spotify.com/episode/4l5TMlnYKE3Gc12LVwNIXK" target="_blank" class="watch-link">Listen on Spotify →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 2 - End of the Road -->
+          <div class="player-content" id="podcast-2">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/fKvOaY1tywU" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">End of the Road Podcast | #328</h3>
+              <p class="podcast-description">Oli Genn-Bash: Animism/The Fungi Consultant/Codex Serafini</p>
+              <a href="https://youtu.be/fKvOaY1tywU" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 3 - Mycelium Hub -->
+          <div class="player-content" id="podcast-3">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/GLfsttnEyTA" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Mycelium Hub Spore Journeys | #04</h3>
+              <p class="podcast-description">Oli Genn-Bash – Functional Mushrooms, Supplement Myths & Decentralised Wisdom</p>
+              <a href="https://youtu.be/GLfsttnEyTA" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 4 - The Simpa Life -->
+          <div class="player-content" id="podcast-4">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/g_G-mXOHjoU" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">The Simpa Life Podcast | #152</h3>
+              <p class="podcast-description">Oli Genn Bash | Cognitive Liberty | Psychedelics | Mycology</p>
+              <a href="https://youtu.be/g_G-mXOHjoU" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 5 - Gnodcast -->
+          <div class="player-content" id="podcast-5">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/xl5UyhdjAYs" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Gnodcast | #18</h3>
+              <p class="podcast-description">Oli Genn-Bash</p>
+              <a href="https://youtu.be/xl5UyhdjAYs" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 6 - Psychedelic Conversations -->
+          <div class="player-content" id="podcast-6">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/RfT_O1F_skY" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Psychedelic Conversations | #153</h3>
+              <p class="podcast-description">Oli Genn-Bash - The Fungi Consultant</p>
+              <a href="https://youtu.be/RfT_O1F_skY" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 7 - Low/No Drinker -->
+          <div class="player-content" id="podcast-7">
+            <div class="player-embed">
+              <iframe width="100%" height="400" src="https://www.youtube-nocookie.com/embed/SaX_Nst_2Jo" style="border: none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Low/No Drinker Magazine | #69</h3>
+              <p class="podcast-description">Do Functional Mushrooms Work In Low/No Drinks?</p>
+              <a href="https://youtu.be/SaX_Nst_2Jo" target="_blank" class="watch-link">Watch on YouTube →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 8 - Wired For Success -->
+          <div class="player-content" id="podcast-8">
+            <div class="player-embed">
+              <iframe title="Libsyn Player" style="border: none" src="//html5-player.libsyn.com/embed/episode/id/35281670/height/90/theme/custom/thumbnail/yes/direction/forward/render-playlist/no/custom-color/000000/" height="90" width="100%" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Wired For Success Podcast | #216</h3>
+              <p class="podcast-description">Functional Mushrooms & Psychedelics with Oli Genn-Bash</p>
+              <a href="https://wiredforsuccesspodcast.libsyn.com/functional-mushrooms-psychedelics-with-oli-genn-bash-episode-216" target="_blank" class="watch-link">Listen on Libsyn →</a>
+            </div>
+          </div>
+
+          <!-- Podcast 9 - Mycopreneur -->
+          <div class="player-content" id="podcast-9">
+            <div class="player-embed">
+              <iframe title="Embed Player" width="100%" height="188px" src="https://embed.acast.com/6009be5a1332f664d8750676/6749f145f6ece089eaafc0b3" scrolling="no" frameBorder="0" style="border:none;overflow:hidden;"></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Mycopreneur Podcast | #3</h3>
+              <p class="podcast-description">Oli Genn-Bash - The Fungi Consultant</p>
+              <a href="https://shows.acast.com/mycopreneur/episodes/oli-genn-bash-the-fungi-consultant" target="_blank" class="watch-link">Listen on Acast →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Title Selector Grid -->
+        <div class="title-selector-grid">
+          <div class="title-item active" data-podcast="1">Psychedelics Today | #645</div>
+          <div class="title-item" data-podcast="2">End of the Road Podcast | #328</div>
+          <div class="title-item" data-podcast="3">Mycelium Hub Spore Journeys | #04</div>
+          <div class="title-item" data-podcast="4">The Simpa Life Podcast | #152</div>
+          <div class="title-item" data-podcast="5">Gnodcast | #18</div>
+          <div class="title-item" data-podcast="6">Psychedelic Conversations | #153</div>
+          <div class="title-item" data-podcast="7">Low/No Drinker Magazine | #69</div>
+          <div class="title-item" data-podcast="8">Wired For Success Podcast | #216</div>
+          <div class="title-item" data-podcast="9">Mycopreneur Podcast | #3</div>
+        </div>
+
+        <!-- CTA Text -->
+        <div class="podcast-cta">
+          <a href="mailto:oli@thefungiconsultant.com" class="contact-link">Get in touch</a> if you're interested in having <span class="brand-name">The Fungi Consultant</span> on your podcast.
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.podcasts-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.header-image-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.intro-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Pill Tabs */
+.pill-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.pill-tab {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.15em;
+  padding: 16px 35px;
+  background-color: #f9f9f7;
+  border: 2px solid #e0e0d8;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #52515c;
+  white-space: nowrap;
+  flex: 0 1 auto;
+}
+
+.pill-tab:hover {
+  border-color: #b6c2a0;
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pill-tab.active {
+  background-color: #63596a;
+  border-color: #63596a;
+  color: #efefed;
+  box-shadow: 0 4px 16px rgba(99, 89, 106, 0.3);
+}
+
+/* Tab Panels */
+.tab-panel {
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.podcast-embed-section {
+  background-color: #f9f9f7;
+  border: 2px solid #e0e0d8;
+  border-radius: 12px;
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+.podcast-embed-section iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Podcast Appearances Section */
+.podcast-section {
+  margin-bottom: 20px;
+}
+
+.title-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.title-item {
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.9em;
+  color: #52515c;
+  background-color: #f9f9f7;
+  border: 2px solid #e0e0d8;
+  border-radius: 6px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.title-item:hover {
+  border-color: #b6c2a0;
+  background-color: #fff;
+  transform: translateY(-2px);
+}
+
+.title-item.active {
+  border-color: #b6c2a0;
+  background-color: #b6c2a0;
+  color: #52515c;
+}
+
+.featured-player {
+  background-color: #f9f9f7;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border: 2px solid #e0e0d8;
+  min-height: 500px;
+}
+
+.player-content {
+  display: none;
+}
+
+.player-content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+.player-embed {
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.player-embed iframe {
+  display: block;
+  width: 100%;
+}
+
+.podcast-details {
+  text-align: center;
+}
+
+.podcast-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4em;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.podcast-description {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  color: #52515c;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.watch-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.95em;
+  color: #9a89a4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.watch-link:hover {
+  color: #b6c2a0;
+}
+
+.podcast-cta {
+  font-family: 'Literata', serif;
+  font-size: 0.95em;
+  color: #52515c;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-style: normal;
+}
+
+.contact-link:hover {
+  color: #9a89a4;
+}
+
+.brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+}
+
+.bottom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .podcasts-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .intro-text {
+    font-size: 0.9em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+
+  .pill-tabs-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .pill-tab {
+    font-size: 1em;
+    padding: 14px 24px;
+    width: 100%;
+  }
+
+  .podcast-embed-section {
+    padding: 25px;
+  }
+
+  .title-selector-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .title-item {
+    font-size: 0.85em;
+    padding: 10px 12px;
+  }
+
+  .featured-player {
+    padding: 15px;
+    min-height: auto;
+  }
+
+  .player-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .player-embed iframe {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .podcast-title {
+    font-size: 1.2em;
+  }
+
+  .podcast-description {
+    font-size: 0.9em;
+  }
+
+  .bottom-image {
+    max-width: 200px;
+    margin-top: 40px;
+  }
+}
+</style>
+
+<script is:inline>
+  function switchTab(tabNumber) {
+    // Remove active class from all tabs and panels
+    document.querySelectorAll('.pill-tab').forEach(tab => tab.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+
+    // Add active class to selected tab and panel
+    document.querySelectorAll('.pill-tab')[tabNumber - 1].classList.add('active');
+    document.getElementById(`panel-${tabNumber}`).classList.add('active');
+  }
+
+  // Podcast player switcher for panel 3
+  const titleItems = document.querySelectorAll('.title-item');
+  const players = document.querySelectorAll('.player-content');
+
+  titleItems.forEach(titleItem => {
+    titleItem.addEventListener('click', () => {
+      const podcastId = titleItem.getAttribute('data-podcast');
+
+      // Remove active class from all title items and players
+      titleItems.forEach(t => t.classList.remove('active'));
+      players.forEach(p => p.classList.remove('active'));
+
+      // Add active class to clicked title item and corresponding player
+      titleItem.classList.add('active');
+      document.getElementById(`podcast-${podcastId}`).classList.add('active');
+    });
+  });
+</script>

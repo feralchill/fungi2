@@ -6,13 +6,11 @@ const pages = [
   { href: '/about', label: 'About' },
   { href: '/mushrooms', label: 'Functional Mushrooms' },
   {
-    href: '/articles',
+    href: '/podcasts',
     label: 'Media',
     dropdown: [
-      { href: '/articles', label: 'Articles' },
-      { href: '/podcast-appearances', label: 'Podcast Appearances' },
-      { href: '/tfc-podcast', label: 'The Fungi Consultant Podcast' },
-      { href: '/ogbc-podcast', label: 'Oli Genn-Bash Connects' }
+      { href: '/podcasts', label: 'Podcasts' },
+      { href: '/articles', label: 'Articles' }
     ]
   },
   { href: '/events', label: 'Events' },
@@ -21,7 +19,7 @@ const pages = [
 ];
 
 // Media page paths for highlighting
-const mediaPaths = ['/articles', '/podcast-appearances', '/tfc-podcast', '/ogbc-podcast', '/media'];
+const mediaPaths = ['/podcasts', '/articles', '/media'];
 
 // Build navigation array
 let navItems;
@@ -140,8 +138,17 @@ if (currentPage === '/') {
 }
 
 .dropdown-trigger:hover {
-  text-decoration: underline;
   transform: scale(1.05);
+}
+
+.dropdown-trigger:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: calc(100% - 20px);
+  height: 2px;
+  background-color: currentColor;
 }
 
 .dropdown-trigger.active {
@@ -164,10 +171,10 @@ if (currentPage === '/') {
   left: 50%;
   transform: translateX(-50%);
   background: #4e625c;
-  border: 2px solid #efefed;
-  border-radius: 8px;
+  border: none;
+  border-radius: 0;
   margin-top: 10px;
-  min-width: 250px;
+  min-width: 200px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   padding: 10px 0;
@@ -180,7 +187,7 @@ if (currentPage === '/') {
 .dropdown-item {
   display: block;
   font-family: 'Abril Fatface', serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: #efefed;
   text-decoration: none;
   padding: 12px 20px;
@@ -189,13 +196,12 @@ if (currentPage === '/') {
 }
 
 .dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #b6c2a0;
+  color: #efefed;
+  text-decoration: underline;
 }
 
 .dropdown-item.active {
   color: #9A89A4;
-  background: rgba(154, 137, 164, 0.1);
 }
 
 /* Hamburger menu button - hidden on desktop */
