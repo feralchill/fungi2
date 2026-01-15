@@ -325,8 +325,8 @@ import Layout from '../layouts/Layout.astro';
   width: 100%;
   text-align: left;
   padding: 12px 40px 12px 15px;
-  background-color: #b6c2a0;
-  border: 1px solid #9a89a4;
+  background-color: #f9f9f7;
+  border: 1px solid #b6c2a0;
   font-family: 'Abril Fatface', serif;
   font-size: 1.2em;
   color: #52515c;
@@ -338,8 +338,16 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .concept-label:hover {
-  background-color: #9a89a4;
+  background-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.concept-toggle:checked + .concept-label {
+  background-color: #63596a;
+  border-color: #63596a;
   color: #efefed;
+  box-shadow: 0 4px 8px rgba(99, 89, 106, 0.2);
 }
 
 .concept-arrow {
