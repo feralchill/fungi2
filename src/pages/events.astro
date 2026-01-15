@@ -3,4 +3,247 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="The Fungi Consultant - Events" currentPage="/events">
+  <div class="events-content">
+    <h1 class="page-heading">Events</h1>
+
+    <!-- Featured Event -->
+    <div class="featured-event">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6035.jpeg" class="event-image" alt="Biohacking with Mushrooms Course">
+
+      <h2 class="event-title">Biohacking with Mushrooms: 5-Week Course</h2>
+      <h3 class="event-subtitle">Navigating the Science, Benefits & Uses of Functional Mushrooms</h3>
+
+      <div class="event-description">
+        <p>This five-week online course offers a grounded, accessible, and evidence-informed introduction to functional mushrooms, blending modern science, traditional wisdom, and real-world application. Designed for beginners and the curious alike, the course explores how medicinal mushrooms can support cognition, stress resilience, immunity, and overall well-being – without hype or unrealistic promises.</p>
+
+        <p>Each session includes a deep dive into specific mushrooms, practical guidance on sourcing and use, and extended Q&A to help participants apply what they learn to their own lives.</p>
+      </div>
+
+      <div class="event-cta">
+        <a href="https://dandelion.events/e/r1d4r" target="_blank" class="event-link">Book tickets and see detailed course outline →</a>
+      </div>
+    </div>
+
+    <!-- Bottom Image -->
+    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
+
+    <!-- Finish Section -->
+    <div class="finish-container">
+      <div class="finish-text">
+        <span class="brand-name">The Fungi Consultant</span> est. 2024
+      </div>
+      <div class="footer-text-small">
+        <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.events-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.page-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.featured-event {
+  margin-bottom: 60px;
+}
+
+.event-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto 30px auto;
+  display: block;
+  border-radius: 12px;
+  border: 2px solid #e0e0d8;
+}
+
+.event-title {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2em;
+  color: #63596a;
+  text-align: center;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.event-subtitle {
+  font-family: 'Literata', serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  font-style: italic;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.event-description {
+  background-color: #f9f9f7;
+  border: 2px solid #e0e0d8;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.event-description p {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #52515c;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.event-description p:last-child {
+  margin-bottom: 0;
+}
+
+.event-cta {
+  text-align: center;
+}
+
+.event-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.2em;
+  color: #9a89a4;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  padding: 10px 0;
+}
+
+.event-link:hover {
+  color: #b6c2a0;
+}
+
+.bottom-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 60px auto 0 auto;
+  display: block;
+}
+
+.finish-container {
+  max-width: 800px;
+  margin: 0px auto;
+  margin-bottom: 0px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.finish-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.8em;
+  line-height: 1.5;
+  color: #52515c;
+  margin-bottom: 10px;
+}
+
+.finish-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+}
+
+.brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-style: normal;
+}
+
+.finish-link {
+  color: #b6c2a0;
+  font-family: 'Almendra Display', serif;
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.finish-link:hover {
+  color: #4e625c;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.finish-link:active {
+  color: #9a89a4;
+  font-weight: bold;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.finish-link:visited {
+  color: #b6c2a0;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.footer-text-small {
+  font-family: 'Almendra Display', serif;
+  font-size: 0.7em;
+  color: #b6c2a0;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .events-content {
+    padding: 0 15px;
+  }
+
+  .page-heading {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .event-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .event-title {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+  }
+
+  .event-subtitle {
+    font-size: 1.05em;
+    margin-bottom: 20px;
+  }
+
+  .event-description {
+    padding: 20px;
+  }
+
+  .event-description p {
+    font-size: 0.95em;
+    line-height: 1.7;
+  }
+
+  .event-link {
+    font-size: 1em;
+  }
+
+  .bottom-image {
+    max-width: 200px;
+    margin-top: 40px;
+  }
+}
+</style>

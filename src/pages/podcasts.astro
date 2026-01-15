@@ -11,10 +11,6 @@ import Layout from '../layouts/Layout.astro';
       <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6031.png" alt="Podcasts" class="header-image">
     </div>
 
-    <div class="intro-text">
-      Explore conversations about functional mushrooms, psychedelics, and wellness.
-    </div>
-
     <!-- Pill Tab Navigation -->
     <div class="pill-tabs-container">
       <button class="pill-tab active" onclick="switchTab(1)">The Fungi Consultant Podcast</button>
@@ -25,13 +21,41 @@ import Layout from '../layouts/Layout.astro';
     <!-- Tab Content Panels -->
     <div class="tab-panel active" id="panel-1">
       <div class="podcast-embed-section">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0bGc7S9DjRAIgSb5KfCh0B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="featured-player">
+          <div id="tfc-player" class="dynamic-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0bGc7S9DjRAIgSb5KfCh0B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Episode Selector Grid for TFC -->
+        <div class="title-selector-grid">
+          <div class="title-item active" data-episode-id="078W1Fg9b6w6RC0e3uWFpY">#6 – KK (Flora Fungi Podcast)</div>
+          <div class="title-item" data-episode-id="1uxjRHQVVyrxJ9DE0UuFKZ">#5 – Cesar Marin (Cultivating Wisdom)</div>
+          <div class="title-item" data-episode-id="7djpWH2pOtSdLjD9NaC07Q">#4 – John James Staniszewski & Charlie Bry</div>
+          <div class="title-item" data-episode-id="5pRGiMhzBOKyAwjtTHGDeq">#3 – Jashid Hameed (Nuvedo)</div>
+          <div class="title-item" data-episode-id="5XjmjdIoZ51NlHxflg8QkM">#2 – Marc Violo (MycoStories)</div>
+          <div class="title-item" data-episode-id="29RzNfqYW1tHAkGS4yYHQ9">#1 – Seth Colchester (Mycogenius)</div>
+        </div>
       </div>
     </div>
 
     <div class="tab-panel" id="panel-2">
       <div class="podcast-embed-section">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3hH5KDQB9s6FxGzoJcnVde?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <div class="featured-player">
+          <div id="ogbc-player" class="dynamic-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3hH5KDQB9s6FxGzoJcnVde?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Episode Selector Grid for OGBC -->
+        <div class="title-selector-grid">
+          <div class="title-item active" data-episode-id="B_AUz-NWIlU" data-youtube="true">#6 – Giulio Sica: Corporations & Psychedelics</div>
+          <div class="title-item" data-episode-id="70FExLdnLt6xgZ1U5GXqPo">#5 – Lina Jan: Is resilience a myth?</div>
+          <div class="title-item" data-episode-id="75LM7ZGiLUrF1ww24fEVvW">#4 – Dr. Jack Hunter: Music & spirits</div>
+          <div class="title-item" data-episode-id="bWOnBjSyTqw" data-youtube="true">#3 – Darryl Bickler: Illegal drugs</div>
+          <div class="title-item" data-episode-id="7wTDGmICdKYUWaJPz6fQ7o">#2 – Dr. Andy Letcher: Weird psychedelics</div>
+          <div class="title-item" data-episode-id="4vNV45NP8Y0ViXdvJgei9f">#1 – Robert Forte: MDMA therapy</div>
+        </div>
       </div>
     </div>
 
@@ -199,6 +223,7 @@ import Layout from '../layouts/Layout.astro';
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .header-image-container {
@@ -207,7 +232,7 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .header-image {
-  max-width: 300px;
+  max-width: 200px;
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -563,7 +588,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .header-image {
-    max-width: 150px;
+    max-width: 100px;
   }
 }
 </style>
@@ -579,21 +604,62 @@ import Layout from '../layouts/Layout.astro';
     document.getElementById(`panel-${tabNumber}`).classList.add('active');
   }
 
-  // Podcast player switcher for panel 3
-  const titleItems = document.querySelectorAll('.title-item');
-  const players = document.querySelectorAll('.player-content');
+  // Episode switcher for TFC podcast (panel 1)
+  document.addEventListener('DOMContentLoaded', function() {
+    const tfcItems = document.querySelectorAll('#panel-1 .title-item');
+    const tfcPlayer = document.getElementById('tfc-player');
 
-  titleItems.forEach(titleItem => {
-    titleItem.addEventListener('click', () => {
-      const podcastId = titleItem.getAttribute('data-podcast');
+    tfcItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const episodeId = item.getAttribute('data-episode-id');
 
-      // Remove active class from all title items and players
-      titleItems.forEach(t => t.classList.remove('active'));
-      players.forEach(p => p.classList.remove('active'));
+        // Remove active class from all TFC items
+        tfcItems.forEach(t => t.classList.remove('active'));
+        item.classList.add('active');
 
-      // Add active class to clicked title item and corresponding player
-      titleItem.classList.add('active');
-      document.getElementById(`podcast-${podcastId}`).classList.add('active');
+        // Update TFC player iframe
+        tfcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+      });
+    });
+
+    // Episode switcher for OGBC podcast (panel 2)
+    const ogbcItems = document.querySelectorAll('#panel-2 .title-item');
+    const ogbcPlayer = document.getElementById('ogbc-player');
+
+    ogbcItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const episodeId = item.getAttribute('data-episode-id');
+        const isYoutube = item.getAttribute('data-youtube');
+
+        // Remove active class from all OGBC items
+        ogbcItems.forEach(t => t.classList.remove('active'));
+        item.classList.add('active');
+
+        // Update OGBC player iframe
+        if (isYoutube) {
+          ogbcPlayer.innerHTML = `<iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/${episodeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+        } else {
+          ogbcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+        }
+      });
+    });
+
+    // Podcast player switcher for panel 3 (appearances)
+    const titleItems = document.querySelectorAll('#panel-3 .title-item');
+    const players = document.querySelectorAll('.player-content');
+
+    titleItems.forEach(titleItem => {
+      titleItem.addEventListener('click', () => {
+        const podcastId = titleItem.getAttribute('data-podcast');
+
+        // Remove active class from all title items and players
+        titleItems.forEach(t => t.classList.remove('active'));
+        players.forEach(p => p.classList.remove('active'));
+
+        // Add active class to clicked title item and corresponding player
+        titleItem.classList.add('active');
+        document.getElementById(`podcast-${podcastId}`).classList.add('active');
+      });
     });
   });
 </script>

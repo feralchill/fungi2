@@ -198,6 +198,7 @@ import Layout from '../layouts/Layout.astro';
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* Hero Image */
@@ -410,11 +411,22 @@ import Layout from '../layouts/Layout.astro';
   left: 0;
   width: 16px;
   height: 16px;
-  background-image: url('https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  top: 4px;
+  top: 6px;
+}
+
+.custom-bullet-list li:nth-child(3n+1):before {
+  background-image: url('https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png');
+}
+
+.custom-bullet-list li:nth-child(3n+2):before {
+  background-image: url('https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png');
+}
+
+.custom-bullet-list li:nth-child(3n+3):before {
+  background-image: url('https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png');
 }
 
 /* Pricing Info */
@@ -543,19 +555,20 @@ strong {
   padding: 12px 24px;
   font-family: 'Abril Fatface', serif;
   font-size: 1.1em;
-  color: #52515c;
-  background-color: #f9f9f7;
-  border: 1px solid #b6c2a0;
+  color: #efefed;
+  background-color: #63596a;
+  border: 1px solid #63596a;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(99, 89, 106, 0.2);
 }
 
 .form-button:hover {
-  background-color: #fff;
+  background-color: #9a89a4;
+  border-color: #9a89a4;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 12px rgba(99, 89, 106, 0.3);
 }
 
 .form-button:active {
