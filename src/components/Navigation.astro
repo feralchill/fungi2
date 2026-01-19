@@ -52,7 +52,7 @@ if (currentPage === '/') {
       item.dropdown ? (
         <div class="nav-dropdown">
           <button class="nav-link dropdown-trigger" class:list={[mediaPaths.includes(currentPage) && 'active']}>
-            {item.label}
+            <span class="dropdown-text">{item.label}</span>
             <span class="dropdown-arrow">▼</span>
           </button>
           <div class="dropdown-menu">
@@ -141,14 +141,8 @@ if (currentPage === '/') {
   transform: scale(1.05);
 }
 
-.dropdown-trigger:hover::before {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: calc(100% - 20px);
-  height: 2px;
-  background-color: currentColor;
+.dropdown-trigger:hover .dropdown-text {
+  text-decoration: underline;
 }
 
 .dropdown-trigger.active {
@@ -391,7 +385,7 @@ if (currentPage === '/') {
     margin-top: 0;
     min-width: 100%;
     box-shadow: none;
-    background: rgba(0, 0, 0, 0.2);
+    background: #4e625c;
     padding: 5px 0;
   }
 
@@ -443,8 +437,15 @@ function initMenu() {
       // Only toggle on mobile
       if (window.innerWidth <= 768) {
         e.preventDefault();
+        e.stopPropagation();
         const dropdown = this.closest('.nav-dropdown');
-        dropdown.classList.toggle('open');
+        const isOpen = dropdown.classList.contains('open');
+        // Close all dropdowns first
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+        // Toggle this one if it wasn't open
+        if (!isOpen) {
+          dropdown.classList.add('open');
+        }
       }
     });
   });

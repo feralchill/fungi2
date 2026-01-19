@@ -20,41 +20,61 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Tab Content Panels -->
     <div class="tab-panel active" id="panel-1">
-      <div class="podcast-embed-section">
+      <div class="podcast-section">
         <div class="featured-player">
-          <div id="tfc-player" class="dynamic-player">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0bGc7S9DjRAIgSb5KfCh0B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          <div class="player-embed">
+            <div id="tfc-player" class="dynamic-player">
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/078W1Fg9b6w6RC0e3uWFpY?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="podcast-details">
+            <h3 class="podcast-title" id="tfc-title">#6 – KK (Flora Fungi Podcast)</h3>
           </div>
         </div>
 
         <!-- Episode Selector Grid for TFC -->
         <div class="title-selector-grid">
-          <div class="title-item active" data-episode-id="078W1Fg9b6w6RC0e3uWFpY">#6 – KK (Flora Fungi Podcast)</div>
-          <div class="title-item" data-episode-id="1uxjRHQVVyrxJ9DE0UuFKZ">#5 – Cesar Marin (Cultivating Wisdom)</div>
-          <div class="title-item" data-episode-id="7djpWH2pOtSdLjD9NaC07Q">#4 – John James Staniszewski & Charlie Bry</div>
-          <div class="title-item" data-episode-id="5pRGiMhzBOKyAwjtTHGDeq">#3 – Jashid Hameed (Nuvedo)</div>
-          <div class="title-item" data-episode-id="5XjmjdIoZ51NlHxflg8QkM">#2 – Marc Violo (MycoStories)</div>
-          <div class="title-item" data-episode-id="29RzNfqYW1tHAkGS4yYHQ9">#1 – Seth Colchester (Mycogenius)</div>
+          <div class="title-item active" data-episode-id="078W1Fg9b6w6RC0e3uWFpY" data-title="#6 – KK (Flora Fungi Podcast)">#6 – KK (Flora Fungi Podcast)</div>
+          <div class="title-item" data-episode-id="1uxjRHQVVyrxJ9DE0UuFKZ" data-title="#5 – Cesar Marin (Cultivating Wisdom)">#5 – Cesar Marin (Cultivating Wisdom)</div>
+          <div class="title-item" data-episode-id="7djpWH2pOtSdLjD9NaC07Q" data-title="#4 – John James Staniszewski & Charlie Bry">#4 – John James Staniszewski & Charlie Bry</div>
+          <div class="title-item" data-episode-id="5pRGiMhzBOKyAwjtTHGDeq" data-title="#3 – Jashid Hameed (Nuvedo)">#3 – Jashid Hameed (Nuvedo)</div>
+          <div class="title-item" data-episode-id="5XjmjdIoZ51NlHxflg8QkM" data-title="#2 – Marc Violo (MycoStories)">#2 – Marc Violo (MycoStories)</div>
+          <div class="title-item" data-episode-id="29RzNfqYW1tHAkGS4yYHQ9" data-title="#1 – Seth Colchester (Mycogenius)">#1 – Seth Colchester (Mycogenius)</div>
+        </div>
+
+        <!-- CTA Text -->
+        <div class="podcast-cta">
+          <a href="mailto:oli@thefungiconsultant.com" class="contact-link">Get in touch</a> if you're interested in appearing on <span class="brand-name">The Fungi Consultant Podcast</span>.
         </div>
       </div>
     </div>
 
     <div class="tab-panel" id="panel-2">
-      <div class="podcast-embed-section">
+      <div class="podcast-section">
         <div class="featured-player">
-          <div id="ogbc-player" class="dynamic-player">
-            <iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/B_AUz-NWIlU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="player-embed">
+            <div id="ogbc-player" class="dynamic-player">
+              <iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/B_AUz-NWIlU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="podcast-details">
+            <h3 class="podcast-title" id="ogbc-title">#6 – Giulio Sica: Corporations & Psychedelics</h3>
           </div>
         </div>
 
         <!-- Episode Selector Grid for OGBC -->
         <div class="title-selector-grid">
-          <div class="title-item active" data-episode-id="B_AUz-NWIlU" data-youtube="true">#6 – Giulio Sica: Corporations & Psychedelics</div>
-          <div class="title-item" data-episode-id="70FExLdnLt6xgZ1U5GXqPo">#5 – Lina Jan: Is resilience a myth?</div>
-          <div class="title-item" data-episode-id="75LM7ZGiLUrF1ww24fEVvW">#4 – Dr. Jack Hunter: Music & spirits</div>
-          <div class="title-item" data-episode-id="bWOnBjSyTqw" data-youtube="true">#3 – Darryl Bickler: Illegal drugs</div>
-          <div class="title-item" data-episode-id="7wTDGmICdKYUWaJPz6fQ7o">#2 – Dr. Andy Letcher: Weird psychedelics</div>
-          <div class="title-item" data-episode-id="4vNV45NP8Y0ViXdvJgei9f">#1 – Robert Forte: MDMA therapy</div>
+          <div class="title-item active" data-episode-id="B_AUz-NWIlU" data-youtube="true" data-title="#6 – Giulio Sica: Corporations & Psychedelics">#6 – Giulio Sica: Corporations & Psychedelics</div>
+          <div class="title-item" data-episode-id="70FExLdnLt6xgZ1U5GXqPo" data-title="#5 – Lina Jan: Is resilience a myth?">#5 – Lina Jan: Is resilience a myth?</div>
+          <div class="title-item" data-episode-id="75LM7ZGiLUrF1ww24fEVvW" data-title="#4 – Dr. Jack Hunter: Music & spirits">#4 – Dr. Jack Hunter: Music & spirits</div>
+          <div class="title-item" data-episode-id="bWOnBjSyTqw" data-youtube="true" data-title="#3 – Darryl Bickler: Illegal drugs">#3 – Darryl Bickler: Illegal drugs</div>
+          <div class="title-item" data-episode-id="7wTDGmICdKYUWaJPz6fQ7o" data-title="#2 – Dr. Andy Letcher: Weird psychedelics">#2 – Dr. Andy Letcher: Weird psychedelics</div>
+          <div class="title-item" data-episode-id="4vNV45NP8Y0ViXdvJgei9f" data-title="#1 – Robert Forte: MDMA therapy">#1 – Robert Forte: MDMA therapy</div>
+        </div>
+
+        <!-- CTA Text -->
+        <div class="podcast-cta">
+          <a href="mailto:oli@thefungiconsultant.com" class="contact-link">Get in touch</a> if you're interested in appearing on <span class="brand-name">Oli Genn-Bash Connects</span>.
         </div>
       </div>
     </div>
@@ -70,7 +90,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Psychedelics Today | #645</h3>
-              <p class="podcast-description">Oli Genn Bash - Functional Mushrooms, Hype Cycles, and Mycelial Thinking</p>
+              <p class="podcast-description">Functional Mushrooms, Hype Cycles, and Mycelial Thinking</p>
               <a href="https://open.spotify.com/episode/4l5TMlnYKE3Gc12LVwNIXK" target="_blank" class="watch-link">Listen on Spotify →</a>
             </div>
           </div>
@@ -82,7 +102,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">End of the Road Podcast | #328</h3>
-              <p class="podcast-description">Oli Genn-Bash: Animism/The Fungi Consultant/Codex Serafini</p>
+              <p class="podcast-description">Animism/The Fungi Consultant/Codex Serafini</p>
               <a href="https://youtu.be/fKvOaY1tywU" target="_blank" class="watch-link">Watch on YouTube →</a>
             </div>
           </div>
@@ -94,7 +114,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Mycelium Hub Spore Journeys | #04</h3>
-              <p class="podcast-description">Oli Genn-Bash – Functional Mushrooms, Supplement Myths & Decentralised Wisdom</p>
+              <p class="podcast-description">Functional Mushrooms, Supplement Myths & Decentralised Wisdom</p>
               <a href="https://youtu.be/GLfsttnEyTA" target="_blank" class="watch-link">Watch on YouTube →</a>
             </div>
           </div>
@@ -106,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">The Simpa Life Podcast | #152</h3>
-              <p class="podcast-description">Oli Genn Bash | Cognitive Liberty | Psychedelics | Mycology</p>
+              <p class="podcast-description">Cognitive Liberty | Psychedelics | Mycology</p>
               <a href="https://youtu.be/g_G-mXOHjoU" target="_blank" class="watch-link">Watch on YouTube →</a>
             </div>
           </div>
@@ -118,7 +138,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Gnodcast | #18</h3>
-              <p class="podcast-description">Oli Genn-Bash</p>
+              <p class="podcast-description">&nbsp;</p>
               <a href="https://youtu.be/xl5UyhdjAYs" target="_blank" class="watch-link">Watch on YouTube →</a>
             </div>
           </div>
@@ -130,7 +150,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Psychedelic Conversations | #153</h3>
-              <p class="podcast-description">Oli Genn-Bash - The Fungi Consultant</p>
+              <p class="podcast-description">The Fungi Consultant</p>
               <a href="https://youtu.be/RfT_O1F_skY" target="_blank" class="watch-link">Watch on YouTube →</a>
             </div>
           </div>
@@ -154,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Wired For Success Podcast | #216</h3>
-              <p class="podcast-description">Functional Mushrooms & Psychedelics with Oli Genn-Bash</p>
+              <p class="podcast-description">Functional Mushrooms & Psychedelics</p>
               <a href="https://wiredforsuccesspodcast.libsyn.com/functional-mushrooms-psychedelics-with-oli-genn-bash-episode-216" target="_blank" class="watch-link">Listen on Libsyn →</a>
             </div>
           </div>
@@ -166,7 +186,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
             <div class="podcast-details">
               <h3 class="podcast-title">Mycopreneur Podcast | #3</h3>
-              <p class="podcast-description">Oli Genn-Bash - The Fungi Consultant</p>
+              <p class="podcast-description">The Fungi Consultant</p>
               <a href="https://shows.acast.com/mycopreneur/episodes/oli-genn-bash-the-fungi-consultant" target="_blank" class="watch-link">Listen on Acast →</a>
             </div>
           </div>
@@ -307,18 +327,6 @@ import Layout from '../layouts/Layout.astro';
   }
 }
 
-.podcast-embed-section {
-  background-color: #f9f9f7;
-  border: 2px solid #e0e0d8;
-  border-radius: 12px;
-  padding: 40px;
-  margin-bottom: 60px;
-}
-
-.podcast-embed-section iframe {
-  display: block;
-  margin: 0 auto;
-}
 
 /* Podcast Appearances Section */
 .podcast-section {
@@ -608,39 +616,45 @@ import Layout from '../layouts/Layout.astro';
   document.addEventListener('DOMContentLoaded', function() {
     const tfcItems = document.querySelectorAll('#panel-1 .title-item');
     const tfcPlayer = document.getElementById('tfc-player');
+    const tfcTitle = document.getElementById('tfc-title');
 
     tfcItems.forEach(item => {
       item.addEventListener('click', () => {
         const episodeId = item.getAttribute('data-episode-id');
+        const title = item.getAttribute('data-title');
 
         // Remove active class from all TFC items
         tfcItems.forEach(t => t.classList.remove('active'));
         item.classList.add('active');
 
-        // Update TFC player iframe
+        // Update TFC player iframe and title
         tfcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+        tfcTitle.textContent = title;
       });
     });
 
     // Episode switcher for OGBC podcast (panel 2)
     const ogbcItems = document.querySelectorAll('#panel-2 .title-item');
     const ogbcPlayer = document.getElementById('ogbc-player');
+    const ogbcTitle = document.getElementById('ogbc-title');
 
     ogbcItems.forEach(item => {
       item.addEventListener('click', () => {
         const episodeId = item.getAttribute('data-episode-id');
         const isYoutube = item.getAttribute('data-youtube');
+        const title = item.getAttribute('data-title');
 
         // Remove active class from all OGBC items
         ogbcItems.forEach(t => t.classList.remove('active'));
         item.classList.add('active');
 
-        // Update OGBC player iframe
+        // Update OGBC player iframe and title
         if (isYoutube) {
           ogbcPlayer.innerHTML = `<iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/${episodeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
         } else {
           ogbcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
         }
+        ogbcTitle.textContent = title;
       });
     });
 
