@@ -29,6 +29,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="podcast-details">
             <h3 class="podcast-title" id="tfc-title">#6 – KK (Flora Fungi Podcast)</h3>
+            <a href="https://open.spotify.com/episode/078W1Fg9b6w6RC0e3uWFpY" target="_blank" class="watch-link" id="tfc-link">Listen on Spotify →</a>
           </div>
         </div>
 
@@ -59,6 +60,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <div class="podcast-details">
             <h3 class="podcast-title" id="ogbc-title">#6 – Giulio Sica: Corporations & Psychedelics</h3>
+            <a href="https://www.youtube.com/watch?v=B_AUz-NWIlU" target="_blank" class="watch-link" id="ogbc-link">Watch on YouTube →</a>
           </div>
         </div>
 
@@ -574,11 +576,11 @@ import Layout from '../layouts/Layout.astro';
 
   .player-embed {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    min-height: 200px;
   }
 
   .player-embed iframe {
-    height: 100% !important;
+    height: 200px !important;
     width: 100% !important;
   }
 
@@ -596,7 +598,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .header-image {
-    max-width: 100px;
+    max-width: 180px;
   }
 }
 </style>
@@ -617,6 +619,7 @@ import Layout from '../layouts/Layout.astro';
     const tfcItems = document.querySelectorAll('#panel-1 .title-item');
     const tfcPlayer = document.getElementById('tfc-player');
     const tfcTitle = document.getElementById('tfc-title');
+    const tfcLink = document.getElementById('tfc-link');
 
     tfcItems.forEach(item => {
       item.addEventListener('click', () => {
@@ -627,9 +630,10 @@ import Layout from '../layouts/Layout.astro';
         tfcItems.forEach(t => t.classList.remove('active'));
         item.classList.add('active');
 
-        // Update TFC player iframe and title
+        // Update TFC player iframe, title, and link
         tfcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
         tfcTitle.textContent = title;
+        tfcLink.href = `https://open.spotify.com/episode/${episodeId}`;
       });
     });
 
@@ -637,6 +641,7 @@ import Layout from '../layouts/Layout.astro';
     const ogbcItems = document.querySelectorAll('#panel-2 .title-item');
     const ogbcPlayer = document.getElementById('ogbc-player');
     const ogbcTitle = document.getElementById('ogbc-title');
+    const ogbcLink = document.getElementById('ogbc-link');
 
     ogbcItems.forEach(item => {
       item.addEventListener('click', () => {
@@ -648,11 +653,15 @@ import Layout from '../layouts/Layout.astro';
         ogbcItems.forEach(t => t.classList.remove('active'));
         item.classList.add('active');
 
-        // Update OGBC player iframe and title
+        // Update OGBC player iframe, title, and link
         if (isYoutube) {
           ogbcPlayer.innerHTML = `<iframe width="100%" height="352" style="border-radius:12px" src="https://www.youtube.com/embed/${episodeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+          ogbcLink.href = `https://www.youtube.com/watch?v=${episodeId}`;
+          ogbcLink.textContent = 'Watch on YouTube →';
         } else {
           ogbcPlayer.innerHTML = `<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/${episodeId}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
+          ogbcLink.href = `https://open.spotify.com/episode/${episodeId}`;
+          ogbcLink.textContent = 'Listen on Spotify →';
         }
         ogbcTitle.textContent = title;
       });

@@ -38,15 +38,16 @@ if (currentPage === '/') {
 }
 ---
 
+<button class="hamburger-container" id="hamburger">
+  <div class="hamburger-lines">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <span class="hamburger-text">menu</span>
+</button>
+
 <nav class="main-nav">
-  <button class="hamburger-container" id="hamburger">
-    <div class="hamburger-lines">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <span class="hamburger-text">menu</span>
-  </button>
   <div class="nav-bar" id="navBar">
     {navItems.map(item => (
       item.dropdown ? (
@@ -137,25 +138,40 @@ if (currentPage === '/') {
   gap: 8px;
 }
 
+.dropdown-text {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
 .dropdown-trigger:hover {
   transform: scale(1.05);
 }
 
 .dropdown-trigger:hover .dropdown-text {
-  text-decoration: underline;
+  border-bottom-color: #efefed;
 }
 
 .dropdown-trigger.active {
   color: #9A89A4 !important;
 }
 
+.dropdown-trigger.active .dropdown-text {
+  border-bottom-color: #9A89A4;
+}
+
 .dropdown-arrow {
   font-size: 0.7em;
   transition: transform 0.3s ease;
+  margin-bottom: 2px;
 }
 
 .nav-dropdown:hover .dropdown-arrow {
   transform: rotate(180deg);
+}
+
+.nav-dropdown.open .dropdown-text {
+  border-bottom-color: #efefed;
 }
 
 .dropdown-menu {
@@ -206,8 +222,9 @@ if (currentPage === '/') {
   gap: 5px;
   padding: 15px;
   cursor: pointer;
-  background: none;
+  background: #b6c2a0;
   border: none;
+  border-radius: 8px;
   position: fixed;
   top: 0;
   right: 15px;
@@ -226,7 +243,6 @@ if (currentPage === '/') {
 .hamburger-container:active,
 .hamburger-container:focus {
   outline: none;
-  background: none;
 }
 
 .hamburger-container:active .hamburger-lines span {
@@ -278,6 +294,10 @@ if (currentPage === '/') {
 }
 
 /* Change hamburger color when open */
+.hamburger-container.open {
+  background: #4e625c;
+}
+
 .hamburger-container.open .hamburger-lines span {
   background: #efefed;
 }
@@ -315,25 +335,30 @@ if (currentPage === '/') {
 
   .hamburger-container {
     display: flex;
-    position: fixed;
+    position: fixed !important;
     top: 40px;
+    right: 12px;
     height: auto;
-    padding: 8px 15px;
+    padding: 12px 14px;
     z-index: 1001;
+    border-radius: 8px;
+    background: rgba(182, 194, 160, 0.7);
+    transform: none !important;
+    will-change: auto;
   }
 
   .hamburger-lines {
-    width: 22px;
-    height: 16px;
+    width: 28px;
+    height: 20px;
   }
 
   .hamburger-lines span {
-    width: 22px;
-    height: 2.5px;
+    width: 28px;
+    height: 3px;
   }
 
   .hamburger-text {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .nav-bar {
@@ -401,6 +426,10 @@ if (currentPage === '/') {
 
   .dropdown-arrow {
     font-size: 0.6em;
+  }
+
+  .nav-dropdown.open .dropdown-text {
+    border-bottom-color: #efefed;
   }
 }
 </style>

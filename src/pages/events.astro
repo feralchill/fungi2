@@ -4,23 +4,56 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="The Fungi Consultant - Events" currentPage="/events">
   <div class="events-content">
-    <h1 class="page-heading">Events</h1>
+    <h1 class="page-heading">Upcoming Events</h1>
 
-    <!-- Featured Event -->
+    <!-- Event 1: Open Foundation Talk -->
+    <div class="featured-event">
+      <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6205.jpeg" class="event-image" alt="Functional Mushrooms: Ecological Allies">
+
+      <h2 class="event-title">Functional Mushrooms: Ecological Allies for Whole-Body Health</h2>
+      <p class="event-date">Wednesday 18th February 2026, online via Zoom</p>
+
+      <div class="event-cta">
+        <a href="https://open-foundation.org/events/online/functional-mushrooms-ecological-allies-for-whole-body-health/" target="_blank" class="event-link">Sign up or book a space with the Open Foundation →</a>
+      </div>
+
+      <input type="checkbox" id="event1Toggle" class="event-toggle">
+      <label for="event1Toggle" class="event-expand-link">
+        <span class="expand-text">more about this event</span>
+        <span class="expand-chevron"></span>
+      </label>
+
+      <div class="event-description">
+        <p>This talk explores functional mushrooms not simply as supplements, but as ecological allies – organisms with a long history of traditional use and a growing body of scientific research behind them.</p>
+
+        <p>Drawing on insights from immunology, neurobiology, gut microbiome research, and emerging conversations around adaptogens and nootropics, this session invites us to view the body as a living network of relationships — one that can be supported through resilience, balance, and prevention rather than reaction alone.</p>
+
+        <p>This online talk is for anyone curious about mushrooms, interested in integrative health, or looking for new ways to support wellbeing; offering a grounded and thoughtful perspective on working with nature to support the body as a whole.</p>
+      </div>
+    </div>
+
+    <!-- Event 2: Biohacking Course -->
     <div class="featured-event">
       <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6035.jpeg" class="event-image" alt="Biohacking with Mushrooms Course">
 
       <h2 class="event-title">Biohacking with Mushrooms: 5-Week Course</h2>
       <h3 class="event-subtitle">Navigating the Science, Benefits & Uses of Functional Mushrooms</h3>
+      <p class="event-date">Thursday 5th March 2026</p>
+
+      <div class="event-cta">
+        <a href="https://dandelion.events/e/r1d4r" target="_blank" class="event-link">Book tickets and see course outline →</a>
+      </div>
+
+      <input type="checkbox" id="event2Toggle" class="event-toggle">
+      <label for="event2Toggle" class="event-expand-link">
+        <span class="expand-text">more about this event</span>
+        <span class="expand-chevron"></span>
+      </label>
 
       <div class="event-description">
         <p>This five-week online course offers a grounded, accessible, and evidence-informed introduction to functional mushrooms, blending modern science, traditional wisdom, and real-world application. Designed for beginners and the curious alike, the course explores how medicinal mushrooms can support cognition, stress resilience, immunity, and overall well-being – without hype or unrealistic promises.</p>
 
         <p>Each session includes a deep dive into specific mushrooms, practical guidance on sourcing and use, and extended Q&A to help participants apply what they learn to their own lives.</p>
-      </div>
-
-      <div class="event-cta">
-        <a href="https://dandelion.events/e/r1d4r" target="_blank" class="event-link">Book tickets and see course outline →</a>
       </div>
     </div>
 
@@ -81,6 +114,15 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.3;
 }
 
+.event-date {
+  font-family: 'Literata', serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: rgba(82, 81, 92, 0.7);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 .event-subtitle {
   font-family: 'Literata', serif;
   font-size: 1.2em;
@@ -92,12 +134,77 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1.4;
 }
 
+/* Event Toggle */
+.event-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.event-expand-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  margin: 15px 0 0 0;
+  transition: all 0.3s ease;
+}
+
+.expand-text {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  color: #9a89a4;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.expand-chevron {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid #9a89a4;
+  transition: transform 0.3s ease;
+  margin-bottom: 2px;
+}
+
+.event-expand-link:hover .expand-text {
+  border-bottom-color: #9a89a4;
+}
+
+/* When expanded */
+.event-toggle:checked + .event-expand-link .expand-text {
+  border-bottom-color: #9a89a4;
+}
+
+.event-toggle:checked + .event-expand-link .expand-chevron {
+  transform: rotate(180deg);
+}
+
+/* Description hidden by default */
 .event-description {
   background-color: #f9f9f7;
   border: 2px solid #e0e0d8;
   border-radius: 12px;
   padding: 30px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 30px;
+  transition: all 0.4s ease;
+}
+
+/* Show description when toggled */
+.event-toggle:checked ~ .event-description {
+  max-height: 1000px;
+  opacity: 1;
+  padding: 30px;
 }
 
 .event-description p {
@@ -223,12 +330,25 @@ import Layout from '../layouts/Layout.astro';
     margin-bottom: 12px;
   }
 
+  .event-date {
+    font-size: 1em;
+    margin-bottom: 12px;
+  }
+
   .event-subtitle {
     font-size: 1.05em;
     margin-bottom: 20px;
   }
 
+  .event-divider {
+    margin: 40px auto;
+  }
+
   .event-description {
+    padding: 0 20px;
+  }
+
+  .event-toggle:checked ~ .event-description {
     padding: 20px;
   }
 
@@ -239,6 +359,10 @@ import Layout from '../layouts/Layout.astro';
 
   .event-link {
     font-size: 1em;
+  }
+
+  .expand-text {
+    font-size: 0.9em;
   }
 
   .bottom-image {

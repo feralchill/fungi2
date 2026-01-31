@@ -5,101 +5,72 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="The Fungi Consultant - Testimonials" currentPage="/testimonials">
   <div class="testimonials-content">
     <h1 class="page-heading">Testimonials</h1>
-
-    <div class="intro-text">
-      Kind words from clients who have worked with The Fungi Consultant.
-    </div>
+    <p class="page-intro">Read what some of our clients have had to say about our services; and <a href="mailto:oligennbash@thefungiconsultant.com" class="intro-link">let us know</a> if you'd like to share your experience!</p>
 
     <div class="testimonial-wrapper">
-      <!-- Hidden Radio Controls -->
-      <input type="radio" name="testimonial-radio" id="testimonial-1" checked>
-      <input type="radio" name="testimonial-radio" id="testimonial-2">
-      <input type="radio" name="testimonial-radio" id="testimonial-3">
-      <input type="radio" name="testimonial-radio" id="testimonial-4">
-      <input type="radio" name="testimonial-radio" id="testimonial-5">
-      <input type="radio" name="testimonial-radio" id="testimonial-6">
-
-      <!-- Slide Content -->
-      <div class="testimonial-slider">
-        <!-- Testimonial 1 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"I thought it might be interesting, but what I didn't expect was just how insightful, kind, and genuinely supportive Oli would be. From the moment we started, Oli was immediately approachable, and the conversation flowed easily. It wasn't just a typical consultation; he took the time to really explore my physiology and philosophy in a way that felt incredibly personal and thoughtful. I've rarely encountered a consultant who clearly knows his stuff as well as Oli does. He's read extensively, can talk you through the peer-reviewed science without a hitch, and most importantly, he listens."</p>
-            <p class="testimonial-author">— Patrick, Brighton</p>
+      <!-- Card Stack -->
+      <div class="card-stack" id="cardStack">
+        <!-- Card 1 - Green -->
+        <div class="testimonial-card card-green" data-index="0">
+          <div class="card-inner">
+            <p class="quote-text">"I thought it might be interesting, but what I didn't expect was just how insightful, kind, and genuinely supportive Oli would be. From the moment we started, Oli was immediately approachable, and the conversation flowed easily. It wasn't just a typical consultation; he took the time to really explore my physiology and philosophy in a way that felt incredibly personal and thoughtful. I've rarely encountered a consultant who clearly knows his stuff as well as Oli does. He's read extensively, can talk you through the peer-reviewed science without a hitch, and most importantly, he listens."</p>
+            <p class="quote-author">— Patrick, Brighton</p>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"I really enjoyed my session with Oli! He was really enthusiastic, listened deeply to the areas I wanted to address with functional mushrooms, and shared his deep and complex knowledge in an accessible way. I've since ordered some Lion's Mane and Reishi capsules and am really enjoying them already!"</p>
-            <p class="testimonial-author">— Eve, Kent</p>
+        <!-- Card 2 - Purple -->
+        <div class="testimonial-card card-purple" data-index="1">
+          <div class="card-inner">
+            <p class="quote-text">"I really enjoyed my session with Oli! He was really enthusiastic, listened deeply to the areas I wanted to address with functional mushrooms, and shared his deep and complex knowledge in an accessible way. I've since ordered some Lion's Mane and Reishi capsules and am really enjoying them already!"</p>
+            <p class="quote-author">— Eve, Kent</p>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"Oli is very knowledgeable about the properties of a large array of mushrooms, and is skilled at assessing physical or psychological tensions. He is able to confidently suggest fungal supplements to alleviate discomfort. But obviously it is not all about treatment of symptoms; Oli pursues a holistic approach towards the maintenance and enhancement of health, and in this regard may recommend fungi or supplements towards this objective. Beyond everything else, Oli is a patient sympathetic listener, a keen observer, and a wise counsel on how to remain hale and hearty within this jagged age of modernity."</p>
-            <p class="testimonial-author">— William, Canterbury</p>
+        <!-- Card 3 - Teal -->
+        <div class="testimonial-card card-teal" data-index="2">
+          <div class="card-inner">
+            <p class="quote-text">"Oli is very knowledgeable about the properties of a large array of mushrooms, and is skilled at assessing physical or psychological tensions. He is able to confidently suggest fungal supplements to alleviate discomfort. But obviously it is not all about treatment of symptoms; Oli pursues a holistic approach towards the maintenance and enhancement of health, and in this regard may recommend fungi or supplements towards this objective. Beyond everything else, Oli is a patient sympathetic listener, a keen observer, and a wise counsel on how to remain hale and hearty within this jagged age of modernity."</p>
+            <p class="quote-author">— William, Canterbury</p>
           </div>
         </div>
 
-        <!-- Testimonial 4 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"Oli has a very relaxed and joyful personality, which puts you at ease and helps you feel more comfortable. He has good knowledge of fungi, as well as other natural supplements and adaptogens. It's clear to see his passion for this topic, and we've had some interesting conversations about mushrooms and plants. I've heard great feedback about his group workshops which I hope to attend one day!"</p>
-            <p class="testimonial-author">— Grace, Brighton</p>
+        <!-- Card 4 - Dark -->
+        <div class="testimonial-card card-dark" data-index="3">
+          <div class="card-inner">
+            <p class="quote-text">"Oli has a very relaxed and joyful personality, which puts you at ease and helps you feel more comfortable. He has good knowledge of fungi, as well as other natural supplements and adaptogens. It's clear to see his passion for this topic, and we've had some interesting conversations about mushrooms and plants. I've heard great feedback about his group workshops which I hope to attend one day!"</p>
+            <p class="quote-author">— Grace, Brighton</p>
           </div>
         </div>
 
-        <!-- Testimonial 5 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"It was good to have an informal talk both about micro and macrodosing as well as advice on cultivation. The practicalities of cultivation skills was covered sufficiently, as was the microdosing regime. Some information on different species was covered and some on non-regulated other mushrooms that could assist in a general health outline. All my questions were covered, and I was very grateful for the the information. It was good to also exchange experiences to put things in perspective. It was good that you asked me in advance what I wanted to know - another person might be different."</p>
-            <p class="testimonial-author">— Ole, Brighton</p>
+        <!-- Card 5 - Green -->
+        <div class="testimonial-card card-green" data-index="4">
+          <div class="card-inner">
+            <p class="quote-text">"It was good to have an informal talk both about micro and macrodosing as well as advice on cultivation. The practicalities of cultivation skills was covered sufficiently, as was the microdosing regime. Some information on different species was covered and some on non-regulated other mushrooms that could assist in a general health outline. All my questions were covered, and I was very grateful for the information. It was good to also exchange experiences to put things in perspective. It was good that you asked me in advance what I wanted to know - another person might be different."</p>
+            <p class="quote-author">— Ole, Brighton</p>
           </div>
         </div>
 
-        <!-- Testimonial 6 -->
-        <div class="testimonial-slide">
-          <div class="testimonial-quote">
-            <p>"Oli was really knowledgeable about the world of functional mushrooms. I discussed what I wanted from them and what I'd already tried. He was able to explain what to look for and recommended some trusted products and shops."</p>
-            <p class="testimonial-author">— Kieron, Alton</p>
+        <!-- Card 6 - Purple -->
+        <div class="testimonial-card card-purple" data-index="5">
+          <div class="card-inner">
+            <p class="quote-text">"Oli was really knowledgeable about the world of functional mushrooms. I discussed what I wanted from them and what I'd already tried. He was able to explain what to look for and recommended some trusted products and shops."</p>
+            <p class="quote-author">— Kieron, Alton</p>
           </div>
         </div>
       </div>
+
+      <!-- Navigation Arrows -->
+      <button class="arrow prev-arrow" id="prevArrow" aria-label="Previous testimonial"></button>
+      <button class="arrow next-arrow" id="nextArrow" aria-label="Next testimonial"></button>
 
       <!-- Navigation Dots -->
       <div class="testimonial-dots">
-        <label for="testimonial-1" class="testimonial-dot"></label>
-        <label for="testimonial-2" class="testimonial-dot"></label>
-        <label for="testimonial-3" class="testimonial-dot"></label>
-        <label for="testimonial-4" class="testimonial-dot"></label>
-        <label for="testimonial-5" class="testimonial-dot"></label>
-        <label for="testimonial-6" class="testimonial-dot"></label>
-      </div>
-
-      <!-- Arrow Navigation -->
-      <div class="testimonial-arrows">
-        <!-- Prev/Next arrows for testimonial 1 -->
-        <label for="testimonial-6" class="arrow prev-arrow t1-prev"></label>
-        <label for="testimonial-2" class="arrow next-arrow t1-next"></label>
-        <!-- Prev/Next arrows for testimonial 2 -->
-        <label for="testimonial-1" class="arrow prev-arrow t2-prev"></label>
-        <label for="testimonial-3" class="arrow next-arrow t2-next"></label>
-        <!-- Prev/Next arrows for testimonial 3 -->
-        <label for="testimonial-2" class="arrow prev-arrow t3-prev"></label>
-        <label for="testimonial-4" class="arrow next-arrow t3-next"></label>
-        <!-- Prev/Next arrows for testimonial 4 -->
-        <label for="testimonial-3" class="arrow prev-arrow t4-prev"></label>
-        <label for="testimonial-5" class="arrow next-arrow t4-next"></label>
-        <!-- Prev/Next arrows for testimonial 5 -->
-        <label for="testimonial-4" class="arrow prev-arrow t5-prev"></label>
-        <label for="testimonial-6" class="arrow next-arrow t5-next"></label>
-        <!-- Prev/Next arrows for testimonial 6 -->
-        <label for="testimonial-5" class="arrow prev-arrow t6-prev"></label>
-        <label for="testimonial-1" class="arrow next-arrow t6-next"></label>
+        <button class="testimonial-dot active" data-index="0"></button>
+        <button class="testimonial-dot" data-index="1"></button>
+        <button class="testimonial-dot" data-index="2"></button>
+        <button class="testimonial-dot" data-index="3"></button>
+        <button class="testimonial-dot" data-index="4"></button>
+        <button class="testimonial-dot" data-index="5"></button>
       </div>
     </div>
 
@@ -134,263 +105,235 @@ import Layout from '../layouts/Layout.astro';
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.intro-text {
+.page-intro {
   font-family: 'Literata', serif;
   font-weight: 400;
   font-size: 0.95em;
   line-height: 1.6;
   color: #52515c;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* Testimonial Wrapper */
+.intro-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  transition: all 0.3s ease;
+}
+
+.intro-link:hover {
+  color: #9a89a4;
+}
+
+.intro-link:visited {
+  color: #b6c2a0;
+}
+
+/* Wrapper */
 .testimonial-wrapper {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #f9f9f7;
-  border: 1px solid #b6c2a0;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0 0 40px;
 }
 
-/* Hide radio buttons */
-.testimonial-wrapper input[type="radio"] {
+/* Card Stack Container */
+.card-stack {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 520px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+/* Individual Cards */
+.testimonial-card {
   position: absolute;
+  top: 0;
+  left: 50%;
+  width: 85%;
+  max-width: 700px;
+  height: 100%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+  background: #efefed;
+}
+
+.card-inner {
+  padding: 50px 60px;
+  text-align: center;
+  max-width: 100%;
+}
+
+/* Card States */
+.testimonial-card.active {
+  opacity: 1;
+  z-index: 30;
+  pointer-events: auto;
+  transform: translateX(-50%) scale(1);
+}
+
+.testimonial-card.prev {
+  opacity: 1;
+  z-index: 20;
+  transform: translateX(calc(-50% - 60px)) scale(0.92);
+  pointer-events: none;
+}
+
+.testimonial-card.next {
+  opacity: 1;
+  z-index: 20;
+  transform: translateX(calc(-50% + 60px)) scale(0.92);
+  pointer-events: none;
+}
+
+.quote-text,
+.quote-author {
+  color: #52515c;
+}
+
+
+/* Quote Styling */
+.quote-text {
+  font-family: 'Literata', serif;
+  font-size: 1.05em;
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.quote-author {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.15em;
+  text-align: right;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #b6c2a0;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 40;
+  transition: all 0.3s ease;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.prev-arrow {
+  left: calc(50% - 480px);
+}
+
+.next-arrow {
+  right: calc(50% - 480px);
+}
+
+.arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.arrow.hidden {
   opacity: 0;
   pointer-events: none;
 }
 
-/* Slider container */
-.testimonial-slider {
-  position: relative;
-  min-height: 350px;
-  overflow: hidden;
-}
-
-/* Individual slides */
-.testimonial-slide {
+/* Arrow Icons */
+.arrow::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid #9a89a4;
 }
 
-/* Quote styling */
-.testimonial-quote {
-  text-align: center;
+.prev-arrow::before {
+  border-left: 3px solid #9a89a4;
+  transform: translate(-30%, -50%) rotate(-45deg);
 }
 
-.testimonial-quote p {
-  font-family: 'Literata', serif;
-  font-size: 1.05em;
-  line-height: 1.8;
-  font-style: italic;
-  color: #52515c;
-  margin-bottom: 20px;
+.next-arrow::before {
+  border-right: 3px solid #9a89a4;
+  transform: translate(-70%, -50%) rotate(45deg);
 }
 
-.testimonial-author {
-  font-family: 'Abril Fatface', serif;
-  font-weight: normal;
-  font-size: 1em;
-  color: #63596a;
-  text-align: right;
-  font-style: normal !important;
-  margin-top: 15px;
-}
-
-/* Navigation dots */
+/* Dots */
 .testimonial-dots {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
   gap: 12px;
+  margin-top: 30px;
 }
 
 .testimonial-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #e0e0d8;
+  background: transparent;
+  border: 1px solid #b6c2a0;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .testimonial-dot:hover {
-  background-color: #b6c2a0;
+  background: rgba(182, 194, 160, 0.4);
 }
 
-/* Arrow styling */
-.testimonial-arrows {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-}
-
-.arrow {
-  position: absolute;
-  top: 45%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  background-color: transparent;
-  pointer-events: auto;
-  z-index: 2;
-  display: none;
-  border: none;
-}
-
-.prev-arrow {
-  left: -20px;
-}
-
-.next-arrow {
-  right: -20px;
-}
-
-/* Arrow shapes */
-.prev-arrow::before,
-.next-arrow::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-top: 3px solid #b6c2a0;
-  border-right: 3px solid #b6c2a0;
-  top: 50%;
-  transition: border-color 0.3s ease;
-}
-
-.prev-arrow:hover::before,
-.next-arrow:hover::before {
+.testimonial-dot.active {
+  background: #63596a;
   border-color: #63596a;
 }
 
-.prev-arrow::before {
-  left: 50%;
-  transform: translateY(-50%) rotate(-135deg);
-}
-
-.next-arrow::before {
-  right: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-
-/* Radio button controls - show active slide */
-#testimonial-1:checked ~ .testimonial-slider .testimonial-slide:nth-child(1),
-#testimonial-2:checked ~ .testimonial-slider .testimonial-slide:nth-child(2),
-#testimonial-3:checked ~ .testimonial-slider .testimonial-slide:nth-child(3),
-#testimonial-4:checked ~ .testimonial-slider .testimonial-slide:nth-child(4),
-#testimonial-5:checked ~ .testimonial-slider .testimonial-slide:nth-child(5),
-#testimonial-6:checked ~ .testimonial-slider .testimonial-slide:nth-child(6) {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Active dot */
-#testimonial-1:checked ~ .testimonial-dots .testimonial-dot:nth-child(1),
-#testimonial-2:checked ~ .testimonial-dots .testimonial-dot:nth-child(2),
-#testimonial-3:checked ~ .testimonial-dots .testimonial-dot:nth-child(3),
-#testimonial-4:checked ~ .testimonial-dots .testimonial-dot:nth-child(4),
-#testimonial-5:checked ~ .testimonial-dots .testimonial-dot:nth-child(5),
-#testimonial-6:checked ~ .testimonial-dots .testimonial-dot:nth-child(6) {
-  background-color: #63596a;
-}
-
-/* Show correct arrows based on active slide */
-#testimonial-1:checked ~ .testimonial-arrows .t1-prev,
-#testimonial-1:checked ~ .testimonial-arrows .t1-next,
-#testimonial-2:checked ~ .testimonial-arrows .t2-prev,
-#testimonial-2:checked ~ .testimonial-arrows .t2-next,
-#testimonial-3:checked ~ .testimonial-arrows .t3-prev,
-#testimonial-3:checked ~ .testimonial-arrows .t3-next,
-#testimonial-4:checked ~ .testimonial-arrows .t4-prev,
-#testimonial-4:checked ~ .testimonial-arrows .t4-next,
-#testimonial-5:checked ~ .testimonial-arrows .t5-prev,
-#testimonial-5:checked ~ .testimonial-arrows .t5-next,
-#testimonial-6:checked ~ .testimonial-arrows .t6-prev,
-#testimonial-6:checked ~ .testimonial-arrows .t6-next {
-  display: block;
-}
-
-/* Bottom image and footer */
+/* Footer */
 .bottom-image {
   width: 100%;
   max-width: 400px;
-  height: auto;
-  margin: 60px auto 0 auto;
+  margin: 60px auto 0;
   display: block;
 }
 
 .finish-container {
-  max-width: 800px;
-  margin: 0px auto;
-  margin-bottom: 0px auto;
   padding: 10px;
   text-align: center;
 }
 
 .finish-text {
   font-family: 'Literata', serif;
-  font-weight: 500;
   font-size: 0.8em;
-  line-height: 1.5;
   color: #52515c;
   margin-bottom: 10px;
 }
 
-.finish-text .brand-name {
-  font-family: 'Abril Fatface', serif;
-}
-
 .brand-name {
   font-family: 'Abril Fatface', serif;
-  font-style: normal;
 }
 
 .finish-link {
   color: #b6c2a0;
   font-family: 'Almendra Display', serif;
-  font-size: 1em;
   font-weight: bold;
-  opacity: 1;
-  transition: all 0.3s ease;
+  transition: color 0.3s;
 }
 
 .finish-link:hover {
   color: #4e625c;
-  font-weight: bold;
-  opacity: 1;
   text-decoration: underline;
-}
-
-.finish-link:active {
-  color: #9a89a4;
-  font-weight: bold;
-  opacity: 1;
-  text-decoration: none;
-}
-
-.finish-link:visited {
-  color: #b6c2a0;
-  font-weight: bold;
-  opacity: 1;
 }
 
 .footer-text-small {
@@ -400,48 +343,86 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 60px;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .testimonials-content {
-    padding: 0 15px;
+/* Desktop enhancements */
+@media (min-width: 769px) {
+  .card-stack {
+    height: 520px;
   }
 
+  .testimonial-card {
+    border: 1px solid #9a89a4;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(154, 137, 164, 0.15),
+                0 0 40px rgba(154, 137, 164, 0.08);
+    height: 520px;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .prev-arrow {
+    left: 20px;
+  }
+
+  .next-arrow {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
   .page-heading {
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 
-  .intro-text {
-    font-size: 0.9em;
-    line-height: 1.7;
-    margin-bottom: 35px;
+  .page-intro {
+    font-size: 0.85em;
+    padding: 0 10px;
+    margin-bottom: 25px;
   }
 
-  .testimonial-wrapper {
-    padding: 25px 20px;
+  .card-stack {
+    height: 450px;
   }
 
-  .testimonial-slider {
-    min-height: 400px;
+  .testimonial-card {
+    width: calc(100% - 100px);
   }
 
-  .testimonial-quote p {
-    font-size: 0.9em;
-    line-height: 1.7;
+  .card-inner {
+    padding: 30px 15px;
   }
 
-  .testimonial-author {
-    font-size: 0.9em;
+  .quote-text {
+    font-size: 0.75em;
+  }
+
+  .quote-author {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .testimonial-card.prev {
+    transform: translateX(calc(-50% - 20px)) scale(0.95);
+    opacity: 0;
+  }
+
+  .testimonial-card.next {
+    transform: translateX(calc(-50% + 20px)) scale(0.95);
+    opacity: 0;
   }
 
   .arrow {
-    top: 45%;
-    background-color: #f9f9f7;
-    border-radius: 50%;
     width: 36px;
     height: 36px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .prev-arrow {
@@ -452,16 +433,67 @@ import Layout from '../layouts/Layout.astro';
     right: 5px;
   }
 
-  .prev-arrow::before,
-  .next-arrow::before {
-    width: 10px;
-    height: 10px;
-    border-width: 2px;
-  }
-
   .bottom-image {
     max-width: 200px;
     margin-top: 40px;
   }
 }
 </style>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', function() {
+  const cards = document.querySelectorAll('.testimonial-card');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const prevArrow = document.getElementById('prevArrow');
+  const nextArrow = document.getElementById('nextArrow');
+
+  let current = 0;
+  const total = cards.length;
+
+  function updateCards() {
+    cards.forEach((card, i) => {
+      card.classList.remove('active', 'prev', 'next');
+
+      if (i === current) {
+        card.classList.add('active');
+      } else if (i === current - 1) {
+        card.classList.add('prev');
+      } else if (i === current + 1) {
+        card.classList.add('next');
+      }
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+
+    // Hide arrows at ends
+    prevArrow.classList.toggle('hidden', current === 0);
+    nextArrow.classList.toggle('hidden', current === total - 1);
+  }
+
+  prevArrow.addEventListener('click', () => {
+    if (current > 0) {
+      current--;
+      updateCards();
+    }
+  });
+
+  nextArrow.addEventListener('click', () => {
+    if (current < total - 1) {
+      current++;
+      updateCards();
+    }
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      current = i;
+      updateCards();
+    });
+  });
+
+  // Initialize
+  updateCards();
+});
+</script>

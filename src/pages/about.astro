@@ -56,8 +56,9 @@ import Layout from '../layouts/Layout.astro';
             <div class="fungi-content-text">
               <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
               <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
-              
-            <i>I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.<br><br>
+
+            <i>I'm Oli, a UK-based educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work sits between research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.<br><br>
+            I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.<br><br>
           Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but lion's mane, reishi, and cordyceps became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span></i>.
             </div>
           </div>
@@ -86,6 +87,7 @@ import Layout from '../layouts/Layout.astro';
           <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
           <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
          <br>
+          I'm Oli, a UK-based educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work sits between research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.<br><br>
           I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.<br><br>
           Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but lion's mane, reishi, and cordyceps became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span>.
         </div>
@@ -162,7 +164,7 @@ import Layout from '../layouts/Layout.astro';
   justify-content: center;
   align-items: flex-start;
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .fungi-link-item {
@@ -336,6 +338,7 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .fungi-mobile-panel.open {
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
@@ -505,7 +508,10 @@ function fcToggle(n) {
   fcCurrent = n;
 
   if (linksRow) {
-    linksRow.scrollIntoView({ behavior: "smooth", block: "start" });
+    var rect = linksRow.getBoundingClientRect();
+    var offset = isMobile ? 100 : 150;
+    var scrollTop = window.pageYOffset + rect.top - offset;
+    window.scrollTo({ top: scrollTop, behavior: "smooth" });
   }
 }
 </script>
