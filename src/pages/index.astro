@@ -7,12 +7,15 @@ import Layout from '../layouts/Layout.astro';
     <!-- Video Section -->
     <div class="video-container">
       <video
+        id="heroVideo"
         autoplay
         muted
         loop
         playsinline
+        preload="auto"
         class="hero-video"
       >
+        <source src="https://raw.githubusercontent.com/feralchill/fungi/main/video1.mov" type="video/quicktime">
         <source src="https://raw.githubusercontent.com/feralchill/fungi/main/video1.mov" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -199,3 +202,15 @@ import Layout from '../layouts/Layout.astro';
   }
 }
 </style>
+
+<script is:inline>
+document.addEventListener('DOMContentLoaded', function() {
+  const video = document.getElementById('heroVideo');
+  if (video) {
+    video.muted = true;
+    video.play().catch(function(error) {
+      console.log('Autoplay prevented:', error);
+    });
+  }
+});
+</script>
