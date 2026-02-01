@@ -12,7 +12,9 @@ import Layout from '../layouts/Layout.astro';
         muted
         loop
         playsinline
+        webkit-playsinline
         preload="auto"
+        disablepictureinpicture
         class="hero-video"
       >
         <source src="https://raw.githubusercontent.com/feralchill/fungi/main/video1.mov" type="video/quicktime">
@@ -204,13 +206,31 @@ import Layout from '../layouts/Layout.astro';
 </style>
 
 <script is:inline>
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  function playVideo() {
+    const video = document.getElementById('heroVideo');
+    if (video) {
+      video.muted = true;
+      video.setAttribute('muted', '');
+      video.defaultMuted = true;
+      video.play().catch(function(error) {
+        // Retry after a short delay
+        setTimeout(function() {
+          video.play().catch(function() {});
+        }, 500);
+      });
+    }
+  }
+
+  // Try playing on multiple events
+  document.addEventListener('DOMContentLoaded', playVideo);
+  window.addEventListener('load', playVideo);
+
+  // Also try when the video can play
   const video = document.getElementById('heroVideo');
   if (video) {
-    video.muted = true;
-    video.play().catch(function(error) {
-      console.log('Autoplay prevented:', error);
-    });
+    video.addEventListener('canplay', playVideo);
+    video.addEventListener('loadeddata', playVideo);
   }
-});
+})();
 </script>

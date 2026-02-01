@@ -552,28 +552,52 @@ strong {
 
 .form-button {
   width: 100%;
-  padding: 12px 24px;
+  padding: 14px 24px;
   font-family: 'Abril Fatface', serif;
   font-size: 1.1em;
-  color: #63596a;
-  background-color: #b6c2a0;
-  border: 1px solid #63596a;
-  border-radius: 4px;
+  color: #52515c;
+  background: linear-gradient(180deg,
+    #b8abbe 0%,
+    #9a89a4 15%,
+    #9a89a4 85%,
+    #7d6f87 100%);
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(99, 89, 106, 0.2);
+  transition: all 0.2s ease;
+  box-shadow:
+    0 4px 6px rgba(99, 89, 106, 0.3),
+    0 1px 3px rgba(99, 89, 106, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .form-button:hover {
-  background-color: #9a89a4;
-  border-color: #63596a;
-  color: #efefed;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(99, 89, 106, 0.3);
+  background: linear-gradient(180deg,
+    #c4bcc8 0%,
+    #a89bb0 15%,
+    #a89bb0 85%,
+    #8a7c94 100%);
+  color: #52515c;
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 10px rgba(99, 89, 106, 0.35),
+    0 2px 4px rgba(99, 89, 106, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .form-button:active {
+  background: linear-gradient(180deg,
+    #c9d4bc 0%,
+    #b6c2a0 15%,
+    #b6c2a0 85%,
+    #9aab8a 100%);
   transform: translateY(1px);
+  box-shadow:
+    0 2px 4px rgba(99, 89, 106, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 /* Bottom Image */
