@@ -242,29 +242,53 @@ import Layout from '../layouts/Layout.astro';
   width: 100%;
   text-align: left;
   padding: 12px 40px 12px 15px;
-  background-color: #f9f9f7;
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #f9f9f7 15%,
+    #f9f9f7 85%,
+    #e8e8e4 100%);
   border: 1px solid #b6c2a0;
   font-family: 'Abril Fatface', serif;
   font-size: 1.2em;
   color: #52515c;
   cursor: pointer;
   position: relative;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .service-label:hover {
-  background-color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #fcfcfa 15%,
+    #fcfcfa 85%,
+    #ececea 100%);
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 10px rgba(0, 0, 0, 0.12),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
 .service-toggle:checked + .service-label {
-  background-color: #63596a;
-  border-color: #63596a;
+  background: linear-gradient(180deg,
+    #746a7c 0%,
+    #63596a 15%,
+    #63596a 85%,
+    #524858 100%);
+  border: 1px solid #9a89a4;
   color: #efefed;
-  box-shadow: 0 4px 8px rgba(99, 89, 106, 0.2);
+  box-shadow:
+    0 4px 6px rgba(99, 89, 106, 0.3),
+    0 1px 3px rgba(99, 89, 106, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .service-toggle:checked + .service-label .service-arrow {
@@ -557,42 +581,43 @@ strong {
   font-size: 1.1em;
   color: #52515c;
   background: linear-gradient(180deg,
-    #b8abbe 0%,
-    #9a89a4 15%,
-    #9a89a4 85%,
-    #7d6f87 100%);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  box-shadow:
-    0 4px 6px rgba(99, 89, 106, 0.3),
-    0 1px 3px rgba(99, 89, 106, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.form-button:hover {
-  background: linear-gradient(180deg,
-    #c4bcc8 0%,
-    #a89bb0 15%,
-    #a89bb0 85%,
-    #8a7c94 100%);
-  color: #52515c;
-  transform: translateY(-1px);
-  box-shadow:
-    0 6px 10px rgba(99, 89, 106, 0.35),
-    0 2px 4px rgba(99, 89, 106, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
-
-.form-button:active {
-  background: linear-gradient(180deg,
     #c9d4bc 0%,
     #b6c2a0 15%,
     #b6c2a0 85%,
     #9aab8a 100%);
+  border: 1px solid #9a89a4;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow:
+    0 4px 6px rgba(154, 171, 138, 0.3),
+    0 1px 3px rgba(154, 171, 138, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.form-button:hover {
+  background: linear-gradient(180deg,
+    #d4dfc7 0%,
+    #c4cfae 15%,
+    #c4cfae 85%,
+    #a8b998 100%);
+  color: #52515c;
+  transform: translateY(-1px);
+  box-shadow:
+    0 6px 10px rgba(154, 171, 138, 0.35),
+    0 2px 4px rgba(154, 171, 138, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.form-button:active {
+  background: linear-gradient(180deg,
+    #b8abbe 0%,
+    #9a89a4 15%,
+    #9a89a4 85%,
+    #7d6f87 100%);
+  color: #52515c;
   transform: translateY(1px);
   box-shadow:
     0 2px 4px rgba(99, 89, 106, 0.2),

@@ -81,7 +81,7 @@ if (currentPage === '/') {
   width: 100%;
   background: #4e625c;
   z-index: 99;
-  box-shadow: 0 4px 12px rgba(44, 41, 48, 0.4);
+  box-shadow: 0 4px 8px rgba(44, 41, 48, 0.2);
 }
 
 /* Desktop navigation bar */
@@ -143,25 +143,15 @@ if (currentPage === '/') {
 }
 
 .dropdown-text {
-  border-bottom: 1px solid transparent;
   padding-bottom: 2px;
-  transition: border-color 0.3s ease;
 }
 
 .dropdown-trigger:hover {
   transform: scale(1.05);
 }
 
-.dropdown-trigger:hover .dropdown-text {
-  border-bottom-color: #efefed;
-}
-
 .dropdown-trigger.active {
   color: #9A89A4 !important;
-}
-
-.dropdown-trigger.active .dropdown-text {
-  border-bottom-color: #9A89A4;
 }
 
 .dropdown-arrow {
@@ -170,12 +160,8 @@ if (currentPage === '/') {
   margin-bottom: 2px;
 }
 
-.nav-dropdown:hover .dropdown-arrow {
+.nav-dropdown.open .dropdown-arrow {
   transform: rotate(180deg);
-}
-
-.nav-dropdown.open .dropdown-text {
-  border-bottom-color: #efefed;
 }
 
 .dropdown-menu {
@@ -204,7 +190,7 @@ if (currentPage === '/') {
   background: transparent;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+.nav-dropdown.open .dropdown-menu {
   display: block;
 }
 
@@ -309,7 +295,7 @@ if (currentPage === '/') {
 
 /* Change hamburger color when open */
 .hamburger-container.open {
-  background: #4e625c;
+  background: transparent;
 }
 
 .hamburger-container.open .hamburger-lines span {
@@ -353,9 +339,9 @@ if (currentPage === '/') {
     top: 40px;
     right: 12px;
     height: auto;
-    padding: 8px 10px;
+    padding: 5px 7px;
     z-index: 1001;
-    border-radius: 6px;
+    border-radius: 5px;
     background: rgba(182, 194, 160, 0.7);
     transform: none !important;
     will-change: auto;
@@ -387,7 +373,7 @@ if (currentPage === '/') {
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: none;
+    box-shadow: 0 4px 8px rgba(44, 41, 48, 0.2);
   }
 
   .nav-bar.open {
@@ -421,15 +407,19 @@ if (currentPage === '/') {
     transform: none;
     border: none;
     border-radius: 0;
-    margin-top: 0;
+    margin-top: 6px;
     min-width: 100%;
     box-shadow: none;
     background: #4e625c;
-    padding: 2px 0;
+    padding: 0;
   }
 
   .dropdown-menu::before {
     display: none;
+  }
+
+  .dropdown-item {
+    padding: 6px 20px;
   }
 
   .nav-dropdown.open .dropdown-menu {
@@ -445,68 +435,72 @@ if (currentPage === '/') {
   .dropdown-arrow {
     font-size: 0.6em;
   }
-
-  .nav-dropdown.open .dropdown-text {
-    border-bottom-color: #efefed;
-  }
 }
 </style>
 
-<script>
-function initMenu() {
-  const hamburger = document.getElementById('hamburger');
-  const navBar = document.getElementById('navBar');
+<script is:inline>
+(function() {
+  if (window.menuInitialized) return;
+  window.menuInitialized = true;
 
-  if (!hamburger || !navBar) {
-    setTimeout(initMenu, 100);
-    return;
-  }
+  function initMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navBar = document.getElementById('navBar');
 
-  hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('open');
-    navBar.classList.toggle('open');
-  });
+    if (!hamburger || !navBar) {
+      setTimeout(initMenu, 100);
+      return;
+    }
 
-  const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
-  navLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      navLinks.forEach(l => l.classList.remove('active'));
-      this.classList.add('active');
-      hamburger.classList.remove('open');
-      navBar.classList.remove('open');
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('open');
+      navBar.classList.toggle('open');
+      // Close dropdown when closing menu
+      if (!navBar.classList.contains('open')) {
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+      }
     });
-  });
 
-  // Handle mobile dropdown toggle
-  const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
-  dropdownTriggers.forEach(trigger => {
-    trigger.addEventListener('click', function(e) {
-      // Only toggle on mobile
-      if (window.innerWidth <= 768) {
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-trigger)');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        hamburger.classList.remove('open');
+        navBar.classList.remove('open');
+      });
+    });
+
+    // Handle dropdown toggle for both desktop and mobile
+    const dropdownTriggers = document.querySelectorAll('.dropdown-trigger');
+    dropdownTriggers.forEach(trigger => {
+      trigger.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         const dropdown = this.closest('.nav-dropdown');
-        const isOpen = dropdown.classList.contains('open');
-        // Close all dropdowns first
+        // Toggle this dropdown
+        dropdown.classList.toggle('open');
+      });
+    });
+
+    // Close dropdown when clicking outside (desktop)
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
         document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
-        // Toggle this one if it wasn't open
-        if (!isOpen) {
-          dropdown.classList.add('open');
-        }
       }
     });
-  });
 
-  // Close dropdowns when clicking dropdown items on mobile
-  const dropdownItems = document.querySelectorAll('.dropdown-item');
-  dropdownItems.forEach(item => {
-    item.addEventListener('click', function() {
-      hamburger.classList.remove('open');
-      navBar.classList.remove('open');
-      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+    // Close dropdowns when clicking dropdown items
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        navBar.classList.remove('open');
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('open'));
+      });
     });
-  });
-}
+  }
 
-initMenu();
+  initMenu();
+})();
 </script>
