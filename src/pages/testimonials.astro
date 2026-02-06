@@ -544,11 +544,14 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .card-stack {
-    height: 530px;
+    height: auto;
+    min-height: 400px;
   }
 
   .testimonial-card {
     width: calc(100% - 100px);
+    height: auto;
+    position: relative;
   }
 
   .card-inner {
@@ -638,6 +641,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     brandPrevArrow.classList.toggle('hidden', brandCurrent === 0);
     brandNextArrow.classList.toggle('hidden', brandCurrent === brandTotal - 1);
+
+    // Adjust card-stack height on mobile
+    if (window.innerWidth <= 768) {
+      const activeCard = brandCards[brandCurrent];
+      const cardStack = document.getElementById('brandCardStack');
+      if (activeCard && cardStack) {
+        setTimeout(() => {
+          const cardHeight = activeCard.scrollHeight;
+          cardStack.style.height = cardHeight + 'px';
+        }, 50);
+      }
+    }
   }
 
   brandPrevArrow.addEventListener('click', () => {
@@ -689,6 +704,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     individualPrevArrow.classList.toggle('hidden', individualCurrent === 0);
     individualNextArrow.classList.toggle('hidden', individualCurrent === individualTotal - 1);
+
+    // Adjust card-stack height on mobile
+    if (window.innerWidth <= 768) {
+      const activeCard = individualCards[individualCurrent];
+      const cardStack = document.getElementById('individualCardStack');
+      if (activeCard && cardStack) {
+        setTimeout(() => {
+          const cardHeight = activeCard.scrollHeight;
+          cardStack.style.height = cardHeight + 'px';
+        }, 50);
+      }
+    }
   }
 
   individualPrevArrow.addEventListener('click', () => {
@@ -715,5 +742,17 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize both decks
   updateBrandCards();
   updateIndividualCards();
+
+  // Handle window resize to adjust card-stack height on mobile
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+      updateBrandCards();
+      updateIndividualCards();
+    } else {
+      // Reset to auto on desktop
+      document.getElementById('brandCardStack').style.height = '';
+      document.getElementById('individualCardStack').style.height = '';
+    }
+  });
 });
 </script>
