@@ -110,4 +110,12 @@ const { title, currentPage = '/' } = Astro.props;
       padding: 0 15px 100px;
     }
   }
+
+  /* Landscape mobile/tablet - prevent font size inflation */
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+         (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
+    html {
+      font-size: 14px;
+    }
+  }
 </style>

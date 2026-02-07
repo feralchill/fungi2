@@ -203,6 +203,22 @@ import Layout from '../layouts/Layout.astro';
     font-size: 0.95em;
   }
 }
+
+/* Landscape tablet/mobile - keep text sizes consistent */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+       (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
+  .intro-text {
+    font-size: 0.95em !important;
+  }
+
+  .intro-text .brand-name {
+    font-size: 1em !important;
+  }
+
+  .finish-text {
+    font-size: 0.9em !important;
+  }
+}
 </style>
 
 <script is:inline>

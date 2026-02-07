@@ -519,6 +519,17 @@ import Layout from '../layouts/Layout.astro';
   }
 }
 
+/* Tablet/Landscape - keep desktop layout for chevrons */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .prev-arrow {
+    left: 10px !important;
+  }
+
+  .next-arrow {
+    right: 10px !important;
+  }
+}
+
 @media (max-width: 1024px) {
   .page-heading {
     font-size: 2em;
