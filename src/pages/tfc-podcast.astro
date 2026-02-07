@@ -10,6 +10,10 @@ import Layout from '../layouts/Layout.astro';
       Dive deep into conversations about functional mushrooms, wellness, and the fascinating world of fungi.
     </div>
 
+    <div class="channel-links">
+      <a href="https://open.spotify.com/show/0bGc7S9DjRAIgSb5KfCh0B?si=WuGLO_jDTSqm3LfJsooOvw" target="_blank" class="watch-link">Listen on Spotify →</a>
+    </div>
+
     <div class="podcast-embed-container">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0bGc7S9DjRAIgSb5KfCh0B?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
@@ -165,5 +169,27 @@ import Layout from '../layouts/Layout.astro';
     max-width: 200px;
     margin-top: 40px;
   }
+}
+
+.channel-links {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.watch-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.95em;
+  color: #b6c2a0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.watch-link:hover {
+  color: #9a89a4;
 }
 </style>

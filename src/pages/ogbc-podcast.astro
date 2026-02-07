@@ -10,6 +10,11 @@ import Layout from '../layouts/Layout.astro';
       Explore meaningful conversations connecting ideas, people, and perspectives on functional mushrooms and beyond.
     </div>
 
+    <div class="channel-links">
+      <a href="https://open.spotify.com/show/3hH5KDQB9s6FxGzoJcnVde?si=XPVShwuHTGOFCpLf9bavyA" target="_blank" class="watch-link">Listen on Spotify →</a>
+      <a href="https://m.youtube.com/@oligennbashconnects" target="_blank" class="watch-link">Watch on YouTube →</a>
+    </div>
+
     <div class="podcast-embed-container">
       <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3hH5KDQB9s6FxGzoJcnVde?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </div>
@@ -165,5 +170,27 @@ import Layout from '../layouts/Layout.astro';
     max-width: 200px;
     margin-top: 40px;
   }
+}
+
+.channel-links {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.watch-link {
+  display: inline-block;
+  font-family: 'Abril Fatface', serif;
+  font-size: 0.95em;
+  color: #b6c2a0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.watch-link:hover {
+  color: #9a89a4;
 }
 </style>
