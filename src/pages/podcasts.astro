@@ -21,6 +21,9 @@ import Layout from '../layouts/Layout.astro';
     <!-- Tab Content Panels -->
     <div class="tab-panel active" id="panel-1">
       <div class="podcast-section">
+        <div class="channel-links">
+          <a href="https://open.spotify.com/show/0bGc7S9DjRAIgSb5KfCh0B?si=WuGLO_jDTSqm3LfJsooOvw" target="_blank" class="watch-link">Listen on Spotify →</a>
+        </div>
         <div class="featured-player">
           <div class="player-embed">
             <div id="tfc-player" class="dynamic-player">
@@ -53,6 +56,10 @@ import Layout from '../layouts/Layout.astro';
 
     <div class="tab-panel" id="panel-2">
       <div class="podcast-section">
+        <div class="channel-links">
+          <a href="https://open.spotify.com/show/3hH5KDQB9s6FxGzoJcnVde?si=XPVShwuHTGOFCpLf9bavyA" target="_blank" class="watch-link">Listen on Spotify →</a>
+          <a href="https://m.youtube.com/@oligennbashconnects" target="_blank" class="watch-link">Watch on YouTube →</a>
+        </div>
         <div class="featured-player">
           <div class="player-embed">
             <div id="ogbc-player" class="dynamic-player">
@@ -276,7 +283,7 @@ import Layout from '../layouts/Layout.astro';
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
@@ -407,17 +414,18 @@ import Layout from '../layouts/Layout.astro';
 
 .title-item.active {
   background: linear-gradient(180deg,
-    #b8abbe 0%,
-    #9a89a4 15%,
-    #9a89a4 85%,
-    #7d6f87 100%);
-  border: 1px solid #52515c;
+    #8b7f99 0%,
+    #746a7c 15%,
+    #63596a 85%,
+    #524858 100%);
+  border: 0.5px solid #b39dc4;
   color: #efefed;
   box-shadow:
-    0 4px 6px rgba(154, 137, 164, 0.3),
-    0 1px 3px rgba(154, 137, 164, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.08);
+    0 0 12px rgba(154, 137, 164, 0.4),
+    0 4px 6px rgba(99, 89, 106, 0.3),
+    0 1px 3px rgba(99, 89, 106, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .featured-player {
@@ -489,6 +497,19 @@ import Layout from '../layouts/Layout.astro';
 
 .watch-link:hover {
   color: #9a89a4;
+}
+
+.channel-links {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.channel-links .watch-link {
+  font-size: 1.9em;
 }
 
 .podcast-cta {
@@ -655,6 +676,10 @@ import Layout from '../layouts/Layout.astro';
 
   .header-image {
     max-width: 180px;
+  }
+
+  .channel-links .watch-link {
+    font-size: 1em;
   }
 }
 </style>
