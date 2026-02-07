@@ -70,6 +70,8 @@ const { title, currentPage = '/' } = Astro.props;
     background: #EFEFED;
     overflow-x: hidden;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
@@ -114,9 +116,7 @@ const { title, currentPage = '/' } = Astro.props;
   /* Landscape mobile/tablet - prevent font size inflation */
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
          (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
-    html {
-      font-size: 14px;
-    }
+    /* Font sizes will inherit from mobile styles, no override needed */
   }
 
   /* Larger landscape screens - account for navbar */

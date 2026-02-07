@@ -204,20 +204,10 @@ import Layout from '../layouts/Layout.astro';
   }
 }
 
-/* Landscape tablet/mobile - keep text sizes consistent */
+/* Landscape tablet/mobile - inherit mobile font sizes */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
        (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
-  .intro-text {
-    font-size: 0.95em !important;
-  }
-
-  .intro-text .brand-name {
-    font-size: 1em !important;
-  }
-
-  .finish-text {
-    font-size: 0.9em !important;
-  }
+  /* Mobile font sizes already apply via max-width: 1024px media query */
 }
 </style>
 
