@@ -438,9 +438,9 @@ if (currentPage === '/') {
   }
 }
 
-/* Landscape tablets/phones - show desktop navbar but sized to fit */
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
-       (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
+/* Landscape tablets/large phones - show desktop navbar but sized to fit */
+@media (min-width: 900px) and (max-width: 1024px) and (orientation: landscape),
+       (min-width: 900px) and (max-width: 1024px) and (max-height: 500px) {
   /* Hide hamburger menu */
   .hamburger-container {
     display: none !important;
