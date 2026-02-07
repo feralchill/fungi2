@@ -319,16 +319,17 @@ import Layout from '../layouts/Layout.astro';
 
 .pill-tab.active {
   background: linear-gradient(180deg,
-    #746a7c 0%,
-    #63596a 15%,
+    #8b7f99 0%,
+    #746a7c 15%,
     #63596a 85%,
     #524858 100%);
-  border: 1px solid #9a89a4;
+  border: 1px solid #b39dc4;
   color: #efefed;
   box-shadow:
+    0 0 12px rgba(154, 137, 164, 0.4),
     0 4px 6px rgba(99, 89, 106, 0.3),
     0 1px 3px rgba(99, 89, 106, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -406,16 +407,17 @@ import Layout from '../layouts/Layout.astro';
 
 .title-item.active {
   background: linear-gradient(180deg,
-    #b8abbe 0%,
-    #9a89a4 15%,
+    #cdc0d3 0%,
+    #b8abbe 10%,
     #9a89a4 85%,
     #7d6f87 100%);
-  border: 1px solid #52515c;
+  border: 1px solid #b39dc4;
   color: #efefed;
   box-shadow:
+    0 0 12px rgba(154, 137, 164, 0.5),
     0 4px 6px rgba(154, 137, 164, 0.3),
     0 1px 3px rgba(154, 137, 164, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
     inset 0 -1px 0 rgba(0, 0, 0, 0.08);
 }
 
@@ -582,7 +584,7 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 60px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .podcasts-content {
     padding: 0 15px;
   }

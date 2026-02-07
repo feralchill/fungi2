@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Brands -->
         <div class="fungi-link-wrapper">
           <div class="fungi-link-item" id="brandsBtnItem" onclick="fcToggle(1)">
-            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" class="fungi-bullet" alt="">
+            <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5967.png" class="fungi-bullet" alt="">
             <span class="fungi-nav-link" id="brandsLink">What we offer brands <span class="fungi-arrow" id="brandsArrow"></span></span>
           </div>
           <div class="fungi-mobile-panel" id="brandsMobilePanel">
@@ -33,7 +33,7 @@ import Layout from '../layouts/Layout.astro';
         <!-- Individuals -->
         <div class="fungi-link-wrapper">
           <div class="fungi-link-item" id="individualsBtnItem" onclick="fcToggle(2)">
-            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="fungi-bullet" alt="">
+            <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="fungi-bullet" alt="">
             <span class="fungi-nav-link" id="individualsLink">What we offer individuals <span class="fungi-arrow" id="individualsArrow"></span></span>
           </div>
           <div class="fungi-mobile-panel" id="individualsMobilePanel">
@@ -48,12 +48,12 @@ import Layout from '../layouts/Layout.astro';
         <!-- About -->
         <div class="fungi-link-wrapper">
           <div class="fungi-link-item" id="aboutBtnItem" onclick="fcToggle(3)">
-            <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="fungi-bullet" alt="">
+            <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="fungi-bullet" alt="">
             <span class="fungi-nav-link" id="aboutLink">Who is The Fungi Consultant? <span class="fungi-arrow" id="aboutArrow"></span></span>
           </div>
           <div class="fungi-mobile-panel" id="aboutMobilePanel">
             <div class="fungi-content-text">
-              <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
+              <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
               <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
 
             <i>I'm Oli, a UK-based writer, educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work encompasses research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.<br><br>
@@ -83,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="fungi-desktop-panel hidden" id="aboutDesktopPanel">
         <div class="fungi-content-text">
-          <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
+          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
           <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
          <br>
           I'm Oli, a UK-based writer, educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work encompasses research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.<br><br>
@@ -94,7 +94,7 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <!-- Bottom Image -->
-    <img src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
+    <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6018.png" class="bottom-image" alt="">
 
     <!-- Finish Section -->
     <div class="finish-container">
@@ -295,7 +295,7 @@ import Layout from '../layouts/Layout.astro';
   min-height: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .about-content {
     padding: 0 15px;
   }
@@ -470,7 +470,7 @@ function fcToggle(n) {
     document.getElementById("individualsMobilePanel"),
     document.getElementById("aboutMobilePanel")
   ];
-  var isMobile = window.innerWidth <= 768;
+  var isMobile = window.innerWidth <= 1024;
   var i;
 
   if (fcCurrent === n) {

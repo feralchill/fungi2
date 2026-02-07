@@ -230,16 +230,17 @@ import Layout from '../layouts/Layout.astro';
 
 .testimonial-tab.active {
   background: linear-gradient(180deg,
-    #746a7c 0%,
-    #63596a 15%,
+    #8b7f99 0%,
+    #746a7c 15%,
     #63596a 85%,
     #524858 100%);
-  border: 1px solid #9a89a4;
+  border: 1px solid #b39dc4;
   color: #efefed;
   box-shadow:
+    0 0 12px rgba(154, 137, 164, 0.4),
     0 4px 6px rgba(99, 89, 106, 0.3),
     0 1px 3px rgba(99, 89, 106, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -518,7 +519,7 @@ import Layout from '../layouts/Layout.astro';
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .page-heading {
     font-size: 2em;
     margin-top: 20px;
@@ -642,7 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
     brandNextArrow.classList.toggle('hidden', brandCurrent === brandTotal - 1);
 
     // Adjust card-stack height on mobile
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
       const activeCard = brandCards[brandCurrent];
       const cardStack = document.getElementById('brandCardStack');
       if (activeCard && cardStack) {
@@ -705,7 +706,7 @@ document.addEventListener('DOMContentLoaded', function() {
     individualNextArrow.classList.toggle('hidden', individualCurrent === individualTotal - 1);
 
     // Adjust card-stack height on mobile
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
       const activeCard = individualCards[individualCurrent];
       const cardStack = document.getElementById('individualCardStack');
       if (activeCard && cardStack) {
@@ -744,7 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle window resize to adjust card-stack height on mobile
   window.addEventListener('resize', () => {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1024) {
       updateBrandCards();
       updateIndividualCards();
     } else {

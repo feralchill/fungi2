@@ -5,10 +5,10 @@
 <div class="message-bar">
   <div class="message-bar-content">
     <div class="message active" id="message1">mycopreneur company to watch in 2026</div>
-    <div class="message" id="message2">find out which mushrooms are best suited to you</div>
-    <div class="message" id="message3">learn what to look for and what to avoid</div>
-    <div class="message" id="message4">one-to-one consultation, workshops, and coaching</div>
-    <div class="message" id="message5">book your FREE 15-minute discovery call</div>
+    <a href="/booking" class="message message-link" id="message2">find out which mushrooms are best suited to you</a>
+    <a href="/booking" class="message message-link" id="message3">learn what to look for and what to avoid</a>
+    <a href="/booking" class="message message-link" id="message4">one-to-one consultation, workshops, and coaching</a>
+    <a href="/booking" class="message message-link" id="message5">book your FREE 15-minute discovery call</a>
   </div>
 </div>
 
@@ -48,8 +48,18 @@
   opacity: 1;
 }
 
+.message-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.message-link:hover {
+  text-decoration: underline;
+}
+
 /* Mobile adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .message-bar {
     transition: opacity 0.3s ease;
     background: #37323e;
