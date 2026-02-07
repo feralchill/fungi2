@@ -520,13 +520,29 @@ import Layout from '../layouts/Layout.astro';
 }
 
 /* Tablet/Landscape - keep desktop layout for chevrons */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape),
+       (min-width: 768px) and (max-width: 1024px) and (max-height: 500px) {
+  .card-stack {
+    height: 480px !important;
+    min-height: 480px;
+  }
+
+  .arrow {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
   .prev-arrow {
     left: 10px !important;
   }
 
   .next-arrow {
     right: 10px !important;
+  }
+
+  .testimonial-dots {
+    margin-top: 30px !important;
+    position: relative;
   }
 }
 
