@@ -55,14 +55,8 @@ import Layout from '../layouts/Layout.astro';
 
 /* Video Container */
 .video-container {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  margin-top: 0;
-  margin-bottom: 40px;
+  width: 60%;
+  margin: 15px auto 20px;
   text-align: center;
 }
 
@@ -71,12 +65,14 @@ import Layout from '../layouts/Layout.astro';
   max-width: 100%;
   aspect-ratio: 2 / 1;
   object-fit: cover;
+  border: 0.5px solid #b6c2a0;
+  border-radius: 8px;
 }
 
 /* Intro Container */
 .intro-container {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 10px auto;
   padding: 10px;
   text-align: center;
 }
@@ -190,8 +186,19 @@ import Layout from '../layouts/Layout.astro';
 
 @media (max-width: 1024px) {
   .video-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     margin-top: 0;
     margin-bottom: 15px;
+  }
+
+  .hero-video {
+    border: none;
+    border-radius: 0;
   }
 
   .intro-container {
@@ -219,6 +226,7 @@ import Layout from '../layouts/Layout.astro';
       video.muted = true;
       video.setAttribute('muted', '');
       video.defaultMuted = true;
+      video.playbackRate = 0.75;
       video.play().catch(function(error) {
         // Retry after a short delay
         setTimeout(function() {
