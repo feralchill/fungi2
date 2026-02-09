@@ -121,6 +121,43 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Mobile Mushroom Navigation (visible only on mobile) -->
     <div class="mobile-mushroom-nav">
+      <!-- Chaga Mobile -->
+      <div class="mobile-mushroom-wrapper">
+        <div class="mobile-mushroom-item" id="chagaMobileBtn" onclick="mushroomToggle(5)">
+          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5958.png" class="mobile-mushroom-bullet">
+          <span class="mobile-mushroom-link" id="chagaMobileLink">Chaga <span class="mobile-mushroom-arrow" id="chagaMobileArrow"></span></span>
+        </div>
+        <div class="mobile-mushroom-panel" id="chagaMobilePanel">
+          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6229.png" class="mobile-panel-image" alt="" onclick="mushroomToggle(5)">
+          <div class="mobile-panel-text">
+            <p>Often referred to as the 'king of mushrooms', chaga grows on the bark of birch trees in cold northern climates, where it has been used as a folk remedy for centuries.</p>
+            <p>In Siberian and Russian traditional medicine, chaga (<em>Inonotus obliquus</em>) was brewed as a tea and valued as a tonic for general vitality and longevity. Its use was so widespread across Northern Europe and Asia that it became known as the "gift of God" and the "mushroom of immortality" - a title it shares, fittingly, with reishi.</p>
+            <p>What makes chaga particularly remarkable is its extraordinary antioxidant profile. It ranks among the highest of any natural food on the ORAC (Oxygen Radical Absorbance Capacity) scale, largely due to its rich concentration of melanin - the same pigment responsible for its striking dark exterior.</p>
+            <p>Chaga also contains betulinic acid, a compound it absorbs from the birch trees on which it grows, which has been studied for its anti-inflammatory and immune-supporting properties. Its polysaccharides, particularly beta-glucans, contribute to its reputation as a powerful modulator of the immune system - helping to both stimulate and regulate the body's natural defenses.</p>
+            <p>As with its fellow functional mushrooms, the method of extraction is critical to unlocking chaga's full potential, and not all products on the market are created equal. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out whether chaga is a good fit for your wellness goals, and how to source and prepare it for maximum benefit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cordyceps Mobile -->
+      <div class="mobile-mushroom-wrapper">
+        <div class="mobile-mushroom-item" id="cordycepsMobileBtn" onclick="mushroomToggle(3)">
+          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="mobile-mushroom-bullet">
+          <span class="mobile-mushroom-link" id="cordycepsMobileLink">Cordyceps <span class="mobile-mushroom-arrow" id="cordycepsMobileArrow"></span></span>
+        </div>
+        <div class="mobile-mushroom-panel" id="cordycepsMobilePanel">
+          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mobile-panel-image" alt="" onclick="mushroomToggle(3)">
+          <div class="mobile-panel-text">
+            <p>Cordyceps are a uniquely weird fungus, in that they grow on the larvae of insects.</p>
+            <p>While over 350 different species of cordyceps have been identified to date, and with a rich history of traditional use for at least 300 years in Chinese and Tibetan medicine, still only one species - <em>Cordyceps sinensis</em> - has been officially recorded in the Chinese pharmacopoeia since 1964; but it is nonetheless one of the most famous Chinese medicines, and medicinal mushrooms.</p>
+            <p>Folk healers in the Himalayan region of Sikkim have used it as a tonic for "all illnesses", with claims that it improves appetite, stamina, libido, endurance, and sleeping patterns.</p>
+            <p>Its contemporary use has gained popularity as an adaptogenic functional mushroom, particularly in regards to performance, as it stimulates the body's cells to produce more of the molecule adenosine triphosphate - which is essential for delivering energy to the muscles and improving your body's use of oxygen during exercise.</p>
+            <p>The potential for this mushroom to improve exercise was famously noted in 1993, when the Chinese Olympics female running team broke records for 1,500, 3,000 and 10,000 metres, causing suspicion and accusations of using performance-enhancing steroids - however, tests showed zero steroid use and their coach revealed that he had requested the team to take cordyceps after each training session.</p>
+            <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. <a href="/booking" class="mushroom-content-link">Get in touch</a> to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Lion's Mane Mobile -->
       <div class="mobile-mushroom-wrapper">
         <div class="mobile-mushroom-item" id="lionMobileBtn" onclick="mushroomToggle(1)">
@@ -155,25 +192,6 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <!-- Cordyceps Mobile -->
-      <div class="mobile-mushroom-wrapper">
-        <div class="mobile-mushroom-item" id="cordycepsMobileBtn" onclick="mushroomToggle(3)">
-          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5966.png" class="mobile-mushroom-bullet">
-          <span class="mobile-mushroom-link" id="cordycepsMobileLink">Cordyceps <span class="mobile-mushroom-arrow" id="cordycepsMobileArrow"></span></span>
-        </div>
-        <div class="mobile-mushroom-panel" id="cordycepsMobilePanel">
-          <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6023.png" class="mobile-panel-image" alt="" onclick="mushroomToggle(3)">
-          <div class="mobile-panel-text">
-            <p>Cordyceps are a uniquely weird fungus, in that they grow on the larvae of insects.</p>
-            <p>While over 350 different species of cordyceps have been identified to date, and with a rich history of traditional use for at least 300 years in Chinese and Tibetan medicine, still only one species - <em>Cordyceps sinensis</em> - has been officially recorded in the Chinese pharmacopoeia since 1964; but it is nonetheless one of the most famous Chinese medicines, and medicinal mushrooms.</p>
-            <p>Folk healers in the Himalayan region of Sikkim have used it as a tonic for "all illnesses", with claims that it improves appetite, stamina, libido, endurance, and sleeping patterns.</p>
-            <p>Its contemporary use has gained popularity as an adaptogenic functional mushroom, particularly in regards to performance, as it stimulates the body's cells to produce more of the molecule adenosine triphosphate - which is essential for delivering energy to the muscles and improving your body's use of oxygen during exercise.</p>
-            <p>The potential for this mushroom to improve exercise was famously noted in 1993, when the Chinese Olympics female running team broke records for 1,500, 3,000 and 10,000 metres, causing suspicion and accusations of using performance-enhancing steroids - however, tests showed zero steroid use and their coach revealed that he had requested the team to take cordyceps after each training session.</p>
-            <p>With numerous other uses, ranging from addressing lung and kidney problems to sexual dysfunction, it must be noted that again, some methods of application are more useful than others in allowing us to access beneficial compounds such as cordycepin. <a href="/booking" class="mushroom-content-link">Get in touch</a> to discuss whether cordyceps can help you, and how their benefits can be unlocked.</p>
-          </div>
-        </div>
-      </div>
-
       <!-- Turkey Tail Mobile -->
       <div class="mobile-mushroom-wrapper">
         <div class="mobile-mushroom-item" id="turkeyTailMobileBtn" onclick="mushroomToggle(4)">
@@ -197,44 +215,24 @@ import Layout from '../layouts/Layout.astro';
 
     <!-- Mushrooms Container (side by side on desktop) -->
     <div class="mushrooms-container">
-      <!-- Lion's Mane Section -->
-      <div class="mushroom-section" id="lions-mane">
-        <h2 class="mushroom-heading" id="lions-mane-heading">Lion's Mane</h2>
-      <label for="lionToggle" class="mushroom-image-label">
-        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="">
+      <!-- Chaga Section -->
+      <div class="mushroom-section" id="chaga">
+        <h2 class="mushroom-heading" id="chaga-heading">Chaga</h2>
+      <label for="chagaToggle" class="mushroom-image-label">
+        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6229.png" class="mushroom-image" alt="">
       </label>
 
       <div class="mushroom-text-container">
-        <span class="mushroom-text">This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</span>
-        <input type="checkbox" id="lionToggle" class="mushroom-toggle">
-        <label for="lionToggle" class="read-more-link">…Read more</label>
+        <span class="mushroom-text">Often referred to as the 'king of mushrooms', chaga grows on the bark of birch trees in cold northern climates.</span>
+        <input type="checkbox" id="chagaToggle" class="mushroom-toggle">
+        <label for="chagaToggle" class="read-more-link">…Read more</label>
         <div class="mushroom-expanded">
-          <p>This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</p>
-          <p>For centuries this mushroom has been studied for its cognition-enhancing abilities, with recent studies showing its ability to enhance the 'nerve growth factor' (NGF).</p>
-          <p>The active ingredients, known as erinacenes and hericenones - derived from its Latin name <em>Hericium erinaceus</em> (meaning 'hedgehog') - are what stimulate NGF, and make lion's mane a potential treatment for neurodegenerative disorders such as Parkinson's disease and Alzheimer's.</p>
-          <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out if lion's mane is right for you, and how to get the most out of it.</p>
-          <label for="lionToggle" class="show-less-link">Show less</label>
-        </div>
-      </div>
-      </div>
-
-      <!-- Reishi Section -->
-      <div class="mushroom-section" id="reishi">
-        <h2 class="mushroom-heading" id="reishi-heading">Reishi</h2>
-      <label for="reishiToggle" class="mushroom-image-label">
-        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="">
-      </label>
-
-      <div class="mushroom-text-container">
-        <span class="mushroom-text">Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</span>
-        <input type="checkbox" id="reishiToggle" class="mushroom-toggle">
-        <label for="reishiToggle" class="read-more-link">…Read more</label>
-        <div class="mushroom-expanded">
-          <p>Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</p>
-          <p>Some of the traditional benefits of reishi include anti-aging and enhancing memory, with more recent studies showing increased blood flow to the brain and effects on neurotransmitters, suggesting a positive nootropic effect.</p>
-          <p>One compound in particular, ganoderic acid A (related to the Latin name for reishi, <em>Ganoderma lucidum</em>, meaning shining bright) has been shown to be responsible for improvement in brain function and metabolism, cell recycling, and prolonging the length of telomeres (which determines the lifespan of cells).</p>
-          <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
-          <label for="reishiToggle" class="show-less-link">Show less</label>
+          <p>Often referred to as the 'king of mushrooms', chaga grows on the bark of birch trees in cold northern climates, where it has been used as a folk remedy for centuries.</p>
+          <p>In Siberian and Russian traditional medicine, chaga (<em>Inonotus obliquus</em>) was brewed as a tea and valued as a tonic for general vitality and longevity. Its use was so widespread across Northern Europe and Asia that it became known as the "gift of God" and the "mushroom of immortality" - a title it shares, fittingly, with reishi.</p>
+          <p>What makes chaga particularly remarkable is its extraordinary antioxidant profile. It ranks among the highest of any natural food on the ORAC (Oxygen Radical Absorbance Capacity) scale, largely due to its rich concentration of melanin - the same pigment responsible for its striking dark exterior.</p>
+          <p>Chaga also contains betulinic acid, a compound it absorbs from the birch trees on which it grows, which has been studied for its anti-inflammatory and immune-supporting properties. Its polysaccharides, particularly beta-glucans, contribute to its reputation as a powerful modulator of the immune system - helping to both stimulate and regulate the body's natural defenses.</p>
+          <p>As with its fellow functional mushrooms, the method of extraction is critical to unlocking chaga's full potential, and not all products on the market are created equal. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out whether chaga is a good fit for your wellness goals, and how to source and prepare it for maximum benefit.</p>
+          <label for="chagaToggle" class="show-less-link">Show less</label>
         </div>
       </div>
       </div>
@@ -262,6 +260,48 @@ import Layout from '../layouts/Layout.astro';
       </div>
       </div>
 
+      <!-- Lion's Mane Section -->
+      <div class="mushroom-section" id="lions-mane">
+        <h2 class="mushroom-heading" id="lions-mane-heading">Lion's Mane</h2>
+      <label for="lionToggle" class="mushroom-image-label">
+        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6025.png" class="mushroom-image" alt="">
+      </label>
+
+      <div class="mushroom-text-container">
+        <span class="mushroom-text">This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan.</span>
+        <input type="checkbox" id="lionToggle" class="mushroom-toggle">
+        <label for="lionToggle" class="read-more-link">…Read more</label>
+        <div class="mushroom-expanded">
+          <p>This increasingly popular mushroom has been revered for centuries by the Yamabushi Buddhist monks of Japan, who use it for mental clarity during meditation.</p>
+          <p>For centuries this mushroom has been studied for its cognition-enhancing abilities, with recent studies showing its ability to enhance the 'nerve growth factor' (NGF).</p>
+          <p>The active ingredients, known as erinacenes and hericenones - derived from its Latin name <em>Hericium erinaceus</em> (meaning 'hedgehog') - are what stimulate NGF, and make lion's mane a potential treatment for neurodegenerative disorders such as Parkinson's disease and Alzheimer's.</p>
+          <p>There are ways of consuming these compounds which render them more and less bioavailable, and conditions for which lion's mane is more and less suitable. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out if lion's mane is right for you, and how to get the most out of it.</p>
+          <label for="lionToggle" class="show-less-link">Show less</label>
+        </div>
+      </div>
+      </div>
+
+      <!-- Reishi Section -->
+      <div class="mushroom-section" id="reishi">
+        <h2 class="mushroom-heading" id="reishi-heading">Reishi</h2>
+      <label for="reishiToggle" class="mushroom-image-label">
+        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6022.png" class="mushroom-image" alt="">
+      </label>
+
+      <div class="mushroom-text-container">
+        <span class="mushroom-text">Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years.</span>
+        <input type="checkbox" id="reishiToggle" class="mushroom-toggle">
+        <label for="reishiToggle" class="read-more-link">…Read more</label>
+        <div class="mushroom-expanded">
+          <p>Known as the 'mushroom of immortality' in ancient China, this powerful fungus has been used for over 2,000 years to restore and maintain the body's balance and harmony.</p>
+          <p>Some of the traditional benefits of reishi include anti-aging and enhancing memory, with more recent studies showing increased blood flow to the brain and effects on neurotransmitters, suggesting a positive nootropic effect.</p>
+          <p>One compound in particular, ganoderic acid A (related to the Latin name for reishi, <em>Ganoderma lucidum</em>, meaning shining bright) has been shown to be responsible for improvement in brain function and metabolism, cell recycling, and prolonging the length of telomeres (which determines the lifespan of cells).</p>
+          <p>The beneficial compounds, known as triterpenes, can be made more bioavailable with certain methods of extraction. <a href="/booking" class="mushroom-content-link">Book a consultation</a> to find out how best to use this mushroom, and whether it can work as part of your regime.</p>
+          <label for="reishiToggle" class="show-less-link">Show less</label>
+        </div>
+      </div>
+      </div>
+
       <!-- Turkey Tail Section -->
       <div class="mushroom-section" id="turkey-tail">
         <h2 class="mushroom-heading" id="turkey-tail-heading">Turkey Tail</h2>
@@ -270,7 +310,7 @@ import Layout from '../layouts/Layout.astro';
       </label>
 
       <div class="mushroom-text-container">
-        <span class="mushroom-text">Named for the striking concentric bands of colour that fan out like the plumage of a wild turkey, this common woodland fungus is among the most well-researched medicinal mushrooms in the world.</span>
+        <span class="mushroom-text">This common woodland fungus is among the most well-researched medicinal mushrooms in the world.</span>
         <input type="checkbox" id="turkeyTailToggle" class="mushroom-toggle">
         <label for="turkeyTailToggle" class="read-more-link">…Read more</label>
         <div class="mushroom-expanded">
@@ -661,7 +701,7 @@ import Layout from '../layouts/Layout.astro';
 .mushrooms-container {
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 15px;
   margin: 0;
   max-width: 1200px;
   position: relative;
@@ -677,10 +717,10 @@ import Layout from '../layouts/Layout.astro';
 
 .mushroom-heading {
   font-family: 'Abril Fatface', serif;
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #b6c2a0;
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .mushroom-image-label {
@@ -690,10 +730,10 @@ import Layout from '../layouts/Layout.astro';
 
 .mushroom-image {
   width: 100%;
-  max-width: 200px;
-  height: 200px;
+  max-width: 180px;
+  height: 180px;
   object-fit: contain;
-  margin: 0 auto 15px auto;
+  margin: 0 auto 12px auto;
   display: block;
 }
 
@@ -701,8 +741,8 @@ import Layout from '../layouts/Layout.astro';
   text-align: center;
   font-family: 'Literata', serif;
   font-weight: 400;
-  font-size: 0.95em;
-  line-height: 1.6;
+  font-size: 0.85em;
+  line-height: 1.5;
   color: #52515c;
 }
 
@@ -871,8 +911,8 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .mushroom-section.active-expanded .mushroom-image {
-  max-width: 240px;
-  height: 240px;
+  max-width: 200px;
+  height: 200px;
   transition: all 0.3s ease;
 }
 
@@ -1078,6 +1118,10 @@ function mushroomToggle(num) {
     btn = document.getElementById('turkeyTailMobileBtn');
     panel = document.getElementById('turkeyTailMobilePanel');
     arrow = document.getElementById('turkeyTailMobileArrow');
+  } else if (num === 5) {
+    btn = document.getElementById('chagaMobileBtn');
+    panel = document.getElementById('chagaMobilePanel');
+    arrow = document.getElementById('chagaMobileArrow');
   }
 
   // Toggle the open class on panel and arrow
@@ -1099,14 +1143,16 @@ document.addEventListener('DOMContentLoaded', function() {
     lion: document.getElementById('lionToggle'),
     reishi: document.getElementById('reishiToggle'),
     cordyceps: document.getElementById('cordycepsToggle'),
-    turkeyTail: document.getElementById('turkeyTailToggle')
+    turkeyTail: document.getElementById('turkeyTailToggle'),
+    chaga: document.getElementById('chagaToggle')
   };
 
   const sections = {
     lion: document.getElementById('lions-mane'),
     reishi: document.getElementById('reishi'),
     cordyceps: document.getElementById('cordyceps'),
-    turkeyTail: document.getElementById('turkey-tail')
+    turkeyTail: document.getElementById('turkey-tail'),
+    chaga: document.getElementById('chaga')
   };
 
   let currentExpanded = null;
