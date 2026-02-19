@@ -93,8 +93,20 @@ import Layout from '../layouts/Layout.astro';
       <div class="podcast-section">
         <!-- Featured Player Area -->
         <div class="featured-player">
+          <!-- Podcast 10 - Microdosing for Healing -->
+          <div class="player-content active" id="podcast-10">
+            <div class="player-embed">
+              <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4ealcunc1WaynbzCN3vzjV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Microdosing for Healing</h3>
+              <p class="podcast-description">The Healing Intelligence of Fungi with Sam Gandy, Oli Genn-Bash & Jason Scott</p>
+              <a href="https://open.spotify.com/episode/4ealcunc1WaynbzCN3vzjV?si=l4OEsct0QiqaMqzdV7iMEQ" target="_blank" class="watch-link">Listen on Spotify →</a>
+            </div>
+          </div>
+
           <!-- Podcast 1 - Psychedelics Today Episode 645 (Spotify) -->
-          <div class="player-content active" id="podcast-1">
+          <div class="player-content" id="podcast-1">
             <div class="player-embed">
               <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4l5TMlnYKE3Gc12LVwNIXK?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -200,11 +212,13 @@ import Layout from '../layouts/Layout.astro';
               <a href="https://shows.acast.com/mycopreneur/episodes/oli-genn-bash-the-fungi-consultant" target="_blank" class="watch-link">Listen on Acast →</a>
             </div>
           </div>
+
         </div>
 
         <!-- Title Selector Grid -->
         <div class="title-selector-grid">
-          <div class="title-item active" data-podcast="1">Psychedelics Today | #645</div>
+          <div class="title-item active" data-podcast="10">Microdosing for Healing</div>
+          <div class="title-item" data-podcast="1">Psychedelics Today | #645</div>
           <div class="title-item" data-podcast="2">End of the Road Podcast | #328</div>
           <div class="title-item" data-podcast="3">Mycelium Hub Spore Journeys | #04</div>
           <div class="title-item" data-podcast="4">The Simpa Life Podcast | #152</div>
