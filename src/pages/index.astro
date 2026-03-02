@@ -23,18 +23,52 @@ import Layout from '../layouts/Layout.astro';
       </video>
     </div>
 
-    <!-- Intro Text and Image -->
+    <!-- Intro Text, Bio, and Image -->
     <div class="intro-container">
       <div class="intro-text">
         Welcome to <span class="brand-name">The Fungi Consultant</span>: coaching, workshops and one-to-one consultation for individuals and organisations ready to discover the power of functional mushrooms.<br><br>
         Our services can match you with the natural solutions best suited to your lifestyle, and provide a <span class="brand-name">gold standard</span> of quality, trust and traceability to brands entering the functional mushroom industry.<br><br>
         <a href="/about" class="intro-link">Find out more</a> about our services, or <a href="/booking" class="intro-link">book a consultation</a> today.
       </div>
-      <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5963.png" class="intro-image" alt="">
+
+      <hr class="index-divider bio-divider">
+
+      <!-- Bio Section -->
+      <div class="bio-section">
+        <div class="fungi-link-wrapper">
+          <div class="fungi-link-item" id="homeAboutBtnItem" onclick="homeAboutToggle()">
+            <span class="fungi-nav-link" id="homeAboutLink">Who is The Fungi Consultant? <span class="fungi-arrow" id="homeAboutArrow"></span></span>
+          </div>
+          <div class="fungi-mobile-panel" id="homeAboutMobilePanel">
+            <div class="fungi-content-text">
+              <i>I'm Oli, a UK-based writer, educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work encompasses research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.</i>
+              <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6346.png" class="fungi-inline-image" style="max-width: 120px" alt="">
+              <i>I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.</i>
+              <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6348.png" class="fungi-inline-image" alt="">
+              <i>Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but fungi became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, as well as <a href="/podcasts" class="fungi-content-link">podcasting</a> and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span></i>.
+            </div>
+          </div>
+        </div>
+        <div class="fungi-desktop-panel hidden" id="homeAboutDesktopPanel">
+          <div class="fungi-content-text">
+            I'm Oli, a UK-based writer, educator and consultant working at the intersection of functional mushrooms, mycotherapy, psychedelics, and contemporary wellness culture. My work encompasses research, lived experience, and creative practice, with a focus on education and the responsible development of psychedelic and mushroom spaces.
+            <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6346.png" class="fungi-inline-image" style="max-width: 120px" alt="">
+            I've been in the fungi world since 2009, when I co-founded the UK's first University <a href="https://www.instagram.com/psychedelicsociety_ukc/" target="_blank" class="fungi-content-link">Psychedelics Society</a>, and first Multidisciplinary Conference on Psychedelic Consciousness, <a href="https://breakingconvention.co.uk/" target="_blank" class="fungi-content-link">Breaking Convention</a>, in 2011. These were among the earliest spaces in the country where researchers and clinicians could share their work with psychedelics publically, years before the current renaissance hit the mainstream.
+            <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6348.png" class="fungi-inline-image" alt="">
+            Personal struggles with my health led me to functional mushrooms. Conventional treatments weren't working, but fungi became part of my daily life. I've spent the years since deepening my knowledge of these natural remedies, and helping others make the most of them: from organising workshops with <a href="https://darrenlebaron.com" target="_blank" class="fungi-content-link">Darren Le Baron</a>, giving talks at conferences and festivals around the UK, working as head of mycology for <a href="https://linktr.ee/productearth" target="_blank" class="fungi-content-link">Product Earth</a>, writing for <a href="https://chemical-collective.com" target="_blank" class="fungi-content-link">Chemical Collective</a> and others, teaching as part of <a href="https://www.microdosingforhealing.com/" target="_blank" class="fungi-content-link">Microdosing for Healing</a> and <a href="psychedelicsociety.org.uk" target="_blank" class="fungi-content-link">The Psychedelic Society</a>, as well as <a href="/podcasts" class="fungi-content-link">podcasting</a> and offering coaching, workshops and one-to-one consultation as <span class="brand-name">The Fungi Consultant</span>.
+          </div>
+        </div>
+        <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6444.jpeg" class="fungi-bio-image" alt="">
+        <div class="fungi-bio-caption"><span class="brand-name">The Fungi Consultant</span>: Oli Genn-Bash</div>
+      </div>
+
     </div>
+
+    <hr class="index-divider">
 
     <!-- Finish Section -->
     <div class="finish-container">
+      <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6350.png" class="fungi-bottom-image" alt="">
       <div class="finish-text">
         <span class="brand-name">The Fungi Consultant</span> est. 2024
       </div>
@@ -42,6 +76,8 @@ import Layout from '../layouts/Layout.astro';
         <a href="https://anthosponda.art" target="_blank" class="finish-link">site summoned by ælfryth</a>
       </div>
     </div>
+    <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_5963.png" class="intro-image intro-image-desktop" alt="">
+    <img loading="lazy" src="https://raw.githubusercontent.com/feralchill/fungi/main/IMG_6352.png" class="intro-image intro-image-mobile" alt="">
   </div>
 </Layout>
 
@@ -84,7 +120,7 @@ import Layout from '../layouts/Layout.astro';
   font-size: 1.1em;
   line-height: 1.7;
   color: #52515c;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .intro-text .brand-name {
@@ -115,6 +151,10 @@ import Layout from '../layouts/Layout.astro';
   text-decoration: underline;
 }
 
+.intro-image.intro-image-mobile {
+  display: none;
+}
+
 .intro-image {
   width: 100vw;
   max-width: none;
@@ -124,7 +164,172 @@ import Layout from '../layouts/Layout.astro';
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+  margin-bottom: 8px;
   display: block;
+}
+
+/* Bio Section */
+.bio-section {
+  max-width: 800px;
+  margin: 40px auto 10px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.fungi-bio-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 20px auto 15px auto;
+  display: block;
+  border: 1px solid #b6c2a0;
+  border-radius: 8px;
+}
+
+.fungi-bottom-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: 28px auto 40px;
+  display: block;
+}
+
+.index-divider {
+  border: none;
+  border-top: 1px solid #b6c2a0;
+  max-width: 400px;
+  margin: 30px auto 10px;
+}
+
+.bio-divider {
+  margin-top: 45px;
+  margin-bottom: 15px;
+}
+
+.fungi-inline-image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  margin: 16px auto;
+  display: block;
+}
+
+.fungi-bio-caption {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  color: #52515c;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.fungi-bio-caption .brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+}
+
+.fungi-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fungi-link-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.fungi-bullet {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.fungi-nav-link {
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.3em;
+  color: #b6c2a0;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.fungi-link-item:hover .fungi-nav-link {
+  border-bottom: 1px solid #b6c2a0;
+}
+
+.fungi-arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #b6c2a0;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.fungi-arrow.flipped {
+  transform: rotate(180deg);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.fungi-content-text {
+  font-family: 'Literata', serif;
+  font-weight: 500;
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #52515c;
+  text-align: center;
+  padding: 8px 0 20px;
+  margin-top: 16px;
+}
+
+.fungi-content-text .brand-name {
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.fungi-content-link {
+  color: #b6c2a0;
+  text-decoration: underline;
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-style: normal;
+}
+
+.fungi-content-link:hover {
+  color: #9a89a4;
+  text-decoration: underline;
+}
+
+.fungi-content-link:visited {
+  color: #b6c2a0;
+  text-decoration: underline;
+}
+
+.fungi-mobile-panel {
+  display: none !important;
+}
+
+.fungi-desktop-panel {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+  text-align: center;
 }
 
 /* Finish Container */
@@ -182,7 +387,33 @@ import Layout from '../layouts/Layout.astro';
   font-family: 'Almendra Display', serif;
   font-size: 0.7em;
   color: #b6c2a0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1024px) {
+  .fungi-desktop-panel {
+    display: none !important;
+  }
+
+  .fungi-mobile-panel.open {
+    display: block !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .fungi-bullet {
+    width: 18px;
+    height: 18px;
+  }
+
+  .fungi-nav-link {
+    font-size: 1.05em;
+  }
+
+  .fungi-content-text {
+    font-size: 0.9em;
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -208,7 +439,41 @@ import Layout from '../layouts/Layout.astro';
   }
 
   .intro-text {
-    font-size: 0.95em;
+    font-size: 0.87em;
+  }
+
+  .fungi-bottom-image {
+    max-width: 200px;
+    margin-top: 32px;
+  }
+
+  .index-divider {
+    max-width: 200px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+  }
+
+  .bio-divider {
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .fungi-nav-link {
+    font-size: 1.35em;
+  }
+
+  .intro-image.intro-image-desktop {
+    display: none;
+  }
+
+  .intro-image.intro-image-mobile {
+    display: block;
+    width: 100%;
+    position: static;
+    left: auto;
+    right: auto;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -218,6 +483,35 @@ import Layout from '../layouts/Layout.astro';
   /* Mobile font sizes already apply via max-width: 1024px media query */
 }
 </style>
+
+<script is:inline>
+var homeAboutOpen = false;
+
+function homeAboutToggle() {
+  var arrow = document.getElementById("homeAboutArrow");
+  var dPanel = document.getElementById("homeAboutDesktopPanel");
+  var mPanel = document.getElementById("homeAboutMobilePanel");
+  var isMobile = window.innerWidth <= 1024;
+
+  homeAboutOpen = !homeAboutOpen;
+
+  if (homeAboutOpen) {
+    arrow.classList.add("flipped");
+    if (isMobile) {
+      mPanel.classList.add("open");
+    } else {
+      dPanel.classList.remove("hidden");
+    }
+  } else {
+    arrow.classList.remove("flipped");
+    if (isMobile) {
+      mPanel.classList.remove("open");
+    } else {
+      dPanel.classList.add("hidden");
+    }
+  }
+}
+</script>
 
 <script is:inline>
 (function() {

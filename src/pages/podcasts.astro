@@ -93,8 +93,20 @@ import Layout from '../layouts/Layout.astro';
       <div class="podcast-section">
         <!-- Featured Player Area -->
         <div class="featured-player">
+          <!-- Podcast 11 - Mama Shrooms -->
+          <div class="player-content active" id="podcast-11">
+            <div class="player-embed ig-player">
+              <iframe src="https://www.instagram.com/reel/DVYFunoipuN/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+            </div>
+            <div class="podcast-details">
+              <h3 class="podcast-title">Mama Shrooms | #1</h3>
+              <p class="podcast-description">Mushroom Myth-Busters</p>
+              <a href="https://www.instagram.com/reel/DVYFunoipuN/?igsh=N3NkNzhxNjhlNzI1" target="_blank" class="watch-link">Watch on Instagram →</a>
+            </div>
+          </div>
+
           <!-- Podcast 10 - Microdosing for Healing -->
-          <div class="player-content active" id="podcast-10">
+          <div class="player-content" id="podcast-10">
             <div class="player-embed">
               <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4ealcunc1WaynbzCN3vzjV?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
@@ -217,7 +229,8 @@ import Layout from '../layouts/Layout.astro';
 
         <!-- Title Selector Grid -->
         <div class="title-selector-grid">
-          <div class="title-item active" data-podcast="10">Microdosing for Healing</div>
+          <div class="title-item active" data-podcast="11">Mama Shrooms | #1</div>
+          <div class="title-item" data-podcast="10">Microdosing for Healing</div>
           <div class="title-item" data-podcast="1">Psychedelics Today | #645</div>
           <div class="title-item" data-podcast="2">End of the Road Podcast | #328</div>
           <div class="title-item" data-podcast="3">Mycelium Hub Spore Journeys | #04</div>
@@ -481,6 +494,20 @@ import Layout from '../layouts/Layout.astro';
   width: 100%;
 }
 
+.ig-player {
+  max-width: 340px;
+  margin: 0 auto 20px;
+  background-color: transparent;
+  height: 400px;
+  overflow: hidden;
+}
+
+.ig-player iframe {
+  width: 100%;
+  height: 600px;
+  margin-top: -60px;
+}
+
 .podcast-details {
   text-align: center;
 }
@@ -673,6 +700,15 @@ import Layout from '../layouts/Layout.astro';
   .player-embed iframe {
     height: 200px !important;
     width: 100% !important;
+  }
+
+  .ig-player {
+    height: 300px !important;
+  }
+
+  .ig-player iframe {
+    height: 500px !important;
+    margin-top: -60px !important;
   }
 
   .podcast-title {
