@@ -32,9 +32,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
 
       <div class="symbol-divider bio-divider">
-        <span class="symbol-divider-line"></span>
-        <span class="symbol-divider-text">ⱄⰔ<strong>𓍊𓋼𓍊</strong>Ⱄⱄ</span>
-        <span class="symbol-divider-line"></span>
+        <span class="symbol-divider-text"><span class="sym-outer">ⱄⰔ</span><strong class="sym-inner">𓍊𓋼𓍊</strong><span class="sym-outer">Ⱄⱄ</span></span>
       </div>
 
       <!-- Bio Section -->
@@ -206,18 +204,9 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .symbol-divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  max-width: 800px;
+  text-align: center;
   margin: 0 auto;
   padding: 0 10px;
-}
-
-.symbol-divider-line {
-  flex: 1;
-  height: 1px;
-  background: #b6c2a0;
 }
 
 .symbol-divider-text {
@@ -228,8 +217,14 @@ import Layout from '../layouts/Layout.astro';
   line-height: 1;
 }
 
-.symbol-divider-text strong {
+.sym-outer {
+  font-weight: 300;
+  opacity: 0.75;
+}
+
+.sym-inner {
   font-weight: 900;
+  font-size: 1.15em;
 }
 
 .bio-divider {
