@@ -31,7 +31,11 @@ import Layout from '../layouts/Layout.astro';
         <a href="/about" class="intro-link">Find out more</a> about our services, or <a href="/booking" class="intro-link">book a consultation</a> today.
       </div>
 
-      <hr class="index-divider bio-divider">
+      <div class="symbol-divider bio-divider">
+        <span class="symbol-divider-line"></span>
+        <span class="symbol-divider-text">ⱄⰔ<strong>𓍊𓋼𓍊</strong>Ⱄⱄ</span>
+        <span class="symbol-divider-line"></span>
+      </div>
 
       <!-- Bio Section -->
       <div class="bio-section">
@@ -199,6 +203,33 @@ import Layout from '../layouts/Layout.astro';
   border-top: 1px solid #b6c2a0;
   max-width: 400px;
   margin: 30px auto 10px;
+}
+
+.symbol-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.symbol-divider-line {
+  flex: 1;
+  height: 1px;
+  background: #b6c2a0;
+}
+
+.symbol-divider-text {
+  font-family: 'Literata', serif;
+  font-size: 1em;
+  color: #b6c2a0;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.symbol-divider-text strong {
+  font-weight: 900;
 }
 
 .bio-divider {
