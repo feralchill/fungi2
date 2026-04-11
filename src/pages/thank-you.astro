@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="The Fungi Consultant - Thank You" currentPage="">
+  <div class="thankyou-content">
+    <h1 class="thankyou-heading">Thank you!</h1>
+    <p class="thankyou-text">Your message has been received. I'll be in touch as soon as possible.</p>
+    <p class="redirect-text">Redirecting you back...</p>
+  </div>
+</Layout>
+
+<script is:inline>
+  setTimeout(function() {
+    window.location.href = '/booking';
+  }, 3000);
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500&family=Abril+Fatface&display=swap');
+
+.thankyou-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.thankyou-heading {
+  font-family: 'Abril Fatface', serif;
+  font-size: 2.5em;
+  color: #b6c2a0;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.thankyou-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.7;
+  color: #52515c;
+  margin-bottom: 30px;
+}
+
+.redirect-text {
+  font-family: 'Literata', serif;
+  font-weight: 400;
+  font-size: 0.85em;
+  color: #9a89a4;
+}
+</style>

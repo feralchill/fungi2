@@ -134,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="form-heading">Get in touch</h2>
       <p class="form-intro">Fill out the form below and I'll get back to you as soon as possible.</p>
 
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <form name="contact" method="POST" action="/thank-you" data-netlify="true" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
         <div class="form-group">
           <label for="name" class="form-label">Name</label>
